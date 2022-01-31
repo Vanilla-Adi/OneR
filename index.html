@@ -45,7 +45,7 @@
             </div>
         </div>
         <div class="navbar-mobile__menu-items">
-            <a href="digital.html" class="navbar__menu-item navbar__menu-item--active">
+            <a href="digital.html" class="navbar__menu-item">
                 Digital
             </a>
             <a href="alternative.html" class="navbar__menu-item">
@@ -105,7 +105,7 @@
                     One River Asset Management is an innovative investment manager dedicated to delivering high-conviction
                     absolute-return strategies that help our clients build superior portfolios.
                 </h3>
-                <div class="p home-section__text fade-in-slow">
+                <div class="p home-section__text">
                     We see the world in a period of major economic, policy and political transition, with the investment
                     landscape shifting in ways that will make the coming decade look profoundly different from the past
                     decade.
@@ -213,6 +213,20 @@
                 mobileNavButton.classList.remove('navbar-mobile__toggle--active');
                 moibleNavOpen = false;
             }
+        });
+
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top <= (window.innerHeight || document.documentElement.clientHeight)
+            );
+        }
+
+        document.addEventListener('scroll', () => {
+            if(isInViewport(document.querySelector('.home-section__text')))
+                document.querySelector('.home-section__text').classList.add('fade-in-slow');
+            if(isInViewport(document.querySelector('.home-section__secondary')))
+                document.querySelector('.home-section__secondary').classList.add('backInRight');
         });
     </script>
 </body>

@@ -79,7 +79,12 @@
 
         @include media-breakpoint-up(xi) {
             margin-right: 95px;
-        }        
+        }         
+
+        a {
+          text-decoration: none;
+          color: $color-white;
+        }
     }
 
     &--active {
@@ -222,7 +227,7 @@
     margin-top: 30px;
     
     @include media-breakpoint-up(lg) {
-      margin-top: 8%;
+      margin-top: 12%;
     }
   }
 

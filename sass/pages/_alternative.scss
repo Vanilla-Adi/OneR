@@ -49,6 +49,14 @@
       }
     }
 
+    &__col-right--no-animation {
+      width: 100%;
+
+      @include media-breakpoint-up(lg) {
+        width: calc(100% - 600px);
+      }
+    }
+
     &__we-build {
       padding: 20px;
       font-family: "Ivy Mode";
@@ -69,10 +77,16 @@
       font-size: 16;
       line-height: 25px;
       padding: 20px;
+      font-family: "Optima";
 
       @include media-breakpoint-up(lg) {
         width: 280px;
-        padding: 25px 20px 25px 20px;
+        padding: 25px 20px 25px 0px;
+      }
+
+      @include media-breakpoint-up(1600) {
+        width: 500px;
+        padding: 70px 20px 80px 0px;
       }
     }
 
@@ -86,6 +100,7 @@
       padding-top: 120px;
       padding-right: 70px;
       font-family: "Optima";
+      z-index: 1;
     }
 
     &__content-toggle {
@@ -146,6 +161,8 @@
     display: none;
     padding: 20px;
     min-height: 100% !important;
+    position: relative;
+    z-index: 0;
 
     @include media-breakpoint-up(lg) {
       padding: 100px 100px 45px 100px;
@@ -221,6 +238,7 @@
       word-spacing: 80;
       line-height: 25px;
       margin-bottom: 0px;
+      font-family: "Optima";
 
       @include media-breakpoint-up(sm) {
         margin-bottom: 45px;

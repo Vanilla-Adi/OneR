@@ -15,7 +15,7 @@
     <nav class="navbar">
         <div class="navbar__container">
             <div class="navbar__menu">
-                <a href="digital.html" class="navbar__menu-item navbar__menu-item--active">
+                <a href="digital.html" class="navbar__menu-item--active">
                     Digital
                 </a>
                 <a href="alternative.html" class="navbar__menu-item">
@@ -28,7 +28,7 @@
                     Data Room
                 </a>
             </div>
-            <div class="navbar__logo">
+            <div class="navbar__logo backInRight">
                 <a href="index.html">
                 <img src="./assets/images/oneriver-digital-logo.png" alt="OneRiver Digital Logo"
                     class="u-image-contain">
@@ -39,24 +39,26 @@
     <nav class="navbar-mobile">
         <div class="navbar-mobile__menu">
             <div class="navbar-mobile__logo">
-                <img src="./assets/images/oneriver-digital-logo.png" alt="OneRiver Digital Logo"
+                <a href="index.html">
+                <img src="./assets/images/oneriver-logo-light.png" alt="OneRiver Digital Logo"
                     class="u-image-contain">
+                </a>    
             </div>
             <div class="navbar-mobile__toggle">
                 <div class="navbar-mobile__toggle-icon"></div>
             </div>
         </div>
         <div class="navbar-mobile__menu-items">
-            <a href="/" class="navbar__menu-item ">
+            <a href="digital.html" class="navbar__menu-item navbar__menu-item--active ">
                 Digital
             </a>
-            <a href="/" class="navbar__menu-item">
+            <a href="alternative.html" class="navbar__menu-item">
                 Alternatives
             </a>
             <a href="/" class="navbar__menu-item">
                 About
             </a>
-            <a href="/" class="navbar__menu-item">
+            <a href="weekendNotes.html" class="navbar__menu-item">
                 Data Room
             </a>
         </div>
@@ -95,11 +97,11 @@
                     <div class="digital-banner__selector-button"></div>
                 </div>
             </div>
-            <div class="digital-banner__image fade-in">
+            <div class="digital-banner__image backInLeft" style="opacity: 1;">
                 <img src="./assets/images/digital@1x.png" alt="Digital" class="u-image-contain">
             </div>
         </div>
-        <div class="digital-banner__secondary">
+        <div class="digital-banner__secondary fade-in">
             <div class="digital-banner__secondary-mask"></div>
             <div class="digital-banner__content digital-banner__content--digital digital-banner__content--active">
                 <div class="digital-banner__content-title">
@@ -301,10 +303,7 @@
             function isInViewport(element) {
                 const rect = element.getBoundingClientRect();
                 return (
-                    rect.top >= 0 &&
-                    rect.left >= 0 &&
-                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                    rect.top <= (window.innerHeight || document.documentElement.clientHeight)
                 );
             }
 
@@ -347,8 +346,10 @@
             document.addEventListener('scroll', () => {
                 if(isInViewport(readTitle)) 
                     readTitle.classList.add('fade-in')
+                if(isInViewport(document.querySelector('.digital-read__container')))
+                    document.querySelector('.digital-read__container').classList.add('fade-in');
             });
-
+            
             let readContentId = 1;
 
             

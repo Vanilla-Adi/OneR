@@ -51,25 +51,27 @@
         <nav class="navbar-mobile">
             <div class="navbar-mobile__menu">
                 <div class="navbar-mobile__logo">
+                    <a href="index.html">
                     <img
                         src="./assets/images/oneriver-logo-light.png"
                         alt="OneRiver Digital Logo"
                         class="u-image-contain"
                     />
+                </a>
                 </div>
                 <div class="navbar-mobile__toggle">
                     <div class="navbar-mobile__toggle-icon"></div>
                 </div>
             </div>
             <div class="navbar-mobile__menu-items">
-                <a href="/" class="navbar__menu-item navbar__menu-item--active">
+                <a href="digital.html" class="navbar__menu-item">
                     Digital
                 </a>
-                <a href="/" class="navbar__menu-item navbar__menu-item--light">
+                <a href="alternative.html" class="navbar__menu-item navbar__menu-item--active">
                     Alternatives
                 </a>
                 <a href="/" class="navbar__menu-item"> About </a>
-                <a href="/" class="navbar__menu-item"> Data Room </a>
+                <a href="weekendNotes.html" class="navbar__menu-item"> Data Room </a>
             </div>
         </nav>
 
@@ -117,7 +119,7 @@
                     </div>
                 </div>
                 <img
-                    class="mask-q mask-q--active"
+                    class="mask-q mask-q--active backInRight"
                     src="./assets/images/OR-mask-alternative.png"
                     alt=""
                 />
@@ -376,7 +378,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="alternative-content__col-right">
+                <div class="alternative-content__col-right--no-animation">
                     <div class="alternative-content__have-you-read-right alternative-content__have-you-read-right--active">
                         <p class="alternative-content__title">
                             Volatility Relative Value
@@ -594,8 +596,8 @@
             document.addEventListener('scroll', () => {
                 if(isInViewport(readTitle)) 
                     readTitle.classList.add('fade-in');
-                if(isInViewport(document.querySelector('.alternative-content__have-you-read-right')))
-                    document.querySelector('.alternative-content__have-you-read-right').classList.add('fade-in');
+                // if(isInViewport(document.querySelector('.alternative-content__have-you-read-right')))
+                //     document.querySelector('.alternative-content__have-you-read-right').classList.add('fade-in');
                 if(isInViewport(document.querySelector('.alternative-content__we-build')))
                     document.querySelector('.alternative-content__we-build').classList.add('fade-in');
                 if(isInViewport(document.querySelector('.alternative-content__col-right')))
@@ -609,11 +611,13 @@
                     readContent1.classList.remove('alternative-content__have-you-read-right--active');
                     readContent2.classList.add('alternative-content__have-you-read-right--active');
                     readContentToggle.classList.add('alternative-content__content-toggle--active');
+                    readContent2.classList.add('fadeInUp');
                     readContentId = 2;
                 } else {
-                  readContent1.classList.add('alternative-content__have-you-read-right--active');
+                    readContent1.classList.add('alternative-content__have-you-read-right--active');
                     readContent2.classList.remove('alternative-content__have-you-read-right--active');
                     readContentToggle.classList.remove('alternative-content__content-toggle--active');
+                    readContent1.classList.add('fadeInUp');
                     readContentId = 1;
                 }
             });

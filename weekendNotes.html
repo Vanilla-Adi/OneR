@@ -13,7 +13,7 @@
 
 <body>
     <nav class="navbar">
-        <div class="navbar__container">
+        <div class="navbar__container fade-in">
             <div class="navbar__menu">
                 <a href="digital.html" class="navbar__menu-item">
                     Digital
@@ -33,26 +33,28 @@
             </div>
         </div>
     </nav>
-    <nav class="navbar-mobile">
+    <nav class="navbar-mobile fade-in">
         <div class="navbar-mobile__menu">
             <div class="navbar-mobile__logo">
+              <a href="index.html">
                 <img src="./assets/images/oneriver-logo-light.png" alt="OneRiver Digital Logo" class="u-image-contain">
+              </a>  
             </div>
             <div class="navbar-mobile__toggle">
                 <div class="navbar-mobile__toggle-icon"></div>
             </div>
         </div>
         <div class="navbar-mobile__menu-items">
-            <a href="/" class="navbar__menu-item navbar__menu-item--active">
+            <a href="digital.html" class="navbar__menu-item">
                 Digital
             </a>
-            <a href="/" class="navbar__menu-item">
+            <a href="alternative.html" class="navbar__menu-item">
                 Alternatives
             </a>
-            <a href="/" class="navbar__menu-item">
+            <a href="about.html" class="navbar__menu-item">
                 About
             </a>
-            <a href="/" class="navbar__menu-item">
+            <a href="weekendNotes.html" class="navbar__menu-item navbar__menu-item--active">
                 Data Room
             </a>
         </div>
@@ -63,9 +65,9 @@
         
       </div>
       <div class="weekend-content__row">
-        <div class="weekend-content__left-panel">
-          <img src="./assets/images/left-panel-white.png" style="width: 500px; margin-left: -90px;" alt="">
-          <div class="weekend-content__left-panel-links">
+        <div class="weekend-content__left-panel ">
+          <img src="./assets/images/left-panel-white.png" class="backInLeft" style="width: 500px; margin-left: -90px;" alt="">
+          <div class="weekend-content__left-panel-links backInLeft">
               <div class="weekend-content__selector weekend-content__selector--title">
                   <span>
                       
@@ -104,7 +106,7 @@
               </div>
           </div>
         </div>
-        <div class="weekend-content__content weekend-content__content-weekend weekend-content__content--active">
+        <div class="weekend-content__content weekend-content__content-weekend weekend-content__content--active backInRight">
           <div class="weekend-content__title-active weekend-content__title-active--white">
             Wknd 
           </div>
@@ -606,9 +608,16 @@
         selector.classList.add('weekend-content__selector--active');
         let content = document.querySelector('.weekend-content__content-'+section);
         content.classList.add('weekend-content__content--active');
-        document.querySelector(".weekend-content__left-panel-links").style.animation="fadeOutIn 2s ";
+        content.style.animation = "fade-in 1.5s";
+        // document.querySelector(".weekend-content__left-panel-links").style.animation="fadeOutIn 2s ";
       }
 
+      var params = new URLSearchParams(window.location.search);
+      params = Object.fromEntries(params.entries());
+
+      if(params.section) {
+        activateSection(params.section);
+      }
 
       selectorMedia.addEventListener('click', () => activateSection('media'));
       selectorPress.addEventListener('click', () => activateSection('press'));
