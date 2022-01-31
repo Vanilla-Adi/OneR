@@ -1,0 +1,27 @@
+//colors
+$color-primary: #FF24B0;
+$color-secondary: #6F1FFF;
+$color-dark-primary: #182060;
+$color-dark-secondary: #09102E;
+$color-white: #fff;
+$color-black: #000;
+$color-gray: #707070;
+$color-gray-light: #F1F4FF;
+$color-gray-dark: #464C62;
+$color-danger: #ED1B24;
+
+$gradient-primary: linear-gradient($color-primary, $color-dark-primary);
+
+//breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xi: 1400px;
+
+//animations
+$digital-banner-anim-duration: .25s;
+$digital-banner-anim-timing: ease-in;
+//animations
+$alternative-banner-anim-duration: .25s;
+$alternative-banner-anim-timing: ease-in;

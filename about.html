@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./assets/fonts/IvyMode/index.css" />
+        <link rel="stylesheet" href="./assets/fonts/Optima/index.css" />
+        <title>One River</title>
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <div class="navbar__container">
+                <div class="navbar__menu">
+                    <a href="digital.html" class="navbar__menu-item">
+                        Digital
+                    </a>
+                    <a href="alternative.html" class="navbar__menu-item">
+                        Alternatives
+                    </a>
+                    <a href="about.html" class="navbar__menu-item"> About </a>
+                    <a href="weekendNotes.html" class="navbar__menu-item">
+                        Data Room
+                    </a>
+                </div>
+                <div class="navbar__logo backInRight">
+                    <a href="index.html">
+                        <img
+                            src="./assets/images/footer-logo.png"
+                            alt="OneRiver Digital Logo"
+                            class="u-image-contain"
+                        />
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar-mobile">
+            <div class="navbar-mobile__menu">
+                <div class="navbar-mobile__logo">
+                    <img
+                        src="./assets/images/oneriver-logo-light.png"
+                        alt="OneRiver Digital Logo"
+                        class="u-image-contain"
+                    />
+                </div>
+                <div class="navbar-mobile__toggle">
+                    <div class="navbar-mobile__toggle-icon"></div>
+                </div>
+            </div>
+            <div class="navbar-mobile__menu-items">
+                <a
+                    href="digital.html"
+                    class="navbar__menu-item navbar__menu-item--active"
+                >
+                    Digital
+                </a>
+                <a href="alternative.html" class="navbar__menu-item">
+                    Alternatives
+                </a>
+                <a href="about.html" class="navbar__menu-item"> About </a>
+                <a href="weekendNotes.html" class="navbar__menu-item">
+                    Data Room
+                </a>
+            </div>
+        </nav>
+
+        
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__logo">
+                    <img
+                        src="./assets/images/footer-logo.png"
+                        alt="OneRiver Logo"
+                        class="u-image-contain"
+                    />
+                </div>
+                <div class="footer__contact">
+                    <div class="footer__contact-row">
+                        <span class="footer__contact-info">
+                            (203) 489-1440
+                        </span>
+                        <span class="footer__contact-info-spacer">|</span>
+                        <span class="footer__contact-info">
+                            info@oneriveram.com
+                        </span>
+                    </div>
+                    <div class="footer__contact-row">
+                        <span class="footer__contact-info">
+                            <span>3 River Road,</span>
+                            <span>2nd Floor, Greenwich,</span>
+                            <span>CT 06807</span>
+                        </span>
+                    </div>
+                    <div class="footer__contact-row">
+                        <span class="footer__contact-info">
+                            NFA ID: 0461647
+                        </span>
+                        <span class="footer__contact-info-spacer">|</span>
+                        <span class="footer__contact-info">
+                            FINRA: 167835
+                        </span>
+                    </div>
+                </div>
+                <div class="footer__text-container">
+                    <p class="footer__text">
+                        One River Asset Management is an SEC registered
+                        investment advisor, regulated by the National Futures
+                        Association, and manages ERISA assets as a Qualified
+                        Plan Asset Manager.
+                    </p>
+                    <div class="footer__text footer__text--small">
+                        © 2020 One River Asset Management. All Rights Reserved.
+                    </div>
+                </div>
+            </div>
+            <div class="footer__legal-links">
+                <div class="footer__legal-item">
+                    <a href="privacypolicy.html" class="footer__legal-link">
+                        Privacy
+                    </a>
+                </div>
+                <div class="footer__legal-item">
+                    <a href="termsconditions.html" class="footer__legal-link">
+                        Terms of use
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            //mobile nav
+            const mobileNavButton = document.querySelector('.navbar-mobile__toggle');
+            const mobileMenu = document.querySelector('.navbar-mobile__menu-items');
+            let moibleNavOpen = false;
+            
+            mobileNavButton.addEventListener('click', () => {
+                if(!moibleNavOpen) {
+                    mobileMenu.classList.add('navbar-mobile__menu-items--active');
+                    mobileNavButton.classList.add('navbar-mobile__toggle--active');
+                    moibleNavOpen = true;
+                } else {
+                    mobileMenu.classList.remove('navbar-mobile__menu-items--active');
+                    mobileNavButton.classList.remove('navbar-mobile__toggle--active');
+                    moibleNavOpen = false;
+                }
+            });
+        </script>
+    </body>
+</html>

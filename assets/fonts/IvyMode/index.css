@@ -1,0 +1,79 @@
+@font-face {
+	font-family: 'Ivy Mode';
+	font-style: normal;
+	font-weight: 200;
+	font-display: swap;
+	src: url('./IvyMode-Thin.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Ivy Mode';
+	font-style: italic;
+	font-weight: 200;
+	font-display: swap;
+	src: url('./IvyMode-ThinItalic.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Ivy Mode';
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+	src: url('./IvyMode-Light.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Ivy Mode';
+	font-style: italic;
+	font-weight: 300;
+	font-display: swap;
+	src: url('./IvyMode-LightItalic.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Ivy Mode';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('./IvyMode-Regular.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Ivy Mode';
+	font-style: italic;
+	font-weight: 400;
+	font-display: swap;
+	src: url('./IvyMode-Italic.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Ivy Mode';
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+	src: url('./IvyMode-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Ivy Mode';
+	font-style: italic;
+	font-weight: 600;
+	font-display: swap;
+	src: url('./IvyMode-SemiBoldItalic.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Ivy Mode';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url('./IvyMode-Bold.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Ivy Mode';
+	font-style: italic;
+	font-weight: 700;
+	font-display: swap;
+	src: url('./IvyMode-BoldItalic.woff2') format('woff2');
+}
