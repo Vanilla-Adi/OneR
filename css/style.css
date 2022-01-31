@@ -272,7 +272,7 @@ body {
     height: 1px;
     left: 0;
     bottom: -2px;
-    background-color: #FF24B0; }
+    background-color: transparent; }
   @media only screen and (min-width: 992px) {
     .navbar__menu-item--active::after {
       bottom: -16px; } }
@@ -2316,84 +2316,242 @@ body {
     letter-spacing: 60; }
 
 .about-banner {
-  display: grid;
-  min-height: 100vh; }
-  .about-banner__main {
-    z-index: 1;
-    background-color: #09102E; }
-  .about-banner__content {
+  position: relative;
+  min-height: 100vh;
+  background-color: #09102E;
+  padding-top: 180px; }
+  .about-banner::before {
+    content: "";
     position: absolute;
-    margin-top: 100px;
-    max-width: 1242px;
-    margin-left: auto;
-    padding-left: 16px;
-    overflow: hidden; }
-    @media only screen and (min-width: 576px) {
-      .about-banner__content {
-        padding-top: 24px; } }
-    @media only screen and (min-width: 992px) {
-      .about-banner__content {
-        padding-top: 120px;
-        overflow: visible; } }
-    @media only screen and (min-width: 1200px) {
-      .about-banner__content {
-        height: 535px;
-        padding-top: 0; } }
-    @media only screen and (min-width: 1400px) {
-      .about-banner__content {
-        margin-top: 170px; } }
-    @media only screen and (min-width: 1600px) {
-      .about-banner__content {
-        height: 720px; } }
+    max-width: 448px;
+    max-height: 736px;
+    top: 180px;
+    left: -20px;
+    width: 100%;
+    height: calc(100% - 30px);
+    background-image: url("../../assets/images/about-background.png");
+    background-repeat: no-repeat;
+    background-size: contain; }
+  .about-banner::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 80px;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #182060; }
+  .about-banner__title-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto; }
   .about-banner__title {
     font-family: 'Ivy Mode';
-    font-size: 90px;
+    font-size: 48px;
     line-height: 1.11;
     letter-spacing: 5.4px;
     font-weight: 400;
+    max-width: 1120px;
+    color: #fff; }
+    @media only screen and (min-width: 768px) {
+      .about-banner__title {
+        font-size: 72px; } }
+    @media only screen and (min-width: 1600px) {
+      .about-banner__title {
+        font-size: 90px; } }
+  .about-banner__title-el {
+    position: absolute;
+    right: 0;
+    top: 36px;
+    height: 22px;
+    width: 390px; }
+    .about-banner__title-el::after {
+      content: "";
+      position: absolute;
+      height: 22px;
+      width: 11px;
+      top: 0;
+      right: 0;
+      border: 1px solid #FF24B0;
+      border-top-left-radius: 100px;
+      border-bottom-left-radius: 100px;
+      border-right: none; }
+    .about-banner__title-el::before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: calc(100% - 11px);
+      top: 10px;
+      right: 11px;
+      background-color: #FF24B0; }
+  .about-banner__selectors-container {
+    position: absolute;
+    right: 0;
+    top: 265px;
+    overflow: hidden; }
+    .about-banner__selectors-container > :first-child {
+      margin-bottom: 36px; }
+  .about-banner__selector {
+    display: flex;
+    position: relative;
+    font-family: 'Optima';
+    width: min-content;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.68px;
+    line-height: 1.85;
+    text-transform: uppercase;
+    cursor: pointer;
     color: #fff;
-    margin-top: 15%;
+    white-space: nowrap;
+    text-decoration: none; }
+    .about-banner__selector > span {
+      display: block;
+      margin-right: 75px;
+      width: 385px;
+      text-align: right;
+      opacity: 1;
+      transition: opacity 0.25s ease-in; }
+    .about-banner__selector > div {
+      position: absolute;
+      height: 22px;
+      width: 60px;
+      background-color: #09102E;
+      border-radius: 100%;
+      right: -11px;
+      top: 50%;
+      transform: translateY(-50%); }
+      .about-banner__selector > div::before {
+        content: "";
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        right: 0;
+        border: 1px solid #fff;
+        border-radius: 100%;
+        transition: border-color 0.25s ease-in; }
+      .about-banner__selector > div::after {
+        content: "";
+        position: absolute;
+        width: 38px;
+        height: 1px;
+        background-color: #fff;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        transition: left 0.25s ease-in, background-color 0.25s ease-in; }
+  .about-banner__carousel {
+    position: relative;
+    max-width: 1300px;
+    padding: 0 50px;
+    max-height: 420px;
+    margin: 100px auto 0; }
+  .about-banner__carousel > .slick-arrow {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    font-size: 0;
+    width: 13px;
+    height: 26px;
+    background-image: url("../../assets/images/arrow-primary.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer; }
+    .about-banner__carousel > .slick-arrow:focus {
+      outline: none; }
+  .about-banner__carousel > .slick-arrow.slick-prev {
+    transform: rotate(180deg);
+    right: unset;
+    left: 0; }
+  .about-banner__carousel-item {
+    position: relative;
+    width: 215px;
+    height: 276px;
+    margin: 72px 12px;
+    opacity: .4;
+    transition: width .2s ease-in, height .2s ease-in, margin .2s ease-in, opacity .2s ease-in;
+    filter: grayscale(100%); }
+  .about-banner .slick-current {
+    height: 420px;
+    width: 330px !important;
+    margin: 0 15px;
+    opacity: 1; }
+  .about-banner__carousel-details {
+    margin-top: 35px; }
+  .about-banner__carousel-details-content {
     text-align: center; }
+  .about-banner__carousel-title {
+    font-family: 'Optima';
+    font-size: 30px;
+    letter-spacing: 3px;
+    line-height: 1.63;
+    font-weight: 400;
+    color: #fff; }
+  .about-banner__carousel-text {
+    font-family: 'Optima';
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 1.28px;
+    line-height: 1.5625;
+    color: #FF24B0; }
 
-.about-section__title {
-  font-family: 'Ivy Mode';
-  font-size: 90px;
-  line-height: 1.11;
-  letter-spacing: 5.4px;
-  font-weight: 400;
-  color: #182060;
-  margin-bottom: 5%;
-  text-align: left;
-  padding-left: 150px;
-  grid-template-columns: 1fr; }
+.about-content {
+  padding: 90px 0 150px;
+  background-color: #F1F4FF; }
+  .about-content__container {
+    display: block;
+    max-width: 980px;
+    padding: 0 15px;
+    margin: 0 auto; }
+  .about-content__text {
+    font-family: 'Optima';
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1.28px;
+    line-height: 1.5625;
+    text-align: center;
+    color: #09102E; }
 
-.about-section__text {
-  font-family: 'Optima';
-  font-size: 20px;
-  line-height: 1.11;
-  letter-spacing: 5.4px;
-  font-weight: 400;
-  color: #182060;
-  text-align: left;
-  padding-left: 150px;
-  grid-template-columns: 1fr;
-  margin-bottom: 10%; }
-
-.about-section__small-title {
-  font-family: 'Optima';
-  font-weight: bold; }
-
-.about-section__contact {
-  display: flex;
-  flex-direction: row;
-  margin-left: 100px;
-  margin-right: 100px;
-  margin-top: 8%; }
-
-.about-section__column {
-  width: 40%; }
-
-.about-section__column2 {
-  width: 60%; }
-  .about-section__column2 img {
-    width: 100%; }
+.about-contact {
+  padding: 160px 0;
+  display: block; }
+  .about-contact__container {
+    display: grid;
+    max-width: 1420px;
+    margin: 0 auto;
+    grid-template-columns: 400px 1fr;
+    grid-gap: 20px; }
+  .about-contact__title {
+    font-family: 'Ivy Mode';
+    font-size: 48px;
+    line-height: 1.11;
+    letter-spacing: 5.4px;
+    font-weight: 400;
+    max-width: 1120px;
+    color: #182060; }
+    @media only screen and (min-width: 768px) {
+      .about-contact__title {
+        font-size: 72px; } }
+    @media only screen and (min-width: 1600px) {
+      .about-contact__title {
+        font-size: 90px; } }
+  .about-contact__info {
+    font-family: 'Optima';
+    font-size: 16px;
+    letter-spacing: 0.512px;
+    line-height: 1.5625;
+    font-weight: 400;
+    margin-top: 48px;
+    color: #09102E; }
+  .about-contact__group-title {
+    color: #182060;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .about-contact__map {
+    padding-top: 30px; }
