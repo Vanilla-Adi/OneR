@@ -4,20 +4,6 @@
     background-color: $color-dark-secondary;
     padding-top: 180px;
 
-    &::before {
-        content: "";
-        position: absolute;
-        max-width: 448px;
-        max-height: 736px;
-        top: 180px;
-        left: -20px;
-        width: 100%;
-        height: calc(100% - 30px);
-        background-image: url('../../assets/images/about-background.png');
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
-
     &::after {
         content: "";
         position: absolute;
@@ -27,6 +13,20 @@
         left: 50%;
         transform: translateX(-50%);
         background-color: $color-dark-primary;
+    }
+
+    &__background {
+        content: "";
+        position: absolute;
+        max-width: 448px;
+        max-height: 736px;
+        top: 180px;
+        left: -20px;
+        width: 100%;
+        height: calc(100% - 30px);
+        background-image: url('../../assets/images/about-background.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
     }
 
     &__title-container {
@@ -59,8 +59,16 @@
         position: absolute;
         right: 0;
         top: 36px;
-        height: 22px; 
-        width: 390px;
+        height: 22px;
+        width: 50px;
+
+        @include media-breakpoint-up(xl) {
+            width: 110px;
+        }
+
+        @include media-breakpoint-up(xi) {
+            width: 220px;
+        }
 
         &::after {
             content: "";
@@ -288,10 +296,15 @@
 
     &__container {
         display: grid;
+        grid-template-columns: 1fr;
         max-width: 1420px;
         margin: 0 auto;
-        grid-template-columns: 400px 1fr;
         grid-gap: 20px;
+        padding: 15px;
+
+        @include media-breakpoint-up(md) {
+            grid-template-columns: 400px 1fr;
+        }
     }
 
     &__details {
@@ -330,7 +343,9 @@
         margin-top: 48px;
         color: $color-dark-secondary;
         max-width: 100%;
-        padding: 0px 20px;
+        padding: 0;
+        // padding: 0px 20px;
+
         @include media-breakpoint-up(sm) {
             padding: 0px;
         }
@@ -344,6 +359,7 @@
 
     &__map {
         padding-top: 30px;
+        min-height: 450px;
     }
 }
 

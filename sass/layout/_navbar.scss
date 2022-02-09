@@ -28,8 +28,17 @@
         height: 100%;
         margin-left: auto;
         padding-left: 16px;
-        padding-right: 100px;
-        
+        padding-right: 90px;
+
+        @include media-breakpoint-up(lg) {
+            padding-right: 80px;
+        }
+
+        &--home {
+            @include media-breakpoint-up(lg) {
+                padding-right: 110px;
+            }
+        }
 
         @include media-breakpoint-up(xi) {
             padding-right: 150px;
@@ -61,7 +70,7 @@
             position: relative;
             font-family: 'Optima';
             font-size: 14px;
-            font-weight: 700;
+            font-weight: 400;
             line-height: 1.14;
             letter-spacing: 1.68px;
             text-transform: uppercase;
@@ -114,10 +123,9 @@
         height: 45px;
         width: auto;
 
-        @include media-breakpoint-up(xi) {
-            height: auto;
+        @include media-breakpoint-up(xl) {
+            height: 60px;
         }
-
     }
 }
 

@@ -13,7 +13,7 @@
 
 <body>
     <nav class="navbar">
-        <div class="navbar__container">
+        <div class="navbar__container navbar__container--home">
             <div class="navbar__menu">
                 <a href="digital.html" class="navbar__menu-item">
                     Digital
@@ -28,11 +28,9 @@
                     Data Room
                 </a>
             </div>
-            <div class="navbar__logo backInRight">
-                <a href="index.html">
-                <img src="./assets/images/oneriver-logo.png" alt="OneRiver Digital Logo" class="u-image-contain">
-                </a>
-            </div>
+            <a href="index.html" class="navbar__logo backInRight">
+                <img src="./assets/images/oneriver-logo.svg" alt="OneRiver Digital Logo" class="u-image-contain">
+            </a>
         </div>
     </nav>
     <nav class="navbar-mobile">
@@ -67,7 +65,7 @@
                 </h1>
                 <div class="home-banner__image-container">
                     <div class="home-banner__image-top fade-in-slow">
-                        <img src="./assets/images/home-banner-r.png" alt="OneRiver Asset Management"
+                        <img src="./assets/images/home-banner-r.svg" alt="OneRiver Asset Management"
                             class="u-image-cover">
                     </div>
                     <div class="home-banner__image-background zoom-in">
@@ -146,7 +144,7 @@
     <footer class="footer">
         <div class="footer__container">
             <div class="footer__logo">
-                <img src="./assets/images/footer-logo.png" alt="OneRiver Logo" class="u-image-contain">
+                <img src="./assets/images/oneriver-logo-light.svg" alt="OneRiver Logo" class="u-image-contain">
             </div>
             <div class="footer__contact">
                 <div class="footer__contact-row">
@@ -226,7 +224,7 @@
             if(isInViewport(document.querySelector('.home-section__text')))
                 document.querySelector('.home-section__text').classList.add('fade-in-slow');
             if(isInViewport(document.querySelector('.home-section__secondary')))
-                document.querySelector('.home-section__secondary').classList.add('backInRight');
+                document.querySelector('.home-section__secondary').classList.add('backInRight--no-zoom');
         });
     </script>
 </body>

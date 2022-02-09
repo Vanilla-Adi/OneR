@@ -62,7 +62,7 @@
       font-family: "Ivy Mode";
       color: $color-dark-primary;
       font-size: 30px;
-      word-spacing: 60;
+      letter-spacing: 1.6px;
       line-height: 49px;
       @include media-breakpoint-up(lg) {
         padding: 60px 120px 30px 120px;
@@ -73,11 +73,12 @@
       width: 100%;
       padding-left: 0px;
       padding-top: 60px;
-      word-spacing: 80;
-      font-size: 16;
+      letter-spacing: 1.28px;
+      font-size: 15px;
       line-height: 25px;
       padding: 20px;
       font-family: "Optima";
+      color: $color-dark-secondary;
 
       @include media-breakpoint-up(lg) {
         width: 280px;
@@ -226,6 +227,7 @@
 
     &__title {
       font-size: 16px;
+      letter-spacing: 1.28px;
       font-weight: bold;
       margin-bottom: 20px;
       text-transform: uppercase;
@@ -234,11 +236,12 @@
     }
 
     &__paragraph {
-      font-size: 16px;
-      word-spacing: 80;
+      font-size: 15px;
+      letter-spacing: 1.28px;
       line-height: 25px;
       margin-bottom: 0px;
       font-family: "Optima";
+      color: $color-dark-secondary;
 
       @include media-breakpoint-up(sm) {
         margin-bottom: 45px;
@@ -257,10 +260,11 @@
 
     &__left-panel-title {
       font-size: 60px;
-      font-family: "Optima";
+      font-family: "Ivy Mode";
       text-align: right;
       padding-top: 80px;
       padding-right: 20px;
+      letter-spacing: 5.4px;
       @include media-breakpoint-up(lg) {
         padding-right: 80px;
       }
@@ -332,7 +336,7 @@
         position: absolute;
         width: 42px;
         height: 42px;
-        background-color: $color-gray-light;
+        background-color: $color-dark-primary;
         border-radius: 100%;
         right: -21px;
         top: 50%;
@@ -357,7 +361,7 @@
             position: absolute;
             width: 30px;
             height: 1px;
-            background-color: $color-white;
+            background-color: $color-dark-primary;
             top: 50%;
             transform: translateY(-50%);
             left: -20px;
@@ -390,7 +394,7 @@
       font-family: 'Optima';
       color: #09102E;
       line-height: 25px;
-      word-spacing: 80;
+      letter-spacing: 1.28px;
     }
   
     &__article-paraghraph {
@@ -402,7 +406,7 @@
       color: #09102E;
       line-height: 25px;
       font-weight: normal;
-      word-spacing: 80;
+      letter-spacing: 1.28px;
     }
   
     &__article-link {
@@ -413,7 +417,7 @@
       font-size: 16px;
       color: $color-primary;
       line-height: 25px;
-      word-spacing: 80;
+      letter-spacing: 1.28px;
       font-weight: bold;
       text-decoration: none;
       display: block;
@@ -528,4 +532,5 @@
   word-spacing: 120;
   line-height: 26px;
   font-size: 14px;
+  letter-spacing: 1.68px;
 }

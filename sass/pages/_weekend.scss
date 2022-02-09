@@ -121,15 +121,15 @@
     position: absolute;
     width: 42px;
     height: 42px;
-    background-color: $color-gray-light;
+    background-color: $color-dark-primary;
     border-radius: 100%;
     right: -21px;
     top: 50%;
     transform: translateY(-50%);
 
-    &--active {
-      background-color: $color-dark-primary;
-    }
+    // &--active {
+    //   background-color: $color-dark-primary;
+    // }
 
     &::before {
         content: "";
@@ -193,6 +193,8 @@
     margin: 0px;
     font-size: 80px;
     font-family: 'Ivy Mode';
+    color: $color-dark-primary;
+    letter-spacing: 5.4px;
 
     @include media-breakpoint-up(lg) {
       padding-left: 100px;
@@ -215,7 +217,7 @@
     font-family: 'Optima';
     color: #09102E;
     line-height: 25px;
-    word-spacing: 80;
+    letter-spacing: 1.28px;
 
     @include media-breakpoint-up(xl) {
       padding-left: 100px;
@@ -239,7 +241,7 @@
     color: #09102E;
     line-height: 25px;
     font-weight: normal;
-    word-spacing: 80;
+    letter-spacing: 1.28px;
 
     @include media-breakpoint-up(lg) {
       padding-left: 100px;
@@ -271,6 +273,8 @@
     font-weight: bold;
     font-size: 24px;
     font-family: 'Optima';
+    color: $color-dark-primary;
+
     @include media-breakpoint-up(lg) {
       // margin-top: 110px;
       padding-left: 100px;
@@ -321,6 +325,7 @@
     padding: 0px 30px 0px 0px;
     font-size: 16px;
     font-weight: bold;
+    letter-spacing: 1.28px;
     font-family: 'Optima';
     color: $color-dark-primary;
     margin-top: 50px;
