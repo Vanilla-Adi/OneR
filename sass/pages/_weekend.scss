@@ -4,6 +4,14 @@
     background-image: url('../../assets/images/bg-weekend-notes.png');
     background-size: cover;
     background-position: center;
+
+    @include media-breakpoint-up(fhd) {
+      min-height: 485px;
+    }
+
+    @include media-breakpoint-up(tk) {
+      min-height: 780px;
+    }
   }
 
   &__row {
@@ -27,10 +35,35 @@
       overflow-x: hidden;
       overflow-y: hidden;
 
+    & > img {
+      width: 500px;
+      margin-left: -90px;
+    }
+
     @include media-breakpoint-up(lg) {
       width: 500px;
       overflow-x: initial;
       overflow-y: initial;
+    }
+
+    @include media-breakpoint-up(fhd) {
+      width: 750px;
+      height: 900px;
+      max-height: 900px;
+
+      & > img {
+        width: 750px;
+      }
+    }
+
+    @include media-breakpoint-up(tk) {
+      width: 1000px;
+      height: 1200px;
+      max-height: 1200px;
+
+      & > img {
+        width: 1000px;
+      }
     }
   }
 
@@ -71,6 +104,16 @@
     color: $color-white;
     white-space: nowrap;
 
+    @include media-breakpoint-up(fhd) {
+      font-size: 21px;
+      letter-spacing: 2.1px;
+    }
+
+    @include media-breakpoint-up(tk) {
+      font-size: 28px;
+      letter-spacing: 3.2px;
+    }
+
     & > span {
         display: block;
         margin-right: 60px;
@@ -80,6 +123,14 @@
         @include media-breakpoint-up(xi) {
             margin-right: 95px;
         }         
+
+        @include media-breakpoint-up(fhd) {
+          margin-right: 120px;
+        }
+
+        @include media-breakpoint-up(tk) {
+          margin-right: 150px;
+        }
 
         a {
           text-decoration: none;
@@ -102,18 +153,58 @@
     }
     &--media {
       margin-top: 80px;
+
+      @include media-breakpoint-up(fhd) {
+        margin-top: 120px;
+      }
+
+      @include media-breakpoint-up(tk) {
+        margin-top: 160px;
+      }
     }
     &--press {
       margin-top: 80px;
+
+      @include media-breakpoint-up(fhd) {
+        margin-top: 120px;
+      }
+
+      @include media-breakpoint-up(tk) {
+        margin-top: 160px;
+      }
     }
     &--podcasts {
       margin-top: 80px;
+
+      @include media-breakpoint-up(fhd) {
+        margin-top: 120px;
+      }
+
+      @include media-breakpoint-up(tk) {
+        margin-top: 160px;
+      }
     }
     &--resources {
       margin-top: 80px;
+
+      @include media-breakpoint-up(fhd) {
+        margin-top: 120px;
+      }
+
+      @include media-breakpoint-up(tk) {
+        margin-top: 160px;
+      }
     }
     &--weekend {
       margin-top: 80px;
+
+      @include media-breakpoint-up(fhd) {
+        margin-top: 120px;
+      }
+
+      @include media-breakpoint-up(tk) {
+        margin-top: 160px;
+      }
     }
   }
 
@@ -178,6 +269,14 @@
         transform: translateY(-50%);
         left: 32px !important;
         transition: left $digital-banner-anim-duration $digital-banner-anim-timing, background-color $digital-banner-anim-duration $digital-banner-anim-timing;
+      
+      @include media-breakpoint-up(fhd) {
+        left: 48px !important;
+      }
+      
+      @include media-breakpoint-up(tk) {
+        left: 64px !important;
+      }
     }
 
     @include media-breakpoint-up(xi) {
@@ -186,6 +285,42 @@
             left: -55px;
         }   
     }
+    @include media-breakpoint-up(fhd) {
+        width: 60px;
+        height: 60px;
+
+
+        &::before {
+            border-width: 2px;
+            width: 36px;
+            height: 36px;
+        }
+
+        &::after {
+            width: 75px;
+            left: -60px;
+            height: 2px;
+        }
+    }
+
+  @include media-breakpoint-up(tk) {
+      width: 80px;
+      height: 80px;
+      right: -40px;
+
+      &::before {
+          border-width: 3px;
+          width: 48px;
+          height: 48px;
+      }
+
+      &::after {
+          width: 95px;
+          left: -80px;
+          height: 3px;
+      }
+    }
+
 }
 
   &__title-active {
@@ -200,6 +335,17 @@
       padding-left: 100px;
     }
 
+    @include media-breakpoint-up(fhd) {
+      font-size: 120px;
+      letter-spacing: 8px;
+      padding-left: 150px;
+    }
+    @include media-breakpoint-up(tk) {
+      font-size: 120px;
+      letter-spacing: 10.8px;
+      padding-left: 200px;
+    }
+
     &--white {
       margin-top: 70px;
       margin-bottom: 0px;
@@ -207,6 +353,14 @@
 
       @include media-breakpoint-up(lg) {
         color: $color-white;
+      }
+
+      @include media-breakpoint-up(fhd) {
+        margin-top: 20px;
+      }
+
+      @include media-breakpoint-up(tk) {
+        margin-top: 20px;
       }
     }
   }
@@ -216,12 +370,25 @@
     margin-top: 55px;
     font-family: 'Optima';
     color: #09102E;
-    line-height: 25px;
+    line-height: 1.5625;
     letter-spacing: 1.28px;
+    font-size: 16px;
 
     @include media-breakpoint-up(xl) {
       padding-left: 100px;
       padding-right: 70px;
+    }
+
+    @include media-breakpoint-up(fhd) {
+      font-size: 24px;
+      letter-spacing: 1.9px;
+      padding: 30px 105px 30px 150px;
+    }
+
+    @include media-breakpoint-up(tk) {
+      font-size: 32px;
+      letter-spacing: 2.5px;
+      padding: 40px 140px 40px 200px;
     }
   }
 
@@ -239,13 +406,27 @@
     font-family: 'Optima';
     font-size: 16px;
     color: #09102E;
-    line-height: 25px;
+    line-height: 1.5625;
     font-weight: normal;
     letter-spacing: 1.28px;
 
     @include media-breakpoint-up(lg) {
       padding-left: 100px;
       padding-right: 70px;
+    }
+
+    @include media-breakpoint-up(fhd) {
+      padding-left: 150px;
+      padding-right: 105px;
+      font-size: 24px;
+      letter-spacing: 1.9px;
+    }
+
+    @include media-breakpoint-up(tk) {
+      padding-left: 200px;
+      padding-right: 140px;
+      font-size: 32px;
+      letter-spacing: 2.5px;
     }
   }
 
@@ -255,8 +436,8 @@
     font-family: 'Optima';
     font-size: 16px;
     color: $color-primary;
-    line-height: 25px;
-    word-spacing: 80;
+    line-height: 1.5625;
+    letter-spacing: 1.68px;
     font-weight: bold;
     text-decoration: none;
     display: block;
@@ -265,20 +446,48 @@
       padding-left: 100px;
       padding-right: 70px;
     }
+
+    @include media-breakpoint-up(fhd) {
+      padding-left: 150px;
+      padding-right: 105px;
+      font-size: 24px;
+      letter-spacing: 2.5px;
+    }
+
+    @include media-breakpoint-up(tk) {
+      padding-left: 200px;
+      padding-right: 140px;
+      font-size: 32px;
+      letter-spacing: 3.3px;
+    }
   }
 
   &__article-title {
     padding: 0px 20px;
     margin-top: 0px;
     font-weight: bold;
+    letter-spacing: 1.92px;
     font-size: 24px;
     font-family: 'Optima';
     color: $color-dark-primary;
 
     @include media-breakpoint-up(lg) {
-      // margin-top: 110px;
       padding-left: 100px;
       padding-right: 70px;
+    }
+
+    @include media-breakpoint-up(fhd) {
+      padding-left: 150px;
+      padding-right: 105px;
+      font-size: 36px;
+      letter-spacing: 2.8x;
+    }
+
+    @include media-breakpoint-up(tk) {
+      padding-left: 200px;
+      padding-right: 140px;
+      font-size: 48px;
+      letter-spacing: 3.9px;
     }
   }
 
@@ -287,11 +496,27 @@
     margin-top: 10px;
     font-weight: bold;
     font-family: 'Optima';
+    font-size: 16px;
+    letter-spacing: 0.64px;
     color: $color-primary;
 
     @include media-breakpoint-up(lg) {
       padding-left: 100px;
       padding-right: 70px;
+    }
+
+    @include media-breakpoint-up(fhd) {
+      padding-left: 150px;
+      padding-right: 105px;
+      font-size: 24px;
+      letter-spacing: 1px;
+    }
+
+    @include media-breakpoint-up(tk) {
+      padding-left: 200px;
+      padding-right: 140px;
+      font-size: 32px;
+      letter-spacing: 1.3px;
     }
   }
   
@@ -306,6 +531,14 @@
     @include media-breakpoint-up(lg) {
       flex-direction: row;
       padding-left: 100px;
+    }
+
+    @include media-breakpoint-up(fhd) {
+      padding-left: 150px;
+    }
+
+    @include media-breakpoint-up(tk) {
+      padding-left: 200px;
     }
 
     &--vertical {
@@ -328,6 +561,7 @@
     letter-spacing: 1.28px;
     font-family: 'Optima';
     color: $color-dark-primary;
+    line-height: 1.5625;
     margin-top: 50px;
     margin-bottom: 0;
     width: 100%;
@@ -339,6 +573,16 @@
       width: 100%;
       margin-top: 10px;
       margin-bottom: 10px;
+    }
+
+    @include media-breakpoint-up(fhd) {
+      font-size: 24px;
+      letter-spacing: 1.9px;
+    }
+
+    @include media-breakpoint-up(tk) {
+      font-size: 32px;
+      letter-spacing: 2.5px;
     }
 
     &--active {

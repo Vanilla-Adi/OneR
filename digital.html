@@ -13,22 +13,22 @@
 
 <body>
     <nav class="navbar">
-        <div class="navbar__container">
+        <div class="navbar__container navbar__container--digital">
             <div class="navbar__menu">
-                <a href="digital.html" class="navbar__menu-item navbar__menu-item--active">
+                <a href="/digital.html" class="navbar__menu-item navbar__menu-item--active">
                     Digital
                 </a>
-                <a href="alternative.html" class="navbar__menu-item">
+                <a href="/alternative.html" class="navbar__menu-item">
                     Alternatives
                 </a>
-                <a href="about.html" class="navbar__menu-item">
+                <a href="/about.html" class="navbar__menu-item">
                     About
                 </a>
-                <a href="weekendNotes.html" class="navbar__menu-item">
+                <a href="/weekendNotes.html" class="navbar__menu-item">
                     Data Room
                 </a>
             </div>
-            <a href="index.html" class="navbar__logo backInRight">
+            <a href="/" class="navbar__logo backInRight">
                 <img src="./assets/images/oneriver-digital-logo.svg" alt="OneRiver Digital Logo"
                     class="u-image-contain">
             </a>
@@ -37,7 +37,7 @@
     <nav class="navbar-mobile">
         <div class="navbar-mobile__menu">
             <div class="navbar-mobile__logo">
-                <a href="index.html">
+                <a href="/">
                 <img src="./assets/images/oneriver-logo-light.svg" alt="OneRiver Digital Logo"
                     class="u-image-contain">
                 </a>    
@@ -47,22 +47,28 @@
             </div>
         </div>
         <div class="navbar-mobile__menu-items">
-            <a href="digital.html" class="navbar__menu-item navbar__menu-item--active ">
+            <a href="/digital.html" class="navbar__menu-item navbar__menu-item--active ">
                 Digital
             </a>
-            <a href="alternative.html" class="navbar__menu-item">
+            <a href="/alternative.html" class="navbar__menu-item">
                 Alternatives
             </a>
-            <a href="/" class="navbar__menu-item">
+            <a href="/about.html" class="navbar__menu-item">
                 About
             </a>
-            <a href="weekendNotes.html" class="navbar__menu-item">
+            <a href="/weekendNotes.html" class="navbar__menu-item">
                 Data Room
             </a>
         </div>
     </nav>
     <header class="digital-banner">
         <div class="digital-banner__main">
+            <div class="digital-banner__anim-trigger"></div>
+            <div class="digital-banner__background">
+                <div class="digital-banner__background-image animate__width u-image-cover">
+                    <img src="./assets/images/digital-banner.png" alt="OneRiver Digital" class="u-image-cover">
+                </div>
+            </div>
             <div class="digital-banner__selector-container">
                 <h1
                     class="digital-banner__main-title digital-banner__main-title--digital digital-banner__main-title--digital-active">
@@ -95,12 +101,8 @@
                     <div class="digital-banner__selector-button"></div>
                 </div>
             </div>
-            <div class="digital-banner__image backInLeft" style="opacity: 1;">
-                <img src="./assets/images/digital-banner.svg" alt="Digital" class="u-image-contain">
-            </div>
         </div>
-        <div class="digital-banner__secondary fade-in">
-            <div class="digital-banner__secondary-mask"></div>
+        <div class="digital-banner__secondary">
             <div class="digital-banner__content digital-banner__content--digital digital-banner__content--active">
                 <div class="digital-banner__content-title">
                     The digitalization of finance is rapidly disrupting financial intermediation as it moves into the
@@ -147,7 +149,7 @@
         </div>
     </header>
     <section class="digital-read">
-        <div class="digital-read__container">
+        <div class="digital-read__container animate__fadeIn">
             <div class="digital-read__content-toggle">
                 <img src="./assets/icons/digital-arrow.svg" class="u-image-contain">
             </div>
@@ -181,9 +183,10 @@
             </div>
         </div>
         <div class="digital-read__banner">
-            <h1 class="digital-read__title">
-                Have you read?
+            <h1 class="digital-read__title animate__fadeInUp">
+                A Deeper Dive
             </h1>
+            <span class="digital-banner__anim-trigger digital-banner__anim-trigger--read-title"></span>
         </div>
     </section>
     <footer class="footer">
@@ -228,12 +231,12 @@
         </div>
         <div class="footer__legal-links">
             <div class="footer__legal-item">
-                <a href="privacypolicy.html" class="footer__legal-link">
+                <a href="/privacypolicy.html" class="footer__legal-link">
                     Privacy
                 </a>
             </div>
             <div class="footer__legal-item">
-                <a href="termsconditions.html" class="footer__legal-link">
+                <a href="/termsconditions.html" class="footer__legal-link">
                     Terms of use
                 </a>
             </div>
@@ -270,7 +273,6 @@
             });
 
             //hero animations
-            const oneriverR = document.querySelector('.digital-banner__image');
 
             const selectorDigital = document.querySelector('.digital-banner__selector--digital');
             const selectorBitcoin = document.querySelector('.digital-banner__selector--bitcoin');
@@ -339,14 +341,8 @@
             const readContentToggle = document.querySelector('.digital-read__content-toggle');
             const readContent1 = document.querySelector('.digital-read__content');
             const readContent2 = document.querySelector('.digital-read__content--slide');
-            const readTitle = document.querySelector('.digital-read__title');
 
-            document.addEventListener('scroll', () => {
-                if(isInViewport(readTitle)) 
-                    readTitle.classList.add('fade-in')
-                if(isInViewport(document.querySelector('.digital-read__container')))
-                    document.querySelector('.digital-read__container').classList.add('fade-in');
-            });
+
             
             let readContentId = 1;
 
@@ -365,6 +361,63 @@
                     readContentId = 1;
                 }
             });
+
+            //animations
+            function isInViewport(element, offset = 0) {
+                const rect = element.getBoundingClientRect();
+                return (rect.top <= ((window.innerHeight || document.documentElement.clientHeight) - offset)) && rect.bottom > offset;
+            }
+
+            function addClassBasedOnScroll(trigger, element, offset = 0, className) {
+                if(isInViewport(trigger, offset)) {
+                    element.classList.add(className);
+                } else {
+                    element.classList.remove(className);
+                }
+            }
+
+            let animOffset = 0;
+            if(window.innerWidth <= 800) {
+                animOffset = 100;
+            } else if(window.innerWidth <= 2200) {
+                animOffset = 200;
+            } else if(window.innerWidth <= 3000) {
+                animOffset = 300;
+            } else {
+                animOffset = 400;
+            }
+
+            animOffset = 0;
+            
+            const heroImageTrigger = document.querySelector('.digital-banner__anim-trigger');
+            const heroImage = document.querySelector('.digital-banner__background-image');
+
+            const readTitleTrigger = document.querySelector('.digital-banner__anim-trigger--read-title');
+            const readTitle = document.querySelector('.digital-read__title');
+            const readContent = document.querySelector('.digital-read__container');
+
+            function startAllAnimationsInViewport() {
+                addClassBasedOnScroll(heroImageTrigger, heroImage, animOffset, 'animate__width--active');
+
+                addClassBasedOnScroll(readTitleTrigger, readTitle, animOffset, 'animate__fadeInUp--active');
+                addClassBasedOnScroll(readTitleTrigger, readContent, animOffset, 'animate__fadeIn--active');
+            }
+
+            startAllAnimationsInViewport();
+
+            //throttle scrolling event for performance
+
+            let isScrolling = false;
+            document.addEventListener('scroll', () => {
+                isScrolling = true;
+            });
+
+            setInterval(() => {
+                if(isScrolling) {
+                    isScrolling = false;
+                    startAllAnimationsInViewport();
+                }
+            }, 200);
         });
     </script>
 </body>

@@ -28,7 +28,7 @@
                     Data Room
                 </a>
             </div>
-            <a href="index.html" class="navbar__logo backInRight">
+            <a href="index.html" class="navbar__logo">
                 <img src="./assets/images/oneriver-logo.svg" alt="OneRiver Digital Logo" class="u-image-contain">
             </a>
         </div>
@@ -58,22 +58,18 @@
         </div>
     </nav>
     <header class="home-banner">
-        <div class="home-banner__main fade-in">
+        <div class="home-banner__main">
             <div class="home-banner__content">
-                <h1 class="home-banner__title backInLeft">
+                <h1 class="home-banner__title animate__fadeIn">
                     Alternative Investments for a Changing World
                 </h1>
                 <div class="home-banner__image-container">
-                    <div class="home-banner__image-top fade-in-slow">
-                        <img src="./assets/images/home-banner-r.svg" alt="OneRiver Asset Management"
-                            class="u-image-cover">
-                    </div>
-                    <div class="home-banner__image-background zoom-in">
+                    <div class="home-banner__image-background">
                         <img src="./assets/images/home-banner-background.jpg" alt="OneRiver Asset Management"
                             class="u-image-cover">
                     </div>
                 </div>
-                <div class="home-banner__links fade-in-slow">
+                <div class="home-banner__links">
                     <a href="digital.html" class="home-banner__link">
                         <span>
                             Digital Strategies
@@ -87,19 +83,22 @@
                         <div></div>
                     </a>
                 </div>
+                <div class="home-banner__anim-trigger"></div>
             </div>
         </div>
-        <div class="home-banner__secondary backInRight">
+        <div class="home-banner__secondary">
             <div class="home-banner__secondary-background">
                 <img src="./assets/images/home-banner-secondary.jpg " alt="OneRiver Asset Management"
                     class="u-image-cover">
+                <div class="home-banner__secondary-mask animate__width-reverse"></div>
             </div>
         </div>
     </header>
     <section class="home-section">
         <div class="home-section__main">
-            <div class="home-section__content">
-                <h3 class="home-section__title backInLeft">
+            <div class="home-section__anim-trigger"></div>
+            <div class="home-section__content animate__fadeInUp">
+                <h3 class="home-section__title">
                     One River Asset Management is an innovative investment manager dedicated to delivering high-conviction
                     absolute-return strategies that help our clients build superior portfolios.
                 </h3>
@@ -123,7 +122,7 @@
                 </div>
             </div>
         </div>
-        <div class="home-section__secondary">
+        <div class="home-section__secondary animate__fadeIn">
             <div class="home-section__award">
                 <img src="./assets/images/HFM-US-Quant-Awards-2021-Performance_CustomWinnerLogos14.png"
                     alt="HFM US Quant Awards 2021 Performance" class="u-image-contain">
@@ -133,7 +132,7 @@
                     alt="HFM US Performance Awards Quantitative" class="u-image-contain">
             </div>
         </div>
-        <div href="/" class="home-section__link-container backInLeft">
+        <div href="/" class="home-section__link-container">
             <a href="/" class="home-section__link">
                 Read eric peters whitepaper
                 <br>
@@ -183,12 +182,12 @@
         </div>
         <div class="footer__legal-links">
             <div class="footer__legal-item">
-                <a href="privacypolicy.html" class="footer__legal-link">
+                <a href="/privacypolicy.html" class="footer__legal-link">
                     Privacy
                 </a>
             </div>
             <div class="footer__legal-item">
-                <a href="termsconditions.html" class="footer__legal-link">
+                <a href="/termsconditions.html" class="footer__legal-link">
                     Terms of use
                 </a>
             </div>
@@ -213,19 +212,65 @@
             }
         });
 
-        function isInViewport(element) {
+        //animations
+        function isInViewport(element, offset = 0) {
             const rect = element.getBoundingClientRect();
-            return (
-                rect.top <= (window.innerHeight || document.documentElement.clientHeight)
-            );
+            return (rect.top <= ((window.innerHeight || document.documentElement.clientHeight) - offset)) && rect.bottom > offset;
         }
 
+        function addClassBasedOnScroll(trigger, element, offset = 0, className) {
+            if(isInViewport(trigger, offset)) {
+                element.classList.add(className);
+            } else {
+                element.classList.remove(className);
+            }
+        }
+
+        let animOffset = 0;
+        if(window.innerWidth <= 800) {
+            animOffset = 100;
+        } else if(window.innerWidth <= 2200) {
+            animOffset = 200;
+        } else if(window.innerWidth <= 3000) {
+            animOffset = 300;
+        } else {
+            animOffset = 400;
+        }
+
+        animOffset = 0;
+        
+        const heroImageTrigger = document.querySelector('.home-banner__anim-trigger');
+        const heroImageMask = document.querySelector('.home-banner__secondary-mask');
+        const heroTitle = document.querySelector('.home-banner__title');
+
+        const homeContent = document.querySelector('.home-section__content');
+        const homeAwards = document.querySelector('.home-section__secondary');
+        const homeContentTrigger = document.querySelector('.home-section__anim-trigger');
+
+        function startAllAnimationsInViewport() {
+
+            addClassBasedOnScroll(heroImageTrigger, heroImageMask, animOffset, 'animate__width-reverse--active');
+            addClassBasedOnScroll(heroTitle, heroTitle, animOffset, 'animate__fadeIn--active');
+
+            addClassBasedOnScroll(homeContentTrigger, homeContent, animOffset, 'animate__fadeInUp--active');
+            addClassBasedOnScroll(homeAwards, homeAwards, animOffset, 'animate__fadeIn--active');
+        }
+
+        startAllAnimationsInViewport();
+
+        //throttle scrolling event for performance
+
+        let isScrolling = false;
         document.addEventListener('scroll', () => {
-            if(isInViewport(document.querySelector('.home-section__text')))
-                document.querySelector('.home-section__text').classList.add('fade-in-slow');
-            if(isInViewport(document.querySelector('.home-section__secondary')))
-                document.querySelector('.home-section__secondary').classList.add('backInRight--no-zoom');
+            isScrolling = true;
         });
+
+        setInterval(() => {
+            if(isScrolling) {
+                isScrolling = false;
+                startAllAnimationsInViewport();
+            }
+        }, 200);
     </script>
 </body>
 

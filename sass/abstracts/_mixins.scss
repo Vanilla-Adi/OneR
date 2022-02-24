@@ -11,8 +11,22 @@
     justify-content: center;
 }
 
+@mixin pos-abs-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
 @mixin media-breakpoint-up($breakpoint) {
     
+    @if $breakpoint == xs {
+        @media only screen and (min-width: $breakpoint-xs) {
+            @content
+        };
+    }
+
     @if $breakpoint == sm {
         @media only screen and (min-width: $breakpoint-sm) {
             @content
@@ -39,6 +53,30 @@
 
     @else if $breakpoint == xi {
         @media only screen and (min-width: $breakpoint-xi) {
+            @content
+        };
+    }
+
+    @else if $breakpoint == fhd {
+        @media only screen and (min-width: $breakpoint-fhd) {
+            @content
+        };
+    }
+
+    @else if $breakpoint == tk {
+        @media only screen and (min-width: $breakpoint-2k) {
+            @content
+        };
+    }
+
+    @else if $breakpoint == ik {
+        @media only screen and (min-width: $breakpoint-ik) {
+            @content
+        };
+    }
+
+    @else if $breakpoint == fk {
+        @media only screen and (min-width: $breakpoint-4k) {
             @content
         };
     }

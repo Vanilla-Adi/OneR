@@ -11,6 +11,16 @@
     @include media-breakpoint-up(xi) {
         grid-template-columns: 1fr 550px;
     }
+
+    @include media-breakpoint-up(fhd) {
+        grid-template-columns: 1fr 800px;
+        height: 1200px;
+    }
+
+    @include media-breakpoint-up(tk) {
+        grid-template-columns: 1fr 1100px;
+        height: 1600px;
+    }
     
     &__main {
         z-index: 1;
@@ -47,6 +57,14 @@
 
         @include media-breakpoint-up(1600) {
             height: 720px;
+        }
+
+        @include media-breakpoint-up(fhd) {
+            max-width: 1050px;
+        }
+
+        @include media-breakpoint-up(tk) {
+            max-width: 1650px;
         }
     }
 
@@ -88,6 +106,17 @@
             left: 15rem;
             margin-top: 13rem;
             max-width: 750px;
+        }
+
+        @include media-breakpoint-up(fhd) {
+            font-size: 135px;
+            letter-spacing: 7.2px;
+        }
+
+        @include media-breakpoint-up(tk) {
+            font-size: 180px;
+            letter-spacing: 10.8px;
+            max-width: 100%;
         }
     }
     &__image-container {
@@ -213,6 +242,14 @@
         @include media-breakpoint-up(xl) {
             top: 170px;
         }
+
+        @include media-breakpoint-up(fhd) {
+            top: 230px;
+        }
+
+        @include media-breakpoint-up(tk) {
+            top: 307px;
+        }
     }
 }
 
@@ -220,6 +257,14 @@
 .terms-section {
     display: flexbox;
     padding: 4rem 0;
+
+    @include media-breakpoint-up(tk) {
+        padding: 6rem 0;
+    }
+
+    @include media-breakpoint-up(tk) {
+        padding: 8rem 0;
+    }
 
     &__text {
         font-family: 'Optima';
@@ -232,6 +277,15 @@
         margin-right: 10%;
         margin-left: 10%;
 
+        @include media-breakpoint-up(fhd) {
+            font-size: 24px;
+            letter-spacing: 1.9px;
+        }
+
+        @include media-breakpoint-up(tk) {
+            font-size: 32px;
+            letter-spacing: 2.5px;
+        }
     }
     &__alternate {
         font-weight: bold;
@@ -239,11 +293,30 @@
     &__h {
         color: #ff24B0;
         font-weight: bold;
+        margin-bottom: 16px;
+
+        @include media-breakpoint-up(fhd) {
+            margin-bottom: 24px;
+        }
+
+        @include media-breakpoint-up(tk) {
+            margin-bottom: 32px;
+        }
     }
     &__termsHeader {
         color: #131F58;
         font-family: 'Ivy Mode';
         font-size: 30px;
-        letter-spacing: 60;
+        letter-spacing: 1.8px;
+
+        @include media-breakpoint-up(fhd) {
+            font-size: 45px;
+            letter-spacing: 2.7px;
+        }
+
+        @include media-breakpoint-up(tk) {
+            font-size: 60px;
+            letter-spacing: 3.6px;
+        }
     }
 }

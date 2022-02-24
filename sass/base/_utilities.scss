@@ -14,6 +14,14 @@
     object-fit: cover;
 }
 
+.u-text-white {
+  color: $color-white !important;
+}
+
+.u-text-bold {
+  font-weight: 700 !important;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 10px;

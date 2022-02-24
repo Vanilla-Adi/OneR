@@ -18,10 +18,55 @@
         grid-template-columns: 1fr 750px;
     }
 
+    @include media-breakpoint-up(fhd) {
+        grid-template-columns: 1fr 900px;
+    }
+
+    @include media-breakpoint-up(tk) {
+        grid-template-columns: 1fr 1200px;
+    }
+
     &__main {
         position: relative;
         z-index: 1;
         background-color: $color-dark-secondary;
+    }
+
+    &__main > &__anim-trigger {
+        height: 100%;
+        bottom: 0;
+        
+        @include media-breakpoint-up(lg) {
+            bottom: auto;
+            height: 200px;    
+        }
+    }
+
+    &__background {
+        @include pos-abs-cover;
+        z-index: 0;
+        top: auto;
+        bottom: 0;
+
+        @include media-breakpoint-up(lg) {
+            height: calc(100% - 100px);
+        }
+
+        @include media-breakpoint-up(xi) {
+            height: calc(100% - 170px);
+        }
+
+        @include media-breakpoint-up(fhd) {
+            height: calc(100% - 220px);
+        }
+
+        @include media-breakpoint-up(tk) {
+            height: calc(100% - 300px);
+        }
+    }
+
+    &__anim-trigger {
+        @extend .home-banner__anim-trigger;
     }
 
     &__selector-container {
@@ -33,6 +78,7 @@
         margin-top: 155px;
         margin-left: auto;
         overflow: hidden;
+        z-index: 1;
 
         @include media-breakpoint-up(lg) {
             width: 400px;
@@ -46,6 +92,16 @@
         @include media-breakpoint-up(xi) {
             margin-top: 260px;
         }
+
+        @include media-breakpoint-up(fhd) {
+            margin-top: 330px;
+        }
+
+        @include media-breakpoint-up(tk) {
+            margin-top: 600px;
+            width: 850px;
+            height: 630px;
+        }
     }
 
     &__selector {
@@ -58,7 +114,7 @@
         line-height: 1.85;
         text-transform: uppercase;
         cursor: pointer;
-        color: $color-primary;
+        color: $color-white;
         white-space: nowrap;
 
         & > span {
@@ -69,6 +125,14 @@
 
             @include media-breakpoint-up(xi) {
                 margin-right: 95px;
+            }        
+            
+            @include media-breakpoint-up(fhd) {
+                margin-right: 125px;
+            }        
+            
+            @include media-breakpoint-up(tk) {
+                margin-right: 160px;
             }        
         }
 
@@ -82,10 +146,44 @@
 
         &--bitcoin {
             margin-top: 230px;
+
+            @include media-breakpoint-up(fhd) {
+                margin-top: 285px;
+            }
+
+            @include media-breakpoint-up(tk) {
+                margin-top: 330px;
+            }
         }
 
         &--ethereum {
             margin-top: 32px;
+
+            @include media-breakpoint-up(fhd) {
+                margin-top: 48px;
+            }
+
+            @include media-breakpoint-up(tk) {
+                margin-top: 64px;
+            }
+        }
+
+        @include media-breakpoint-up(fhd) {
+            &,
+            &:link,
+            &:visited {
+                font-size: 22px;
+                letter-spacing: 2.4px;
+            }
+        }
+
+        @include media-breakpoint-up(tk) {
+            &,
+            &:link,
+            &:visited {
+                font-size: 30px;
+                letter-spacing: 3.2px;
+            }
         }
     }
 
@@ -130,6 +228,42 @@
                 left: -55px;
             }   
         }
+
+        @include media-breakpoint-up(fhd) {
+            width: 60px;
+            height: 60px;
+
+
+            &::before {
+                border-width: 2px;
+                width: 36px;
+                height: 36px;
+            }
+
+            &::after {
+                width: 75px;
+                left: -60px;
+                height: 2px;
+            }
+        }
+
+        @include media-breakpoint-up(tk) {
+            width: 80px;
+            height: 80px;
+            right: -40px;
+
+            &::before {
+                border-width: 3px;
+                width: 48px;
+                height: 48px;
+            }
+
+            &::after {
+                width: 95px;
+                left: -80px;
+                height: 3px;
+            }
+        }
     }
 
     &__selector--active {
@@ -147,6 +281,18 @@
         &::after {
             background-color: $color-primary;
             left: 31px;
+        }
+
+        @include media-breakpoint-up(fhd) {
+            &::after {
+                left: 48px;
+            }
+        }
+
+        @include media-breakpoint-up(tk) {
+            &::after {
+                left: 65px;
+            }
         }
     }
 
@@ -173,6 +319,16 @@
             font-size: 90px;
         }
 
+        @include media-breakpoint-up(fhd) {
+            font-size: 120px;
+            max-width: 700px;
+        }
+
+        @include media-breakpoint-up(tk) {
+            font-size: 160px;
+            max-width: 920px;
+        }
+
         &--active {
             right: 40px;
             opacity: 1;
@@ -196,51 +352,18 @@
         }
     }
 
-    &__image {
-        position: absolute;
-        height: auto;
-        width: 300px;
-        top: 450px;
-        left: 0;
-        opacity: 0;
-        z-index: -1;
-
-        @include media-breakpoint-up(sm) {
-            width: 400px;
-            top: 300px;
-        }
-
-        @include media-breakpoint-up(md) {
-            width: 500px;
-            top: 150px;
-        }
-
-        @include media-breakpoint-up(lg) {
-            width: calc(100% - 150px);
-            top: 450px;
-        }
-
-        @include media-breakpoint-up(xl) {
-            width: calc(100% - 150px);
-            top: 450px;
-        }
-
-        @include media-breakpoint-up(xi) {
-            width: calc(100% - 250px);
-            top: 400px;
-        }
-
-        @include media-breakpoint-up(1600) {
-            width: calc(100% - 250px);
-            top: 125px;
-        }
-    }
-
     &__secondary {
         position: relative;
-        background-color: $color-white;
         padding-top: 200px;
-        height: 100vh;
+
+        &::after {
+            content: "";
+            @include pos-abs-cover;
+            top: auto;
+            bottom: 0;
+            background-image: linear-gradient($color-dark-tertiary, #084CE8);
+            z-index: -1;
+        }
 
         @include media-breakpoint-up(sm) {
             padding-top: 150px;
@@ -256,7 +379,7 @@
                 left: 0;
                 width: 100%;
                 height: 100px;
-                background-color: $color-dark-primary;
+                background-color: $color-white;
             }
         }
 
@@ -266,6 +389,33 @@
             &::before {
                 height: 170px;
             }
+
+            &::after {
+                height: calc(100% - 170px);
+            }
+        }
+
+        @include media-breakpoint-up(fhd) {
+
+            &::before {
+                height: 220px;
+            }
+
+            &::after {
+                height: calc(100% - 220px);
+            }
+        }
+
+        @include media-breakpoint-up(tk) {
+            padding-top: 660px;
+
+            &::before {
+                height: 300px;
+            }
+
+            &::after {
+                height: calc(100% - 300px);
+            }
         }
     }
 
@@ -273,7 +423,7 @@
         position: absolute;
         max-width: calc(100% - 32px);
         width: 100%;
-        left: -520px;
+        left: -1000px;
         transition: left $digital-banner-anim-duration $digital-banner-anim-timing;
 
         @include media-breakpoint-up(sm) {
@@ -284,11 +434,22 @@
             max-width: 480px;
         }
 
-        &--active {
-            left: 16px;
+        @include media-breakpoint-up(fhd) {
+            max-width: 720px;
+        }
 
-            @include media-breakpoint-up(sm) {
+        @include media-breakpoint-up(tk) {
+            max-width: 900px;
+        }
+
+        &--active {
+            left: 50%;
+            transform: translateX(-50%);
+            // left: 16px;
+
+            @include media-breakpoint-up(lg) {
                 left: 50px;
+                transform: none;
             }
 
             @include media-breakpoint-up(xl) {
@@ -297,6 +458,14 @@
 
             @include media-breakpoint-up(xi) {
                 left: 100px;
+            }
+
+            @include media-breakpoint-up(fhd) {
+                left: 125px;
+            }
+
+            @include media-breakpoint-up(tk) {
+                left: 200px;
             }
         }
 
@@ -315,7 +484,21 @@
         letter-spacing: 1.8px;
         line-height: 1.53;
         font-weight: 400;
-        color: $color-dark-primary;
+        color: $color-white;
+
+        @include media-breakpoint-up(fhd) {
+            font-size: 45px;
+            max-width: 680px;
+            margin-right: 60px;
+            letter-spacing: 2.4px;
+        }
+
+        @include media-breakpoint-up(tk) {
+            font-size: 60px;
+            max-width: 900px;
+            margin-right: 90px;
+            letter-spacing: 3.2px;
+        }
     }
 
     &__content-text {
@@ -325,11 +508,21 @@
         font-weight: 400;
         letter-spacing: 1.28px;
         line-height: 1.5625;
-        color: $color-gray-dark;
+        color: $color-white;
         margin-top: 32px;
 
         @include media-breakpoint-up(xi) {
             margin-top: 50px;
+        }
+
+        @include media-breakpoint-up(fhd) {
+            font-size: 24px;
+            letter-spacing: 2.2px;
+        }
+
+        @include media-breakpoint-up(tk) {
+            font-size: 30px;
+            letter-spacing: 3.2px;
         }
     }
 
@@ -345,7 +538,7 @@
             letter-spacing: 1.68px;
             line-height: 1.85;
             text-transform: uppercase;
-            color: $color-primary;
+            color: $color-white;
             transition: color .2s ease-in;
             text-decoration: none;
         }
@@ -354,7 +547,27 @@
             &,
             &:link,
             &:visited {
-                margin-top: 65px;
+                margin-top: 48px;
+            }
+        }
+
+        @include media-breakpoint-up(fhd) {
+            &,
+            &:link,
+            &:visited {
+                font-size: 24px;
+                letter-spacing: 2.2px;
+                margin-top: 72px;
+            }
+        }
+
+        @include media-breakpoint-up(tk) {
+            &,
+            &:link,
+            &:visited {
+                font-size: 30px;
+                letter-spacing: 3.2px;
+                margin-top: 90px;
             }
         }
 
@@ -386,14 +599,23 @@
         grid-template-columns: 1fr 750px;
     }
 
+    @include media-breakpoint-up(fhd) {
+        grid-template-columns: 1fr 900px;
+        height: 900px;
+    }
+
+    @include media-breakpoint-up(tk) {
+        grid-template-columns: 1fr 1200px;
+        height: 1300px;
+    }
+
     &__banner {
+        position: relative;
         grid-row: 1;
         height: 100%;
         width: 100%;
-        background-image: url('../../assets/images/digital-background.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
+        background-image: linear-gradient(#084CE8, #60E0ED);
+        z-index: 0;
 
         @include media-breakpoint-up(lg) {
             grid-column: 2;
@@ -405,9 +627,8 @@
         font-size: 48px;
         font-weight: 400;
         letter-spacing: 5.4px;
-        opacity: 0;
         line-height: 1.11;
-        max-width: 405px;
+        max-width: 415px;
         color: $color-white;
         margin: 100px 16px 100px 16px;
 
@@ -420,6 +641,20 @@
         @include media-breakpoint-up(xl) {
             font-size: 90px;
         }
+
+        @include media-breakpoint-up(fhd) {
+            font-size: 120px;
+            margin-left: 160px;
+            margin-top: 255px;
+            max-width: 623px;
+        }
+
+        @include media-breakpoint-up(tk) {
+            font-size: 160px;
+            margin-left: 225px;
+            margin-top: 335px;
+            max-width: 830px;
+        }
     }
 
     &__container {
@@ -428,6 +663,7 @@
         margin-top: 50px;
         height: 480px;
         overflow: hidden;
+        z-index: 1;
 
         @include media-breakpoint-up(lg) {
             height: 100%;
@@ -439,6 +675,15 @@
 
         @include media-breakpoint-up(xl) {
             margin: 220px 0 auto auto;
+        }
+
+        @include media-breakpoint-up(fhd) {
+            margin: 280px 0 auto auto;
+        }
+
+        @include media-breakpoint-up(tk) {
+            margin: 440px 0 auto auto;
+            padding-right: 220px;
         }
     }
 
@@ -495,6 +740,16 @@
         line-height: 1.5625;
         margin-bottom: 24px;
         color: $color-dark-primary;
+
+        @include media-breakpoint-up(fhd) {
+            font-size: 24px;
+            letter-spacing: 2.2px;
+        }
+
+        @include media-breakpoint-up(tk) {
+            font-size: 30px;
+            letter-spacing: 3.2px;
+        }
     }
 
     &__content-text {
@@ -504,6 +759,16 @@
         line-height: 1.5625;
         margin-bottom: 24px;
         color: $color-gray-dark;
+
+        @include media-breakpoint-up(fhd) {
+            font-size: 24px;
+            letter-spacing: 2.2px;
+        }
+
+        @include media-breakpoint-up(tk) {
+            font-size: 30px;
+            letter-spacing: 3.2px;
+        }
     }
     
     &__content-cta {
@@ -515,13 +780,33 @@
             font-weight: 700;
             line-height: 1.68;
             text-transform: uppercase;
-            color: $color-primary;
+            color: $color-secondary;
             transition: .2s ease-in;
             text-decoration: none;
         }
 
         &:hover {
             color: $color-secondary;
+        }
+
+        @include media-breakpoint-up(fhd) {
+            &,
+            &:link,
+            &:visited {
+                font-size: 24px;
+                letter-spacing: 2.2px;
+                margin-top: 72px;
+            }
+        }
+
+        @include media-breakpoint-up(tk) {
+            &,
+            &:link,
+            &:visited {
+                font-size: 30px;
+                letter-spacing: 3.2px;
+                margin-top: 90px;
+            }
         }
     }
 
@@ -541,6 +826,17 @@
             height: auto;
         }
 
+        &::before {
+            content: "";
+            position: absolute;
+            width: 60px;
+            height: 1px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -50px;
+            background-color: $color-dark-secondary;
+        }
+
         &::after {
             content: "";
             position: absolute;
@@ -553,17 +849,6 @@
             border: 1px solid $color-dark-secondary;
         }
 
-        &::before {
-            content: "";
-            position: absolute;
-            width: 60px;
-            height: 1px;
-            top: 50%;
-            transform: translateY(-50%);
-            left: -50px;
-            background-color: $color-dark-secondary;
-        }
-
         &--active > img {
             transform: rotate(180deg);
         }
@@ -573,6 +858,27 @@
             top: 50px;
             right: -21px;
             margin-bottom: 0;
+        }
+
+        @include media-breakpoint-up(tk) {
+            width: 84px;
+            height: 84px;
+
+            & > img {
+                width: 18px;
+            }
+
+            &::before {
+                width: 120px;
+                height: 3px;
+                left: -96px;
+            }
+
+            &::after {
+                height: 42px;
+                width: 42px;
+                border-width: 3px;
+            }
         }
     }
 }
