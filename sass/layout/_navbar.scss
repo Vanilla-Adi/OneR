@@ -142,7 +142,7 @@
             &,
             &:link,
             &:visited {
-                color: $color-primary;
+                color: #0387ff;
             } 
         
             &::after {
@@ -152,7 +152,7 @@
                 height: 1px;
                 left: 0;
                 bottom: -2px;
-                background-color: $color-primary;
+                background-color: #0387ff;
             }
         }
 

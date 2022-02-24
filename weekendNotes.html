@@ -62,11 +62,13 @@
 
     <div class="weekend-content">
       <div class="weekend-content__banner">
-        
+        <div class="weekend-content__banner-image u-image-cover">
+          <img src="./assets/images/bg-weekend-notes.png" alt="Oneriver" class="u-image-cover">
+        </div>
+        <div class="weekend-content__banner-mask animate__width-reverse"></div>
       </div>
-      <div class="weekend-content__row">
+      <div class="weekend-content__row animate__fadeIn">
         <div class="weekend-content__left-panel ">
-          <img src="./assets/images/left-panel-white.svg" class="backInLeft" alt="">
           <div class="weekend-content__left-panel-links backInLeft">
               <div class="weekend-content__selector weekend-content__selector--title">
                   <span>
@@ -106,7 +108,7 @@
               </div>
           </div>
         </div>
-        <div class="weekend-content__content weekend-content__content-weekend weekend-content__content--active backInRight">
+        <div class="weekend-content__content weekend-content__content-weekend weekend-content__content--active">
           <div class="weekend-content__title-active weekend-content__title-active--white">
             Wknd 
           </div>
@@ -153,6 +155,19 @@
               adipiscing elit, sed do eiusmod
               <br>
               <a href="weekendArticle2.html" class="pink-link">
+                Read more
+              </a>
+            </div>
+            <div class="weekend-content__weekend-column">
+              DON'T OVERTHINK THIS <br>
+              JUST JUMP
+              <br>
+              <img src="./assets/images/wknd3.png" alt="">
+              <br>
+              Lorem ipsum dolor sit amet, 
+              adipiscing elit, sed do eiusmod
+              <br>
+              <a href="" class="pink-link">
                 Read more
               </a>
             </div>
@@ -643,6 +658,57 @@
               moibleNavOpen = false;
           }
       });
+
+      //animations
+      function isInViewport(element, offset = 0) {
+            const rect = element.getBoundingClientRect();
+            return (rect.top <= ((window.innerHeight || document.documentElement.clientHeight) - offset)) && rect.bottom > offset;
+        }
+
+        function addClassBasedOnScroll(trigger, element, offset = 0, className) {
+            if(isInViewport(trigger, offset)) {
+                element.classList.add(className);
+            } else {
+                element.classList.remove(className);
+            }
+        }
+
+        let animOffset = 0;
+        if(window.innerWidth <= 800) {
+            animOffset = 100;
+        } else if(window.innerWidth <= 2200) {
+            animOffset = 200;
+        } else if(window.innerWidth <= 3000) {
+            animOffset = 300;
+        } else {
+            animOffset = 400;
+        }
+
+        animOffset = 0;
+        
+        const heroMask = document.querySelector('.weekend-content__banner-mask');
+        const weekendContent = document.querySelector('.weekend-content__row');
+
+        function startAllAnimationsInViewport() {
+            addClassBasedOnScroll(heroMask, heroMask, animOffset, 'animate__width-reverse--active');
+            addClassBasedOnScroll(weekendContent, weekendContent, animOffset, 'animate__fadeIn--active');
+        }
+
+        startAllAnimationsInViewport();
+
+        //throttle scrolling event for performance
+
+        let isScrolling = false;
+        document.addEventListener('scroll', () => {
+            isScrolling = true;
+        });
+
+        setInterval(() => {
+            if(isScrolling) {
+                isScrolling = false;
+                startAllAnimationsInViewport();
+            }
+        }, 200);
     </script>
 </body>
 
