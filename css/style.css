@@ -1185,8 +1185,13 @@ body {
         margin-top: 170px; } }
     @media only screen and (min-width: 1600px) {
       .home-banner__content {
-        height: 720px;
+        height: 720px; } }
+    @media only screen and (min-width: 1680px) {
+      .home-banner__content {
         margin-left: 55px; } }
+    @media only screen and (min-width: 1685px) {
+      .home-banner__content {
+        margin-left: auto; } }
     @media only screen and (min-width: 1921px) {
       .home-banner__content {
         margin-top: 250px;
