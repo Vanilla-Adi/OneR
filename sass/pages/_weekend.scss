@@ -43,6 +43,35 @@
       flex-direction: row;
       margin-top: -170px;
     }
+
+    &--notes {
+      display: grid;
+      flex-direction: unset;
+      grid-template-columns: 1fr;
+
+      @include media-breakpoint-up(lg) {
+        grid-template-columns: 305px 1fr;
+        flex-direction: unset;
+      }
+
+      @include media-breakpoint-up(fhd) {
+        grid-template-columns: 455px 1fr;
+      }
+
+      @include media-breakpoint-up(tk) {
+        grid-template-columns: 610px 1fr;
+      }
+    }
+
+    &--notes > .weekend-content__left-panel {
+      @include media-breakpoint-up(lg) {
+        position: absolute;
+      }
+    }
+
+    &--notes > .weekend-content__content {
+      margin: 0 auto;
+    }
   }
 
   &__left-panel {
@@ -81,7 +110,6 @@
     display: none;
     text-decoration: none;
 
-
     @include media-breakpoint-up(lg) {
       max-width: 1400px;
       margin-left: 100px;
@@ -110,6 +138,24 @@
       @include media-breakpoint-up(tk) {
         padding: 0 30px;
         padding-bottom: 300px;
+      }
+    }
+
+    &--article > .weekend-content__weekend-text,
+    &--article > .weekend-content__title-active {
+      @include media-breakpoint-up(lg) {
+        padding-left: 100px;
+        padding-right: 70px;
+      }
+  
+      @include media-breakpoint-up(fhd) {
+        padding-left: 150px;
+        padding-right: 105px;
+      }
+  
+      @include media-breakpoint-up(tk) {
+        padding-left: 200px;
+        padding-right: 140px;
       }
     }
 
@@ -391,7 +437,7 @@
     margin-top: 30px;
     
     @include media-breakpoint-up(lg) {
-      margin-top: 12%;
+      margin-top: 170px;
     }
   }
 
@@ -537,6 +583,28 @@
     @include media-breakpoint-up(xi) {
       grid-gap: 80px;
     }
+
+    &--vertical {
+      display: flex;
+      grid-template-columns: unset;
+      flex-direction: column;
+      grid-gap: 0;
+      margin-top: 60px;
+      grid-row: 3;
+
+      @include media-breakpoint-up(lg) {
+        grid-row: unset;
+        margin-top: 640px;
+      }
+
+      @include media-breakpoint-up(fhd) {
+        margin-top: 960px;
+      }
+
+      @include media-breakpoint-up(tk) {
+        margin-top: 1280px;
+      }
+    }
   }
 
   &__weekend-column {
@@ -570,18 +638,49 @@
 
     &--active {
       position: relative;
-      &::after {
-          content: "";
-          position: absolute;
-          width: 100px;
-          height: 1px;
-          background-color: $color-primary;
-          top: 10%;
-          transform: translateY(-50%);
-          right: -100px;
-          transition: left $digital-banner-anim-duration $digital-banner-anim-timing, background-color $digital-banner-anim-duration $digital-banner-anim-timing;
+      display: none;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 90px;
+            height: 1px;
+            background-color: $color-primary;
+            top: 45px;
+            transform: translateY(-50%);
+            right: -110px;
+            transition: left $digital-banner-anim-duration $digital-banner-anim-timing, background-color $digital-banner-anim-duration $digital-banner-anim-timing;
+      }
+
+      @include media-breakpoint-up(lg) {
+        display: block;
+      }
     }
-  }
+
+    &--active-mobile {
+      display: block;
+      max-width: 550px;
+      padding: 0 15px;
+      margin: 0 auto;
+
+      &::after {
+        content: none;
+      }
+
+      @include media-breakpoint-up(lg) {
+        display: none;
+      }
+    }
+
+    &--notes {
+      margin-top: 0;
+      max-width: 400px;
+      margin: 25px auto 0;
+
+      @include media-breakpoint-up(lg) {
+        max-width: 100%;
+      }
+    }
   }
 
   .pink-link {

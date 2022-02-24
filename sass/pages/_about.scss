@@ -206,13 +206,14 @@
     &__carousel {
         position: relative;
         max-width: 1590px !important;
-        padding: 0 50px;
+        padding: 0 75px;
         max-height: 420px;
         height: 420px;
         margin: 100px auto 0;
         
         @include media-breakpoint-up(lg) {
             margin: 140px auto 0;
+            padding: 0 50px;
         }
 
         @include media-breakpoint-up(fhd) {
@@ -234,8 +235,8 @@
 
     &__carousel > .slick-arrow {
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 150px;
+        right: 10px;
         font-size: 0;
         width: 13px;
         height: 26px;
@@ -252,6 +253,10 @@
             outline: none;
         }
 
+        @include media-breakpoint-up(sm) {
+            top: 0;
+        }
+
         @include media-breakpoint-up(fhd) {
             width: 26px;
             height: 52px;
@@ -266,7 +271,7 @@
     &__carousel > .slick-arrow.slick-prev {
         transform: rotate(180deg);
         right: unset;
-        left: 0;
+        left: 10px;
     }
 
     &__carousel-item {
