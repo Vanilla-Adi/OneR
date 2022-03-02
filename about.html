@@ -77,7 +77,9 @@
                 </div>
             </div>
             <h1 class="about-banner__title team-selector--current">
-                Our Team
+                <div class="about-banner__title-mask">
+                    <span>Our team</span>
+                </div>
             </h1>
         </div>
 
@@ -243,7 +245,7 @@
             </div>
         </div>
     </header>
-    <section class="about-content">
+    <section class="about-content animate__fadeIn">
         <div class="about-content__carousel-details">
             <div class="about-content__carousel-details-content">
                 <div class="about-content__carousel-title">
@@ -872,6 +874,57 @@
         }
 
         document.head.appendChild(scriptEl);
+
+        //animations
+        function isInViewport(element, offset = 0) {
+                const rect = element.getBoundingClientRect();
+                return (rect.top <= ((window.innerHeight || document.documentElement.clientHeight) - offset)) && rect.bottom > offset;
+            }
+
+            function addClassBasedOnScroll(trigger, element, offset = 0, className) {
+                if(isInViewport(trigger, offset)) {
+                    element.classList.add(className);
+                } else {
+                    element.classList.remove(className);
+                }
+            }
+
+            let animOffset = 0;
+            if(window.innerWidth <= 800) {
+                animOffset = 100;
+            } else if(window.innerWidth <= 2200) {
+                animOffset = 200;
+            } else if(window.innerWidth <= 3000) {
+                animOffset = 300;
+            } else {
+                animOffset = 400;
+            }
+
+            animOffset = 0;
+            
+            const aboutTitle = document.querySelector('.about-banner__title')
+            const aboutContent = document.querySelector('section.about-content');
+
+            function startAllAnimationsInViewport() {
+                addClassBasedOnScroll(aboutContent, aboutContent, animOffset, 'animate__fadeIn--active');
+                addClassBasedOnScroll(aboutTitle, aboutTitle, animOffset, 'about-banner__title--active');
+            }
+
+            startAllAnimationsInViewport();
+
+            //throttle scrolling event for performance
+
+            let isScrolling = false;
+            document.addEventListener('scroll', () => {
+                isScrolling = true;
+            });
+
+            setInterval(() => {
+                if(isScrolling) {
+                    isScrolling = false;
+                    startAllAnimationsInViewport();
+                }
+            }, 200);
     </script>
 </body>
 

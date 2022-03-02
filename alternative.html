@@ -79,10 +79,20 @@
             <div class="alternative-content__row">
                 <div class="alternative-content__left-panel">
                     <div class="alternative-content__anim-trigger"></div>
+                    <div class="alternative-content__video-container">
+                        <video width="674" height="722" class="u-image-cover" loop playsinline autoplay muted preload="metadata" poster="https://bowberes.sirv.com/OneRiver/Left_60fps.mp4?thumbnail=674">
+                            <source src="https://bowberes.sirv.com/OneRiver/Left_60fps.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                     <div class="alternative-content__mask animate__width-reverse"></div>
                     <h1 class="alternative-content__left-panel-title">
-                        Alternative <br />
-                        Strategies
+                        <div class="alternative-content__title-mask">
+                            <span>Alternative</span>
+                        </div>
+                        <div class="alternative-content__title-mask">
+                            <span>Strategies</span>
+                        </div>
                     </h1>
                     <div class="alternative-content__left-panel-links">
                         <div
@@ -298,11 +308,13 @@
 
                 <div class="alternative-content__col-left alternative-content__col-left--bottom">
                     <div class="alternative-content__anim-trigger alternative-content__anim-trigger--deeper"></div>
-                    <div
-                        class="alternative-content__have-you-read-left animate__fadeInUp">  
-                        A Deeper <br />
-                        dive
-
+                    <div class="alternative-content__have-you-read-left">  
+                        <div class="alternative-content__title-mask">
+                            <span>A Deeper</span>
+                        </div>
+                        <div class="alternative-content__title-mask">
+                            <span>Dive</span>
+                        </div>
                         <div class="alternative-content__content-toggle">
                             <img
                                 src="./assets/images/arrow-white.svg"
@@ -311,40 +323,42 @@
                         </div>
                     </div>
                 </div>
-                <div class="alternative-content__col-right--no-animation animate__fadeIn">
-                    <div class="alternative-content__have-you-read-right alternative-content__have-you-read-right--active">
-                        <p class="alternative-content__title u-text-white">
-                            Improving the Industry’s Dominant Portfolios
+                <div class="alternative-content__col-right--no-animation">
+                    <div class="alternative-content__col-right-anim animate__fadeIn">
+                        <div class="alternative-content__have-you-read-right alternative-content__have-you-read-right--active">
+                            <p class="alternative-content__title u-text-white">
+                                Improving the Industry’s Dominant Portfolios
+                            </p>
+                            <p class="alternative-content__paragraph u-text-white">
+                                We explore a positive-expectancy portfolio overlay that is negatively-correlated to risk assets. We first published the
+                                research last April and have updated it following the dramatic Q1 2020 real-time stress-test. With US treasury yields so
+                                close to zero, and thus unable to provide a material offset to equity/credit risk, never has this overlay been so vital
+                                in the construction of durable portfolios…
+                            </p>
+    
+                            <a href="" class="pink-link u-text-white" style="font-weight: bold;">
+                              VIEW RESEARCH PAPER
+                            </a>
+                        </div>
+                        <div class="alternative-content__have-you-read-right--slide">
+                          <p class="alternative-content__title u-text-white">
+                            Observations on Post-Covid Inflation Data
+                          </p>
+                          <p class="alternative-content__paragraph u-text-white" style="margin-bottom: 15px;">
+                            We’ve received two months of inflation data since the coronavirus shut down and they paint an interesting picture of the
+                            economy. The impact is broadly but not exclusively deflationary. It’s these divergences that tell a story of a recession
+                            very different from those in recent history. Historically recessions have been broad based demand destructions but
+                            recent data reflect something more complex…We’ve received two months of inflation data since the coronavirus shut down
+                            and they paint an interesting picture of the economy. The impact is broadly but not exclusively deflationary. It’s these
+                            divergences that tell a story of a recession very different from those in recent history. Historically recessions have
+                            been broad based demand destructions but recent data reflect something more complex…
                         </p>
-                        <p class="alternative-content__paragraph u-text-white" style="margin-bottom: 15px;">
-                            We explore a positive-expectancy portfolio overlay that is negatively-correlated to risk assets. We first published the
-                            research last April and have updated it following the dramatic Q1 2020 real-time stress-test. With US treasury yields so
-                            close to zero, and thus unable to provide a material offset to equity/credit risk, never has this overlay been so vital
-                            in the construction of durable portfolios…
-                        </p>
-
-                        <a href="" class="pink-link u-text-white" style="font-weight: bold;">
-                          VIEW RESEARCH PAPER
-                        </a>
+    
+                          <a href="" class="pink-link u-text-white" style="font-weight: bold;">
+                            VIEW RESEARCH PAPER
+                          </a>
+                        </div>
                     </div>
-                    <div class="alternative-content__have-you-read-right--slide">
-                      <p class="alternative-content__title u-text-white">
-                        Observations on Post-Covid Inflation Data
-                      </p>
-                      <p class="alternative-content__paragraph u-text-white" style="margin-bottom: 15px;">
-                        We’ve received two months of inflation data since the coronavirus shut down and they paint an interesting picture of the
-                        economy. The impact is broadly but not exclusively deflationary. It’s these divergences that tell a story of a recession
-                        very different from those in recent history. Historically recessions have been broad based demand destructions but
-                        recent data reflect something more complex…We’ve received two months of inflation data since the coronavirus shut down
-                        and they paint an interesting picture of the economy. The impact is broadly but not exclusively deflationary. It’s these
-                        divergences that tell a story of a recession very different from those in recent history. Historically recessions have
-                        been broad based demand destructions but recent data reflect something more complex…
-                    </p>
-
-                      <a href="" class="pink-link u-text-white" style="font-weight: bold;">
-                        VIEW RESEARCH PAPER
-                      </a>
-                  </div>
                 </div>
             </div>
         </div>
@@ -477,13 +491,11 @@
                     readContent1.classList.remove('alternative-content__have-you-read-right--active');
                     readContent2.classList.add('alternative-content__have-you-read-right--active');
                     readContentToggle.classList.add('alternative-content__content-toggle--active');
-                    readContent2.classList.add('fadeInUp');
                     readContentId = 2;
                 } else {
                     readContent1.classList.add('alternative-content__have-you-read-right--active');
                     readContent2.classList.remove('alternative-content__have-you-read-right--active');
                     readContentToggle.classList.remove('alternative-content__content-toggle--active');
-                    readContent1.classList.add('fadeInUp');
                     readContentId = 1;
                 }
             });
@@ -534,6 +546,7 @@
 
             animOffset = 0;
             
+            const heroTitle = document.querySelector('.alternative-content__left-panel-title');
             const heroImageTrigger = document.querySelector('.alternative-content__anim-trigger');
             const heroImageMask = document.querySelector('.alternative-content__mask');
 
@@ -541,7 +554,7 @@
             const weBuildText = document.querySelector('.alternative-content__our-alternative');
 
             const deeperTitle = document.querySelector('.alternative-content__have-you-read-left');
-            const deeperContent = document.querySelector('.alternative-content__col-right--no-animation');
+            const deeperSlideAnim = document.querySelector('.alternative-content__col-right-anim');
             const deeperTitleTrigger = document.querySelector('.alternative-content__anim-trigger--deeper');
 
             function startAllAnimationsInViewport() {
@@ -550,8 +563,10 @@
                 addClassBasedOnScroll(weBuildTitle, weBuildTitle, animOffset, 'animate__fadeIn--active');
                 addClassBasedOnScroll(weBuildText, weBuildText, animOffset, 'animate__fadeIn--active');
 
-                addClassBasedOnScroll(deeperTitleTrigger, deeperTitle, animOffset, 'animate__fadeInUp--active');
-                addClassBasedOnScroll(deeperContent, deeperContent, animOffset, 'animate__fadeIn--active');
+                addClassBasedOnScroll(deeperTitle, deeperTitle, animOffset, 'alternative-content__have-you-read-left--active');
+                addClassBasedOnScroll(deeperSlideAnim, deeperSlideAnim, animOffset, 'animate__fadeIn--active');
+
+                addClassBasedOnScroll(heroTitle, heroTitle, animOffset, 'alternative-content__left-panel-title--active')
             }
 
             startAllAnimationsInViewport();

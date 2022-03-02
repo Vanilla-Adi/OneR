@@ -63,16 +63,22 @@
     </nav>
     <!-- END NAVBAR -->
     <header class="privacy-banner">
-        <div class="privacy-banner__main fade-in">
+        <div class="privacy-banner__main">
             <div class="privacy-banner__content">
-                <h1 class="privacy-banner__title backInLeft">
-                    TERMS OF USE
+                <h1 class="privacy-banner__title">
+                    <div class="privacy-banner__title-mask">
+                        <span>Terms of Use</span>
+                    </div>
                 </h1>
             </div>
         </div>
         <div class="privacy-banner__secondary backInRight">
             <div class="privacy-banner__secondary-background">
-                <img src="./assets/images/home-banner-secondary.jpg " alt="OneRiver Asset Management" class="u-image-cover" >
+                <video width="674" height="722" class="u-image-cover" loop playsinline autoplay muted preload="metadata" poster="https://bowberes.sirv.com/OneRiver/Left_60fps.mp4?thumbnail=674">
+                    <source src="https://bowberes.sirv.com/OneRiver/Left_60fps.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="privacy-banner__video-mask animate__width-reverse"></div>
             </div>
         </div>
     </header>
@@ -82,7 +88,7 @@
 
 
     <section class="privacy-section">
-        <div class="privacy-section__content">
+        <div class="privacy-section__content animate__fadeIn">
             <h3 class="privacy-section__title">
                 One River Asset Management, LLC | Terms of Use
             </h3>
@@ -248,6 +254,59 @@
                 moibleNavOpen = false;
             }
         });
+        
+        //animations
+        function isInViewport(element, offset = 0) {
+            const rect = element.getBoundingClientRect();
+            return (rect.top <= ((window.innerHeight || document.documentElement.clientHeight) - offset)) && rect.bottom > offset;
+        }
+
+        function addClassBasedOnScroll(trigger, element, offset = 0, className) {
+            if(isInViewport(trigger, offset)) {
+                element.classList.add(className);
+            } else {
+                element.classList.remove(className);
+            }
+        }
+
+        let animOffset = 0;
+        if(window.innerWidth <= 800) {
+            animOffset = 100;
+        } else if(window.innerWidth <= 2200) {
+            animOffset = 200;
+        } else if(window.innerWidth <= 3000) {
+            animOffset = 300;
+        } else {
+            animOffset = 400;
+        }
+
+        animOffset = 0;
+        
+        const videoMask = document.querySelector('.privacy-banner__video-mask');
+        const heroTitle = document.querySelector('.privacy-banner__title');
+        const content = document.querySelector('.privacy-section__content');
+
+        function startAllAnimationsInViewport() {
+            addClassBasedOnScroll(videoMask, videoMask, animOffset, 'animate__width-reverse--active');
+            addClassBasedOnScroll(heroTitle, heroTitle, animOffset, 'privacy-banner__title--active');
+            addClassBasedOnScroll(content, content, animOffset, 'animate__fadeIn--active');
+        }
+
+        startAllAnimationsInViewport();
+
+        //throttle scrolling event for performance
+
+        let isScrolling = false;
+        document.addEventListener('scroll', () => {
+            isScrolling = true;
+        });
+
+        setInterval(() => {
+            if(isScrolling) {
+                isScrolling = false;
+                startAllAnimationsInViewport();
+            }
+        }, 200);
     </script>
 </body>
 </html>

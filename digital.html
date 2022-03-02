@@ -15,7 +15,7 @@
     <nav class="navbar">
         <div class="navbar__container navbar__container--digital">
             <div class="navbar__menu">
-                <a href="/digital.html" class="navbar__menu-item navbar__menu-item--active">
+                <a href="/digital.html" class="navbar__menu-item navbar__menu-item--active navbar__menu-item--active-lumo">
                     Digital
                 </a>
                 <a href="/alternative.html" class="navbar__menu-item">
@@ -47,7 +47,7 @@
             </div>
         </div>
         <div class="navbar-mobile__menu-items">
-            <a href="/digital.html" class="navbar__menu-item navbar__menu-item--active ">
+            <a href="/digital.html" class="navbar__menu-item navbar__menu-item--active navbar__menu-item--active-lumo">
                 Digital
             </a>
             <a href="/alternative.html" class="navbar__menu-item">
@@ -65,15 +65,28 @@
         <div class="digital-banner__main">
             <div class="digital-banner__anim-trigger"></div>
             <div class="digital-banner__background">
-                <div class="digital-banner__background-image animate__width u-image-cover">
-                    <img src="./assets/images/digital-banner.png" alt="OneRiver Digital" class="u-image-cover">
+                <div class="digital-banner__background-video digital-banner__background-video--active digital-banner__background-video--digital u-image-cover">
+                    <video width="840" height="740" class="u-image-cover" loop playsinline autoplay muted preload="metadata" poster="https://bowberes.sirv.com/OneRiver/Digital%20Strategies_60fps.mp4?thumbnail=840">
+                        <source src="https://bowberes.sirv.com/OneRiver/Digital%20Strategies_60fps.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
+                <div class="digital-banner__background-video digital-banner__background-video--general u-image-cover">
+                    <video width="1170" height="910" class="u-image-cover" loop playsinline autoplay muted preload="metadata" poster="https://bowberes.sirv.com/OneRiver/Ethereum_Short_60fps.mp4?thumbnail=1170">
+                        <source src="https://bowberes.sirv.com/OneRiver/Ethereum_Short_60fps.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="digital-banner__video-mask animate__width-reverse"></div>
             </div>
             <div class="digital-banner__selector-container">
-                <h1
-                    class="digital-banner__main-title digital-banner__main-title--digital digital-banner__main-title--digital-active">
-                    Digital
-                    Strategies
+                <h1 class="digital-banner__main-title digital-banner__main-title--digital digital-banner__main-title--digital-active">
+                    <div class="digital-banner__title-mask">
+                        <span>Digital</span>
+                    </div>
+                    <div class="digital-banner__title-mask">
+                        <span>Strategies</span>
+                    </div>
                 </h1>
                 <h1 class="digital-banner__main-title digital-banner__main-title--bitcoin">
                     Bitcoin
@@ -183,8 +196,13 @@
             </div>
         </div>
         <div class="digital-read__banner">
-            <h1 class="digital-read__title animate__fadeInUp">
-                A Deeper Dive
+            <h1 class="digital-read__title">
+                <div class="digital-read__title-mask">
+                    <span>A Deeper</span>
+                </div>
+                <div class="digital-read__title-mask">
+                    <span>Dive</span>
+                </div>
             </h1>
             <span class="digital-banner__anim-trigger digital-banner__anim-trigger--read-title"></span>
         </div>
@@ -278,6 +296,9 @@
             const selectorBitcoin = document.querySelector('.digital-banner__selector--bitcoin');
             const selectorEthereum = document.querySelector('.digital-banner__selector--ethereum');
 
+            const videoGeneral = document.querySelector('.digital-banner__background-video--general');
+            const videoDigital = document.querySelector('.digital-banner__background-video--digital');
+
             const titleDigital = document.querySelector('.digital-banner__main-title--digital');
             const titleBitcoin = document.querySelector('.digital-banner__main-title--bitcoin');
             const titleEthereum = document.querySelector('.digital-banner__main-title--ethereum');
@@ -298,6 +319,9 @@
                 contentDigital.classList.remove('digital-banner__content--active');
                 contentBitcoin.classList.remove('digital-banner__content--active');
                 contentEthereum.classList.remove('digital-banner__content--active');
+
+                videoGeneral.classList.remove('digital-banner__background-video--active');
+                videoDigital.classList.remove('digital-banner__background-video--active');
             }
 
             function isInViewport(element) {
@@ -313,7 +337,7 @@
                     selectorDigital.classList.add('digital-banner__selector--active');
                     titleDigital.classList.add('digital-banner__main-title--digital-active');
                     contentDigital.classList.add('digital-banner__content--active');
-                    console.log(contentDigital);
+                    videoDigital.classList.add('digital-banner__background-video--active');
                 }
             });
 
@@ -323,7 +347,7 @@
                     selectorBitcoin.classList.add('digital-banner__selector--active');
                     titleBitcoin.classList.add('digital-banner__main-title--active');
                     contentBitcoin.classList.add('digital-banner__content--active');
-                    console.log(contentBitcoin);
+                    videoGeneral.classList.add('digital-banner__background-video--active');
                 }
             });
 
@@ -333,7 +357,7 @@
                     selectorEthereum.classList.add('digital-banner__selector--active');
                     titleEthereum.classList.add('digital-banner__main-title--active');
                     contentEthereum.classList.add('digital-banner__content--active');
-                    console.log(contentEthereum);
+                    videoGeneral.classList.add('digital-banner__background-video--active');
                 }
             });
 
@@ -390,16 +414,19 @@
             animOffset = 0;
             
             const heroImageTrigger = document.querySelector('.digital-banner__anim-trigger');
-            const heroImage = document.querySelector('.digital-banner__background-image');
+            const heroImageMask = document.querySelector('.digital-banner__video-mask');
+            const heroTitleDigital = document.querySelector('.digital-banner__main-title--digital');
+            const heroTitleBitcoin = document.querySelector('.digital-banner__main-title--bitcoin');
+            const heroTitleEthereum = document.querySelector('.digital-banner__main-title--ethereum');
 
             const readTitleTrigger = document.querySelector('.digital-banner__anim-trigger--read-title');
             const readTitle = document.querySelector('.digital-read__title');
             const readContent = document.querySelector('.digital-read__container');
 
             function startAllAnimationsInViewport() {
-                addClassBasedOnScroll(heroImage, heroImage, animOffset, 'animate__width--active');
+                addClassBasedOnScroll(heroImageMask, heroImageMask, animOffset, 'animate__width-reverse--active');
 
-                addClassBasedOnScroll(readTitleTrigger, readTitle, animOffset, 'animate__fadeInUp--active');
+                addClassBasedOnScroll(readTitleTrigger, readTitle, animOffset, 'digital-read__title--active');
                 addClassBasedOnScroll(readTitleTrigger, readContent, animOffset, 'animate__fadeIn--active');
             }
 

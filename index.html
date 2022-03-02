@@ -39,7 +39,7 @@
                 <img src="./assets/images/oneriver-logo-light.svg" alt="OneRiver Digital Logo" class="u-image-contain">
             </div>
             <div class="navbar-mobile__toggle">
-                <div class="navbar-mobile__toggle-icon"></div>
+                <img src="./assets/images/navbar-icon-dark-primary.svg" alt="Menu" class="u-image-contain">
             </div>
         </div>
         <div class="navbar-mobile__menu-items">
@@ -60,14 +60,35 @@
     <header class="home-banner">
         <div class="home-banner__main">
             <div class="home-banner__content">
-                <h1 class="home-banner__title animate__fadeIn">
-                    Alternative Investments for a Changing World
-                </h1>
-                <div class="home-banner__image-container">
-                    <div class="home-banner__image-background">
-                        <img src="./assets/images/home-banner-background.jpg" alt="OneRiver Asset Management"
-                            class="u-image-cover">
+                <h1 class="home-banner__title">
+                    <div class="home-banner__title-mask">
+                        <span>Alternative</span>
                     </div>
+                    <div class="home-banner__title-mask">
+                        <span>Investments</span>
+                    </div>
+                    <div class="home-banner__title-mask">
+                        <span>for a Changing</span>
+                    </div>
+                    <div class="home-banner__title-mask">
+                        <span>World</span>
+                    </div>
+                </h1>
+                <div class="home-banner__video-container">
+                    <video width="674" height="722" class="u-image-cover" loop playsinline autoplay muted preload="metadata" poster="https://bowberes.sirv.com/OneRiver/Left_60fps.mp4?thumbnail=674">
+                        <source src="https://bowberes.sirv.com/OneRiver/Left_60fps.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>                   
+                    <div class="home-banner__video-mask animate__width-reverse"></div>
+                </div>
+                <div class="home-banner__mobile-video">
+                    <video width="550" height="1080" class="u-image-cover" loop playsinline autoplay muted preload="metadata" poster="https://bowberes.sirv.com/OneRiver/Right_60fps.mp4?thumbnail=550">
+                        <source src="https://bowberes.sirv.com/OneRiver/Right_60fps.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="home-banner__mobile-text">
+                    One River Asset Management is an innovative investment manager dedicated to delivering high-conviction absolute-return strategies that help our clients build superior portfolios. 
                 </div>
                 <div class="home-banner__links">
                     <a href="digital.html" class="home-banner__link">
@@ -88,8 +109,10 @@
         </div>
         <div class="home-banner__secondary">
             <div class="home-banner__secondary-background">
-                <img src="./assets/images/home-banner-secondary.jpg " alt="OneRiver Asset Management"
-                    class="u-image-cover">
+                <video width="550" height="1080" class="u-image-cover" loop playsinline autoplay muted preload="metadata" poster="https://bowberes.sirv.com/OneRiver/Right_60fps.mp4?thumbnail=550">
+                    <source src="https://bowberes.sirv.com/OneRiver/Right_60fps.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
                 <div class="home-banner__secondary-mask animate__width-reverse"></div>
             </div>
         </div>
@@ -97,7 +120,7 @@
     <section class="home-section">
         <div class="home-section__main">
             <div class="home-section__anim-trigger"></div>
-            <div class="home-section__content animate__fadeInUp">
+            <div class="home-section__content animate__fadeIn">
                 <h3 class="home-section__title">
                     One River Asset Management is an innovative investment manager dedicated to delivering high-conviction
                     absolute-return strategies that help our clients build superior portfolios.
@@ -168,6 +191,9 @@
                     <span class="footer__contact-info">
                         FINRA: 167835
                     </span>
+                </div>
+                <div class="footer__text footer__text--small footer__text--small-mobile">
+                    © 2020 One River Asset Management. All Rights Reserved.
                 </div>
             </div>
             <div class="footer__text-container">
@@ -242,6 +268,7 @@
         const heroImageTrigger = document.querySelector('.home-banner__anim-trigger');
         const heroImageMask = document.querySelector('.home-banner__secondary-mask');
         const heroTitle = document.querySelector('.home-banner__title');
+        const heroMask = document.querySelector('.home-banner__video-mask');
 
         const homeContent = document.querySelector('.home-section__content');
         const homeAwards = document.querySelector('.home-section__secondary');
@@ -250,9 +277,10 @@
         function startAllAnimationsInViewport() {
 
             addClassBasedOnScroll(heroImageMask, heroImageMask, animOffset, 'animate__width-reverse--active');
-            addClassBasedOnScroll(heroTitle, heroTitle, animOffset, 'animate__fadeIn--active');
+            addClassBasedOnScroll(heroTitle, heroTitle, animOffset, 'home-banner__title--active');
+            addClassBasedOnScroll(heroMask, heroMask, animOffset, 'animate__width-reverse--active');
 
-            addClassBasedOnScroll(homeContentTrigger, homeContent, animOffset, 'animate__fadeInUp--active');
+            addClassBasedOnScroll(homeContentTrigger, homeContent, animOffset, 'animate__fadeIn--active');
             addClassBasedOnScroll(homeAwards, homeAwards, animOffset, 'animate__fadeIn--active');
         }
 
