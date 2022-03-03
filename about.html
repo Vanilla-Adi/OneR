@@ -10,9 +10,13 @@
     <link rel="stylesheet" href="./assets/fonts/IvyMode/index.css">
     <link rel="stylesheet" href="./assets/fonts/Optima/index.css">
     <title>One River - About</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 </head>
 
-<body>
+<body class="">
     <nav class="navbar">
         <div class="navbar__container">
             <div class="navbar__menu">
@@ -60,7 +64,7 @@
             </a>
         </div>
     </nav>
-    <header class="about-banner">
+    <header class="about-banner fadeIn1">
         <div class="about-banner__title-container">
             <div class="about-banner__selectors-container">
                 <div class="about-banner__selector team-selector--active team-selector--team">
@@ -310,13 +314,9 @@
                     <div class="about-contact__group-title">
                         Other offices
                     </div>
-                    One River Asset Management, LLC
+                    Santa Barbara, CA
                     <br>
-                    525 East Micheltorena Street, Suite B
-                    <br>
-                    Santa Barbara, CA 93103
-                    <br>
-                    (805) 695-7340
+                    Toronto, Canada
                 </div>
             </div>
             <div class="about-contact__map" id="about-contact-map">
@@ -376,10 +376,32 @@
             </div>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
     <script>
+        $('.about-banner__carousel--team').slick({
+            centerMode: true,
+            slidesToShow: 5,
+            centerPadding: '0',
+            focusOnSelect: true,
+            responsive: [{
+                    breakpoint: 1000,
+                    settings: {
+                        arrows: true,
+                        centerMode: true,
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 700,
+                    settings: {
+                        arrows: true,
+                        centerMode: true,
+                        slidesToShow: 3
+                    }
+                }
+            ]
+        });
+
         window.addEventListener('load', () => {
 
             //mobile nav
@@ -488,30 +510,6 @@
                 $('.about-banner__carousel--academic').slick("slickGoTo", 0);
 
             });
-
-            $('.about-banner__carousel--team').slick({
-                centerMode: true,
-                slidesToShow: 5,
-                centerPadding: '0',
-                focusOnSelect: true,
-                responsive: [{
-                        breakpoint: 1000,
-                        settings: {
-                            arrows: true,
-                            centerMode: true,
-                            slidesToShow: 3
-                        }
-                    },
-                    {
-                        breakpoint: 700,
-                        settings: {
-                            arrows: true,
-                            centerMode: true,
-                            slidesToShow: 1
-                        }
-                    }
-                ]
-            });
         });
 
         // ourTeam array
@@ -563,13 +561,14 @@
                 "role": "Head of Wealth One River Digital",
                 "description": `Ian became the Head of Wealth of One River Digital in January 2022. Ian will oversee client relationships, business development and strategic relationships in the wealth channel. Ian leverages over 20 years of experience in institutional investing and alternative strategies. Prior to One River Digital, Ian was an Executive Director on the US Wealth team at AQR Capital Management, beginning in 2015. In this role, he managed strategic client relationships and provided clients with insights & perspectives regarding portfolio construction, asset allocation and investment strategies. Prior to AQR, Ian worked at Bank of America and Credit Suisse as a Director in Equity Sales and as an Equity Research Associate. Ian holds a B.A. in Economics and Spanish from Middlebury College. Ian is a CFA charterholder.`,
             },
-            {
-                "name": "Chris Lawn",
-                "role": "Digital Trading and Operations",
-                "description": `Chris Lawn has nearly three decades of hedge fund experience with a focus on discretionary trading, quantitative trading, and digital assets. His experience with established funds such as Moore Capital and Caxton Associates prepared Chris for various startup ventures where he built and managed trading desks and portfolios. For the past four years, Chris has focused on digital asset trading infrastructure and asset management, including the operational design from the point of a trade to internal risk controls. Chris began his career with Coopers & Lybrand and is a CPA.
-                <br><br>
-                Chris is a graduate of Fordham University with a B.S. in Accounting and is currently pursuing a Masters of Law in Corporate Compliance at Fordham Law School.`,
-            },
+            // REMOVED
+            // {
+            //     "name": "Chris Lawn",
+            //     "role": "Digital Trading and Operations",
+            //     "description": `Chris Lawn has nearly three decades of hedge fund experience with a focus on discretionary trading, quantitative trading, and digital assets. His experience with established funds such as Moore Capital and Caxton Associates prepared Chris for various startup ventures where he built and managed trading desks and portfolios. For the past four years, Chris has focused on digital asset trading infrastructure and asset management, including the operational design from the point of a trade to internal risk controls. Chris began his career with Coopers & Lybrand and is a CPA.
+            //     <br><br>
+            //     Chris is a graduate of Fordham University with a B.S. in Accounting and is currently pursuing a Masters of Law in Corporate Compliance at Fordham Law School.`,
+            // },
             {
                 "name": "Yuying Chen",
                 "role": "Quantitative Researcher",

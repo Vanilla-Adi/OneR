@@ -41,7 +41,7 @@
               </a>  
             </div>
             <div class="navbar-mobile__toggle">
-                <div class="navbar-mobile__toggle-icon"></div>
+                <img src="./assets/images/navbar-icon-dark-primary.svg" alt="Menu" class="u-image-contain">
             </div>
         </div>
         <div class="navbar-mobile__menu-items">
@@ -63,15 +63,36 @@
     <div class="weekend-content">
       <div class="weekend-content__banner">
         <div class="weekend-content__banner-image u-image-cover">
+<<<<<<< Updated upstream
+          <video width="1920" height="390" class="u-image-cover no-display-under-991" loop playsinline autoplay muted preload="metadata" poster="https://bowberes.sirv.com/OneRiver/Data%20room_60fps_V2.1.mp4?thumbnail=1920">
+            <source src="https://bowberes.sirv.com/OneRiver/Data%20room_60fps_V2.1.mp4" type="video/mp4">
+=======
           <video width="1920" height="390" class="u-image-cover" loop playsinline autoplay muted preload="metadata" poster="https://letivesi.sirv.com/Data%20Room_60fps_V3.mp4?thumbnail=1920">
             <source src="https://letivesi.sirv.com/Data%20Room_60fps_V3.mp4" type="video/mp4">
+>>>>>>> Stashed changes
             Your browser does not support the video tag.
           </video>
+          <video width="674" height="722" class="u-image-cover display-under-991" loop playsinline autoplay muted preload="metadata" poster="https://bowberes.sirv.com/OneRiver/Left_60fps.mp4?thumbnail=674">
+            <source src="https://bowberes.sirv.com/OneRiver/Left_60fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>  
         </div>
         <div class="weekend-content__banner-mask animate__width-reverse"></div>
       </div>
       <div class="weekend-content__row">
         <div class="weekend-content__left-panel ">
+          <h1 class="weekend-content__title display-under-991" style="
+              margin-top: 14vh;
+              color: white;
+              text-align: right;
+              margin-bottom: 60px;">
+            <div class="weekend-content__title-mask">
+              <span>Wknd</span>
+            </div>
+            <div class="weekend-content__title-mask">
+                <span>Notes</span>
+            </div>
+          </h1>
           <div class="weekend-content__left-panel-links backInLeft">
               <div class="weekend-content__selector weekend-content__selector--title">
                   <span>
@@ -112,7 +133,7 @@
           </div>
         </div>
         <div class="weekend-content__content weekend-content__content-weekend weekend-content__content--active">
-          <h1 class="weekend-content__title">
+          <h1 class="weekend-content__title no-display-under-991">
             <div class="weekend-content__title-mask">
               <span>Wknd</span>
             </div>
@@ -620,16 +641,25 @@
         selector.classList.add('weekend-content__selector--active');
         let content = document.querySelector('.weekend-content__content-'+section);
         content.classList.add('weekend-content__content--active');
-        content.style.animation = "fade-in 1.5s";
+        // content.style.animation = "fade-in 1.5s";
 
         let titles = document.querySelectorAll('.weekend-content__title-mask');
         titles.forEach((title) => {
+          title.getElementsByTagName('span')[0].style.transitionDelay = '1s';
+          title.getElementsByTagName('span')[0].style.transitionDuration = '1s';
           title.getElementsByTagName('span')[0].style.transform = 'translateY(100%)';
-          title.getElementsByTagName('span')[0].style.transitionDuration = "1.2s";
+          document.querySelectorAll('.weekend-content__content').forEach((content) => {
+            content.classList.remove('fadeIn1');
+            content.style.opacity = 0;
+          });
         });
         setTimeout(() => {
           titles.forEach((title) => {
+            title.getElementsByTagName('span')[0].style.transitionDelay = '1s';
+            title.getElementsByTagName('span')[0].style.transitionDuration = '1s';
             title.getElementsByTagName('span')[0].style.transform = 'translateY(0%)';
+            document.querySelector('.weekend-content__content--active').classList.add('fadeIn1');
+            content.style.opacity = 1;
           });
         }, 200);
         // document.querySelector(".weekend-content__left-panel-links").style.animation="fadeOutIn 2s ";
@@ -760,9 +790,12 @@
           // pot the articles inside the row
           var col = document.createElement('div');
           col.classList.add('weekend-content__weekend-column');
+          col.style.fontWeight = '100';
           row.appendChild(col);
 
           var title = document.createElement('p');
+          title.style.textTransform = 'uppercase';
+          title.style.fontWeight = 'bold';
           title.innerHTML = articles[j].title;
           title.style.minHeight = '64px';
           col.appendChild(title);
@@ -779,6 +812,8 @@
           var a = document.createElement('a');
           a.href = "./weekendArticle.html?articleId="+j;
           a.classList.add('pink-link');
+          a.style.textTransform = 'uppercase';
+          a.style.fontWeight = 'bold';
           a.innerHTML = 'Read more';
           col.appendChild(a);
 
