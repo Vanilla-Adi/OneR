@@ -1864,12 +1864,13 @@ body {
     font-family: 'Optima';
     font-size: 14px;
     letter-spacing: 1.28px;
-    line-height: 1.5625;
+    line-height: 1.1;
     color: #09102E;
     font-weight: 400;
     margin: 0 50px; }
     @media only screen and (min-width: 576px) {
       .home-section__text {
+        line-height: 1.5625;
         font-size: 22px;
         margin: 0 90px; } }
     @media only screen and (min-width: 768px) {
@@ -4607,7 +4608,9 @@ body {
     width: 215px;
     height: 276px;
     margin: 0 12px;
-    transition: width .2s ease-in, height .2s ease-in, margin .2s ease-in; }
+    transition: width .2s ease-in,
+ height .2s ease-in,
+ margin .2s ease-in; }
     @media screen and (max-width: 382px) {
       .about-banner__carousel-item {
         width: 40px;
