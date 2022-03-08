@@ -60,7 +60,7 @@
                 </a>
                 </div>
                 <div class="navbar-mobile__toggle">
-                    <div class="navbar-mobile__toggle-icon"></div>
+                    <img src="./assets/images/navbar-icon-dark-primary.svg" alt="Menu" class="u-image-contain">
                 </div>
             </div>
             <div class="navbar-mobile__menu-items">
@@ -93,10 +93,13 @@
                         <div class="alternative-content__title-mask">
                             <span>Strategies</span>
                         </div>
+                        <div
+                            class="alternative-content__selector-button display-under-991"
+                        ></div>
                     </h1>
                     <div class="alternative-content__left-panel-links">
                         <div
-                            class="alternative-content__selector alternative-content__selector--inflation alternative-content__selector--active"
+                            class="alternative-content__selector activate-desktop alternative-content__selector--inflation alternative-content__selector"
                         >
                             <span> INFLATION </span>
                             <div
@@ -130,7 +133,7 @@
                     </div>
                 </div>
                 <div
-                    class="alternative-content__content alternative-content__content--inflation alternative-content__content--active"
+                    class="alternative-content__content activate-desktop-content alternative-content__content--inflation alternative-content__content"
                 >
                     <div class="alternative-content__content-inner">
                         <p class="alternative-content__paragraph u-text-white">
@@ -278,7 +281,7 @@
                         previously dormant portfolio considerations to the
                         forefront.
                     </div>
-                    <div class="alternative-content__link-container"> 
+                    <div class="alternative-content__link-container no-display-under-991"> 
                         <a href="/" class="alternative-content__link">
                             CONTACT US
                         </a>
@@ -306,19 +309,32 @@
                     </p>
                 </div>
 
+                <div class="alternative-content__link-container display-under-991"> 
+                    <a href="/" class="alternative-content__link">
+                        CONTACT US
+                    </a>
+                </div>
+
                 <div class="alternative-content__col-left alternative-content__col-left--bottom">
                     <div class="alternative-content__anim-trigger alternative-content__anim-trigger--deeper"></div>
                     <div class="alternative-content__have-you-read-left">  
-                        <div class="alternative-content__title-mask">
+                        <div class="alternative-content__title-mask no-display-under-991">
                             <span>A Deeper</span>
                         </div>
-                        <div class="alternative-content__title-mask">
+                        <div class="alternative-content__title-mask no-display-under-991">
                             <span>Dive</span>
+                        </div>
+                        <div class="alternative-content__title-mask display-under-991">
+                            <span>A Deeper Dive</span>
                         </div>
                         <div class="alternative-content__content-toggle">
                             <img
                                 src="./assets/images/arrow-white.svg"
-                                class="u-image-contain"
+                                class="u-image-contain no-display-under-991"
+                            />
+                            <img
+                                src="./assets/images/arrow-black.svg"
+                                class="u-image-contain display-under-991"
                             />
                         </div>
                     </div>
@@ -326,10 +342,10 @@
                 <div class="alternative-content__col-right--no-animation">
                     <div class="alternative-content__col-right-anim animate__fadeIn">
                         <div class="alternative-content__have-you-read-right alternative-content__have-you-read-right--active">
-                            <p class="alternative-content__title u-text-white">
+                            <p class="alternative-content__title alternative-content__title--black u-text-white">
                                 Improving the Industry’s Dominant Portfolios
                             </p>
-                            <p class="alternative-content__paragraph u-text-white">
+                            <p class="alternative-content__paragraph alternative-content__paragraph--black u-text-white">
                                 We explore a positive-expectancy portfolio overlay that is negatively-correlated to risk assets. We first published the
                                 research last April and have updated it following the dramatic Q1 2020 real-time stress-test. With US treasury yields so
                                 close to zero, and thus unable to provide a material offset to equity/credit risk, never has this overlay been so vital
@@ -341,10 +357,10 @@
                             </a>
                         </div>
                         <div class="alternative-content__have-you-read-right--slide">
-                          <p class="alternative-content__title u-text-white">
+                          <p class="alternative-content__title alternative-content__title--black u-text-white">
                             Observations on Post-Covid Inflation Data
                           </p>
-                          <p class="alternative-content__paragraph u-text-white" style="margin-bottom: 15px;">
+                          <p class="alternative-content__paragraph alternative-content__paragraph--black u-text-white" style="margin-bottom: 15px;">
                             We’ve received two months of inflation data since the coronavirus shut down and they paint an interesting picture of the
                             economy. The impact is broadly but not exclusively deflationary. It’s these divergences that tell a story of a recession
                             very different from those in recent history. Historically recessions have been broad based demand destructions but
@@ -363,14 +379,10 @@
             </div>
         </div>
 
-        <footer class="footer">
+        <footer class="footer no-display-under-991">
             <div class="footer__container">
                 <div class="footer__logo">
-                    <img
-                        src="./assets/images/oneriver-logo-light.svg"
-                        alt="OneRiver Logo"
-                        class="u-image-contain"
-                    />
+                    <img src="./assets/images/oneriver-logo-light.svg" alt="OneRiver Logo" class="u-image-contain">
                 </div>
                 <div class="footer__contact">
                     <div class="footer__contact-row">
@@ -384,9 +396,7 @@
                     </div>
                     <div class="footer__contact-row">
                         <span class="footer__contact-info">
-                            <span>3 River Road,</span>
-                            <span>2nd Floor, Greenwich,</span>
-                            <span>CT 06807</span>
+                            <span>3 River Road,</span> <span>2nd Floor, Greenwich,</span> <span>CT 06807</span>
                         </span>
                     </div>
                     <div class="footer__contact-row">
@@ -401,10 +411,8 @@
                 </div>
                 <div class="footer__text-container">
                     <p class="footer__text">
-                        One River Asset Management is an SEC registered
-                        investment advisor, regulated by the National Futures
-                        Association, and manages ERISA assets as a Qualified
-                        Plan Asset Manager.
+                        One River Asset Management is an SEC registered investment advisor, regulated by the National
+                        Futures Association, and manages ERISA assets as a Qualified Plan Asset Manager.
                     </p>
                     <div class="footer__text footer__text--small">
                         © 2020 One River Asset Management. All Rights Reserved.
@@ -412,18 +420,108 @@
                 </div>
             </div>
             <div class="footer__legal-links">
-                <div class="footer__legal-item">
-                    <a href="/privacypolicy.html" class="footer__legal-link">
-                        Privacy
-                    </a>
-                </div>
-                <div class="footer__legal-item">
-                    <a href="/termsconditions.html" class="footer__legal-link">
-                        Terms of use
-                    </a>
-                </div>
-            </div>
+              <div class="footer__legal-item">
+                  <a href="/privacypolicy.html" class="footer__legal-link">
+                      Privacy
+                  </a>
+              </div>
+              <div class="footer__legal-item">
+                  <a href="/termsconditions.html" class="footer__legal-link">
+                      Terms of use
+                  </a>
+              </div>
+          </div>
         </footer>
+            <footer class="footer display-under-991" style="padding: 0px;">
+                <a href="/" class="navbar-mobile__logo">
+                    <img src="./assets/images/oneriver-logo-light.png" alt="OneRiver Digital Logo"
+                        class="u-image-contain display-under-991" style="margin-left: -90px;
+                        margin-bottom: -85px;">
+                </a>
+                <div class="footer__legal-links display-under-991" style="margin-top: -10px">
+                    <div class="footer__legal-item">
+                        <a href="/privacypolicy.html" class="footer__legal-link">
+                            Privacy
+                        </a>
+                    </div>
+                    <div class="footer__legal-item">
+                        <a href="/termsconditions.html" class="footer__legal-link">
+                            Terms of use
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__container">
+                    <div class="footer__logo">
+                        <img src="./assets/images/footer-logo.png" alt="OneRiver Logo" class="u-image-contain">
+                    </div>
+                    <div class="footer__contact">
+                        <p class="footer__text display-under-991" style="text-align: right; font-size: 10px; line-height: 12px;">
+                            One River Asset Management is an SEC registered investment advisor, regulated by the National
+                            Futures Association, and manages ERISA assets as a Qualified Plan Asset Manager.
+                        </p>
+                        <p class="footer__text no-display-under-991">
+                            One River Asset Management is an SEC registered investment advisor, regulated by the National
+                            Futures Association, and manages ERISA assets as a Qualified Plan Asset Manager.
+                        </p>
+                        <br>
+                        <div class="footer__contact-row display-under-991" style="text-align: right; font-size: 10px; line-height: 12px; display: block;">
+                            <span class="footer__contact-info">
+                                (203) 489-1440
+                            </span>
+                            <span class="footer__contact-info-spacer">|</span>
+                            <span class="footer__contact-info">
+                                info@oneriveram.com
+                            </span>
+                        </div>
+                        <div class="footer__contact-row no-display-under-991">
+                            <span class="footer__contact-info">
+                                (203) 489-1440
+                            </span>
+                            <span class="footer__contact-info-spacer">|</span>
+                            <span class="footer__contact-info">
+                                info@oneriveram.com
+                            </span>
+                        </div>
+                        <div class="footer__contact-row display-under-991" style="text-align: right; font-size: 10px; line-height: 12px; display: block;">
+                            <span class="footer__contact-info">
+                                <span>3 River Road,</span> <span>2nd Floor, Greenwich,</span> <span>CT 06807</span>
+                            </span>
+                        </div>
+                        <div class="footer__contact-row no-display-under-991">
+                            <span class="footer__contact-info">
+                                <span>3 River Road,</span> <span>2nd Floor, Greenwich,</span> <span>CT 06807</span>
+                            </span>
+                        </div>
+                        <div class="footer__text footer__text--small display-under-991" style="display: block; text-align: right;">
+                            © 2020 One River Asset Management. All Rights Reserved.
+                        </div>
+                        <!-- <div class="footer__contact-row">
+                            <span class="footer__contact-info">
+                                NFA ID: 0461647
+                            </span>
+                            <span class="footer__contact-info-spacer">|</span>
+                            <span class="footer__contact-info">
+                                FINRA: 167835
+                            </span>
+                        </div> -->
+                    </div>
+                    <!-- <div class="footer__text-container" style="margin-top: 0px;">
+                        
+                    </div> -->
+                </div>
+                <div class="footer__legal-links no-display-under-991">
+                    <div class="footer__legal-item">
+                        <a href="/privacypolicy.html" class="footer__legal-link">
+                            Privacy
+                        </a>
+                    </div>
+                    <div class="footer__legal-item">
+                        <a href="/termsconditions.html" class="footer__legal-link">
+                            Terms of use
+                        </a>
+                    </div>
+                </div>
+            </footer>
 
         <script>
             const selectorInflation = document.querySelector(".alternative-content__selector--inflation");
@@ -542,6 +640,11 @@
                 animOffset = 300;
             } else {
                 animOffset = 400;
+            }
+
+            if(window.innerWidth >= 991) {
+                document.querySelector('.activate-desktop').classList.add('alternative-content__selector--active');
+                document.querySelector('.activate-desktop-content').classList.add('alternative-content__content--active');
             }
 
             animOffset = 0;

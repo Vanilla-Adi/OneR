@@ -45,7 +45,7 @@
                     class="u-image-contain" >
             </a>
             <div class="navbar-mobile__toggle">
-                <div class="navbar-mobile__toggle-icon"></div>
+                <img src="./assets/images/navbar-icon-dark-primary.svg" alt="Menu" class="u-image-contain">
             </div>
         </div>
         <div class="navbar-mobile__menu-items">
@@ -66,25 +66,36 @@
     <!-- END NAVBAR -->
 
     <header class="privacy-banner">
-        <div class="privacy-banner__main fade-in">
+        <div class="privacy-banner__main">
             <div class="privacy-banner__content">
-                <h1 class="privacy-banner__title">
+                <h1 class="privacy-banner__title no-display-under-991">
                     <div class="privacy-banner__title-mask">
-                        <span>Privacy</span>
-                    </div>
-                    <div class="privacy-banner__title-mask">
-                        <span>Policy</span>
+                        <span>Privacy <br> Policy</span>
                     </div>
                 </h1>
             </div>
         </div>
-        <div class="privacy-banner__secondary">
+        <h1 class="privacy-banner__title display-under-991">
+            <div class="privacy-banner__title-mask1">
+                <span>Privacy Policy</span>
+            </div>
+        </h1>
+        <div class="privacy-banner__secondary backInRight display-under-991">
             <div class="privacy-banner__secondary-background">
                 <video width="674" height="722" class="u-image-cover" loop playsinline autoplay muted preload="metadata" poster="https://bowberes.sirv.com/OneRiver/Left_60fps.mp4?thumbnail=674">
                     <source src="https://bowberes.sirv.com/OneRiver/Left_60fps.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <div class="privacy-banner__video-mask animate__width-reverse"></div>
+            </div>
+        </div>
+        <div class="privacy-banner__secondary backInRight no-display-under-991">
+            <div class="privacy-banner__secondary-background">
+                <video width="674" height="722" class="u-image-cover" loop playsinline autoplay muted preload="metadata" poster="https://bowberes.sirv.com/OneRiver/Left_60fps.mp4?thumbnail=674">
+                    <source src="https://bowberes.sirv.com/OneRiver/Left_60fps.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="privacy-banner__video-mask1 animate__width-reverse"></div>
             </div>
         </div>
     </header>
@@ -212,14 +223,92 @@
 
 
 
-
-    <footer class="footer">
+<footer class="footer no-display-under-991">
+    <div class="footer__container">
+        <div class="footer__logo">
+            <img src="./assets/images/oneriver-logo-light.svg" alt="OneRiver Logo" class="u-image-contain">
+        </div>
+        <div class="footer__contact">
+            <div class="footer__contact-row">
+                <span class="footer__contact-info">
+                    (203) 489-1440
+                </span>
+                <span class="footer__contact-info-spacer">|</span>
+                <span class="footer__contact-info">
+                    info@oneriveram.com
+                </span>
+            </div>
+            <div class="footer__contact-row">
+                <span class="footer__contact-info">
+                    <span>3 River Road,</span> <span>2nd Floor, Greenwich,</span> <span>CT 06807</span>
+                </span>
+            </div>
+            <div class="footer__contact-row">
+                <span class="footer__contact-info">
+                    NFA ID: 0461647
+                </span>
+                <span class="footer__contact-info-spacer">|</span>
+                <span class="footer__contact-info">
+                    FINRA: 167835
+                </span>
+            </div>
+        </div>
+        <div class="footer__text-container">
+            <p class="footer__text">
+                One River Asset Management is an SEC registered investment advisor, regulated by the National
+                Futures Association, and manages ERISA assets as a Qualified Plan Asset Manager.
+            </p>
+            <div class="footer__text footer__text--small">
+                © 2020 One River Asset Management. All Rights Reserved.
+            </div>
+        </div>
+    </div>
+    <div class="footer__legal-links">
+      <div class="footer__legal-item">
+          <a href="/privacypolicy.html" class="footer__legal-link">
+              Privacy
+          </a>
+      </div>
+      <div class="footer__legal-item">
+          <a href="/termsconditions.html" class="footer__legal-link">
+              Terms of use
+          </a>
+      </div>
+  </div>
+</footer>
+    <footer class="footer display-under-991" style="padding: 0px;">
+        <a href="/" class="navbar-mobile__logo">
+            <img src="./assets/images/oneriver-logo-light.png" alt="OneRiver Digital Logo"
+                class="u-image-contain display-under-991" style="margin-left: -90px;
+                margin-bottom: -85px;">
+        </a>
+        <div class="footer__legal-links display-under-991" style="margin-top: -10px">
+            <div class="footer__legal-item">
+                <a href="/privacypolicy.html" class="footer__legal-link">
+                    Privacy
+                </a>
+            </div>
+            <div class="footer__legal-item">
+                <a href="/termsconditions.html" class="footer__legal-link">
+                    Terms of use
+                </a>
+            </div>
+        </div>
         <div class="footer__container">
             <div class="footer__logo">
                 <img src="./assets/images/footer-logo.png" alt="OneRiver Logo" class="u-image-contain">
             </div>
             <div class="footer__contact">
-                <div class="footer__contact-row">
+                <p class="footer__text display-under-991" style="text-align: right; font-size: 10px; line-height: 12px;">
+                    One River Asset Management is an SEC registered investment advisor, regulated by the National
+                    Futures Association, and manages ERISA assets as a Qualified Plan Asset Manager.
+                </p>
+                <p class="footer__text no-display-under-991">
+                    One River Asset Management is an SEC registered investment advisor, regulated by the National
+                    Futures Association, and manages ERISA assets as a Qualified Plan Asset Manager.
+                </p>
+                <br>
+                <div class="footer__contact-row display-under-991" style="text-align: right; font-size: 10px; line-height: 12px; display: block;">
                     <span class="footer__contact-info">
                         (203) 489-1440
                     </span>
@@ -228,12 +317,29 @@
                         info@oneriveram.com
                     </span>
                 </div>
-                <div class="footer__contact-row">
+                <div class="footer__contact-row no-display-under-991">
+                    <span class="footer__contact-info">
+                        (203) 489-1440
+                    </span>
+                    <span class="footer__contact-info-spacer">|</span>
+                    <span class="footer__contact-info">
+                        info@oneriveram.com
+                    </span>
+                </div>
+                <div class="footer__contact-row display-under-991" style="text-align: right; font-size: 10px; line-height: 12px; display: block;">
                     <span class="footer__contact-info">
                         <span>3 River Road,</span> <span>2nd Floor, Greenwich,</span> <span>CT 06807</span>
                     </span>
                 </div>
-                <div class="footer__contact-row">
+                <div class="footer__contact-row no-display-under-991">
+                    <span class="footer__contact-info">
+                        <span>3 River Road,</span> <span>2nd Floor, Greenwich,</span> <span>CT 06807</span>
+                    </span>
+                </div>
+                <div class="footer__text footer__text--small display-under-991" style="display: block; text-align: right;">
+                    © 2020 One River Asset Management. All Rights Reserved.
+                </div>
+                <!-- <div class="footer__contact-row">
                     <span class="footer__contact-info">
                         NFA ID: 0461647
                     </span>
@@ -241,19 +347,13 @@
                     <span class="footer__contact-info">
                         FINRA: 167835
                     </span>
-                </div>
+                </div> -->
             </div>
-            <div class="footer__text-container">
-                <p class="footer__text">
-                    One River Asset Management is an SEC registered investment advisor, regulated by the National
-                    Futures Association, and manages ERISA assets as a Qualified Plan Asset Manager.
-                </p>
-                <div class="footer__text footer__text--small">
-                    © 2020 One River Asset Management. All Rights Reserved.
-                </div>
-            </div>
+            <!-- <div class="footer__text-container" style="margin-top: 0px;">
+                
+            </div> -->
         </div>
-        <div class="footer__legal-links">
+        <div class="footer__legal-links no-display-under-991">
             <div class="footer__legal-item">
                 <a href="/privacypolicy.html" class="footer__legal-link">
                     Privacy

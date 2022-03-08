@@ -43,7 +43,7 @@
                 </a>    
             </div>
             <div class="navbar-mobile__toggle">
-                <div class="navbar-mobile__toggle-icon"></div>
+                <img src="./assets/images/navbar-icon-dark-primary.svg" alt="Menu" class="u-image-contain">
             </div>
         </div>
         <div class="navbar-mobile__menu-items">
@@ -66,13 +66,13 @@
             <div class="digital-banner__anim-trigger"></div>
             <div class="digital-banner__background">
                 <div class="digital-banner__background-video digital-banner__background-video--active digital-banner__background-video--digital u-image-cover">
-                    <video width="840" height="740" class="u-image-cover" loop playsinline autoplay muted preload="metadata" poster="https://bowberes.sirv.com/OneRiver/Digital%20Strategies_60fps.mp4?thumbnail=840">
+                    <video width="840" height="740" class="u-image-cover digital__video--mobile" loop playsinline autoplay muted preload="metadata" poster="https://bowberes.sirv.com/OneRiver/Digital%20Strategies_60fps.mp4?thumbnail=840">
                         <source src="https://bowberes.sirv.com/OneRiver/Digital%20Strategies_60fps.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
                 <div class="digital-banner__background-video digital-banner__background-video--general u-image-cover">
-                    <video width="1170" height="910" class="u-image-cover" loop playsinline autoplay muted preload="metadata" poster="https://bowberes.sirv.com/OneRiver/Ethereum_Short_60fps.mp4?thumbnail=1170">
+                    <video width="1170" height="910" class="u-image-cover digital__video--mobile" loop playsinline autoplay muted preload="metadata" poster="https://bowberes.sirv.com/OneRiver/Ethereum_Short_60fps.mp4?thumbnail=1170">
                         <source src="https://bowberes.sirv.com/OneRiver/Ethereum_Short_60fps.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -197,17 +197,20 @@
         </div>
         <div class="digital-read__banner">
             <h1 class="digital-read__title">
-                <div class="digital-read__title-mask">
+                <div class="digital-read__title-mask no-display-under-991">
                     <span>A Deeper</span>
                 </div>
-                <div class="digital-read__title-mask">
+                <div class="digital-read__title-mask no-display-under-991">
                     <span>Dive</span>
+                </div>
+                <div class="digital-read__title-mask display-under-991">
+                    <span>A Deeper Dive</span>
                 </div>
             </h1>
             <span class="digital-banner__anim-trigger digital-banner__anim-trigger--read-title"></span>
         </div>
     </section>
-    <footer class="footer">
+    <footer class="footer no-display-under-991">
         <div class="footer__container">
             <div class="footer__logo">
                 <img src="./assets/images/oneriver-logo-light.svg" alt="OneRiver Logo" class="u-image-contain">
@@ -248,18 +251,108 @@
             </div>
         </div>
         <div class="footer__legal-links">
-            <div class="footer__legal-item">
-                <a href="/privacypolicy.html" class="footer__legal-link">
-                    Privacy
-                </a>
-            </div>
-            <div class="footer__legal-item">
-                <a href="/termsconditions.html" class="footer__legal-link">
-                    Terms of use
-                </a>
-            </div>
-        </div>
+          <div class="footer__legal-item">
+              <a href="/privacypolicy.html" class="footer__legal-link">
+                  Privacy
+              </a>
+          </div>
+          <div class="footer__legal-item">
+              <a href="/termsconditions.html" class="footer__legal-link">
+                  Terms of use
+              </a>
+          </div>
+      </div>
     </footer>
+        <footer class="footer display-under-991" style="padding: 0px;">
+            <a href="/" class="navbar-mobile__logo">
+                <img src="./assets/images/oneriver-logo-light.png" alt="OneRiver Digital Logo"
+                    class="u-image-contain display-under-991" style="margin-left: -90px;
+                    margin-bottom: -85px;">
+            </a>
+            <div class="footer__legal-links display-under-991" style="margin-top: -10px">
+                <div class="footer__legal-item">
+                    <a href="/privacypolicy.html" class="footer__legal-link">
+                        Privacy
+                    </a>
+                </div>
+                <div class="footer__legal-item">
+                    <a href="/termsconditions.html" class="footer__legal-link">
+                        Terms of use
+                    </a>
+                </div>
+            </div>
+            <div class="footer__container">
+                <div class="footer__logo">
+                    <img src="./assets/images/footer-logo.png" alt="OneRiver Logo" class="u-image-contain">
+                </div>
+                <div class="footer__contact">
+                    <p class="footer__text display-under-991" style="text-align: right; font-size: 10px; line-height: 12px;">
+                        One River Asset Management is an SEC registered investment advisor, regulated by the National
+                        Futures Association, and manages ERISA assets as a Qualified Plan Asset Manager.
+                    </p>
+                    <p class="footer__text no-display-under-991">
+                        One River Asset Management is an SEC registered investment advisor, regulated by the National
+                        Futures Association, and manages ERISA assets as a Qualified Plan Asset Manager.
+                    </p>
+                    <br>
+                    <div class="footer__contact-row display-under-991" style="text-align: right; font-size: 10px; line-height: 12px; display: block;">
+                        <span class="footer__contact-info">
+                            (203) 489-1440
+                        </span>
+                        <span class="footer__contact-info-spacer">|</span>
+                        <span class="footer__contact-info">
+                            info@oneriveram.com
+                        </span>
+                    </div>
+                    <div class="footer__contact-row no-display-under-991">
+                        <span class="footer__contact-info">
+                            (203) 489-1440
+                        </span>
+                        <span class="footer__contact-info-spacer">|</span>
+                        <span class="footer__contact-info">
+                            info@oneriveram.com
+                        </span>
+                    </div>
+                    <div class="footer__contact-row display-under-991" style="text-align: right; font-size: 10px; line-height: 12px; display: block;">
+                        <span class="footer__contact-info">
+                            <span>3 River Road,</span> <span>2nd Floor, Greenwich,</span> <span>CT 06807</span>
+                        </span>
+                    </div>
+                    <div class="footer__contact-row no-display-under-991">
+                        <span class="footer__contact-info">
+                            <span>3 River Road,</span> <span>2nd Floor, Greenwich,</span> <span>CT 06807</span>
+                        </span>
+                    </div>
+                    <div class="footer__text footer__text--small display-under-991" style="display: block; text-align: right;">
+                        © 2020 One River Asset Management. All Rights Reserved.
+                    </div>
+                    <!-- <div class="footer__contact-row">
+                        <span class="footer__contact-info">
+                            NFA ID: 0461647
+                        </span>
+                        <span class="footer__contact-info-spacer">|</span>
+                        <span class="footer__contact-info">
+                            FINRA: 167835
+                        </span>
+                    </div> -->
+                </div>
+                <!-- <div class="footer__text-container" style="margin-top: 0px;">
+                    
+                </div> -->
+            </div>
+            <div class="footer__legal-links no-display-under-991">
+                <div class="footer__legal-item">
+                    <a href="/privacypolicy.html" class="footer__legal-link">
+                        Privacy
+                    </a>
+                </div>
+                <div class="footer__legal-item">
+                    <a href="/termsconditions.html" class="footer__legal-link">
+                        Terms of use
+                    </a>
+                </div>
+            </div>
+        </footer>
     <script>
         window.addEventListener('load', () => {
             //content height on mobile
