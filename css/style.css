@@ -421,6 +421,9 @@ body {
       .footer__contact-row {
         font-size: 28px;
         letter-spacing: 2.24px; } }
+  .footer__contact-info {
+    text-decoration: none;
+    color: white; }
   .footer__contact-info-spacer {
     margin: 0 10px; }
   .footer__text-container {

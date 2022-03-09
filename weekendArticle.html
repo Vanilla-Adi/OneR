@@ -352,7 +352,7 @@
         document.querySelector('.weekend-content__article-content').innerHTML = articles[params.articleId].content;
         document.getElementById('cover').src = articles[params.articleId].img;
 
-        var startIndex = Math.floor((Math.random()*37) + 0);
+        var startIndex = Math.floor((Math.random()*38) + 0);
         for(let i = startIndex; i <= startIndex+1; i++) {
             var row = document.querySelector('.weekend-content__weekend-row');
             var col = document.createElement('div');
