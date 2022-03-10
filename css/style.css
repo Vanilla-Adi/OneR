@@ -2675,7 +2675,7 @@ body {
   position: relative;
   font-family: 'Optima';
   width: min-content;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 1.68px;
   line-height: 1.85;
@@ -4715,15 +4715,14 @@ body {
         letter-spacing: 2.5px; } }
 
 .about-contact {
-  padding: 40px 0 160px;
+  padding: 40px 0 0;
   display: block; }
   .about-contact__container {
     display: grid;
     grid-template-columns: 1fr;
     max-width: 1420px;
     margin: 0 auto;
-    grid-gap: 20px;
-    padding: 15px; }
+    grid-gap: 20px; }
     @media only screen and (min-width: 768px) {
       .about-contact__container {
         grid-template-columns: 400px 1fr; } }
@@ -4748,7 +4747,8 @@ body {
     font-weight: 400;
     max-width: 100%;
     color: #0037ED;
-    padding: 0px 20px; }
+    padding: 0px 20px;
+    text-align: center; }
     @media only screen and (min-width: 576px) {
       .about-contact__title {
         padding: 0px; } }
@@ -4772,7 +4772,8 @@ body {
     margin-top: 48px;
     color: #09102E;
     max-width: 100%;
-    padding: 0; }
+    padding: 0;
+    text-align: center; }
     @media only screen and (min-width: 576px) {
       .about-contact__info {
         padding: 0px; } }
