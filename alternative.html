@@ -1,631 +1,708 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./css/style.css" />
-        <link rel="stylesheet" href="./assets/fonts/IvyMode/index.css" />
-        <link rel="stylesheet" href="./assets/fonts/Optima/index.css" />
-        <title>One River</title>
-    </head>
 
-    <body>
-        <nav class="navbar">
-            <div class="navbar__container">
-                <div class="navbar__menu">
-                    <a
-                        href="/digital.html"
-                        class="navbar__menu-item navbar__menu-item--light u-text-white"
-                    >
-                        Digital
-                    </a>
-                    <a
-                        href="/alternative.html"
-                        class="navbar__menu-item navbar__menu-item--active"
-                    >
-                        Alternatives
-                    </a>
-                    <a
-                        href="/about.html"
-                        class="navbar__menu-item navbar__menu-item--light u-text-white"
-                    >
-                        About
-                    </a>
-                    <a
-                        href="/weekendNotes.html"
-                        class="navbar__menu-item navbar__menu-item--light u-text-white"
-                    >
-                        Research
-                    </a>
-                </div>
-                <a href="/" class="navbar__logo backInRight">
-                    <img
-                        src="./assets/images/oneriver-logo.svg"
-                        alt="OneRiver Digital Logo"
-                        class="u-image-contain"
-                    />
-                </a>
-            </div>
-        </nav>
-        <nav class="navbar-mobile">
-            <div class="navbar-mobile__menu">
-                <div class="navbar-mobile__logo">
-                    <a href="/">
-                    <img
-                        src="./assets/images/oneriver-logo-light.svg"
-                        alt="OneRiver Digital Logo"
-                        class="u-image-contain"
-                    />
-                </a>
-                </div>
-                <div class="navbar-mobile__toggle">
-                    <img src="./assets/images/navbar-icon-dark-primary.svg" alt="Menu" class="u-image-contain">
-                </div>
-            </div>
-            <div class="navbar-mobile__menu-items">
-                <a href="/digital.html" class="navbar__menu-item">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./assets/fonts/IvyMode/index.css" />
+    <link rel="stylesheet" href="./assets/fonts/Optima/index.css" />
+    <link rel="shortcut icon" href="./assets/icons/favicon.svg">
+    <title>One River Asset Management- Alternative Investment Strategies</title>
+    <meta name="description" content="Our alternative strategies leverage the full capabilities of our investment team’s experience over multiple decades running both discretionary and systematic strategies. Our approach is distinct in the industry, leveraging macro awareness, data-driven processes, and market-tested risk management.">
+    <meta name="keywords" content="One River Digital Asset Management, One River Digital Investment Strategies, Volatility Strategy, Customised Solutions, One River AM, One River Digital, One River Investments, Asset Manager">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GRPG28921G"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+    
+            gtag('config', 'G-GRPG28921G');
+        </script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <div class="navbar__menu">
+                <a href="/digital.html" class="navbar__menu-item navbar__menu-item--light u-text-white">
                     Digital
                 </a>
                 <a href="/alternative.html" class="navbar__menu-item navbar__menu-item--active">
                     Alternatives
                 </a>
-                <a href="/about.html" class="navbar__menu-item"> About </a>
-                <a href="/weekendNotes.html" class="navbar__menu-item"> Research </a>
+                <a href="/about.html" class="navbar__menu-item navbar__menu-item--light u-text-white">
+                    About
+                </a>
+                <a href="/research.html" class="navbar__menu-item navbar__menu-item--light u-text-white">
+                    Research
+                </a>
             </div>
-        </nav>
+            <a href="/" class="navbar__logo backInRight">
+                <img src="./assets/images/oneriver-logo.svg" alt="OneRiver Digital Logo" class="u-image-contain" />
+            </a>
+        </div>
+    </nav>
+    <nav class="navbar-mobile">
+        <div class="navbar-mobile__menu">
+            <div class="navbar-mobile__logo">
+                <a href="/">
+                    <img src="./assets/images/oneriver-logo-light.svg" alt="OneRiver Digital Logo"
+                        class="u-image-contain" />
+                </a>
+            </div>
+            <div class="navbar-mobile__toggle">
+                <img src="./assets/images/navbar-icon-dark-primary.svg" alt="Menu" class="u-image-contain">
+            </div>
+        </div>
+        <div class="navbar-mobile__menu-items">
+            <a href="/digital.html" class="navbar__menu-item">
+                Digital
+            </a>
+            <a href="/alternative.html" class="navbar__menu-item navbar__menu-item--active">
+                Alternatives
+            </a>
+            <a href="/about.html" class="navbar__menu-item"> About </a>
+            <a href="/research.html" class="navbar__menu-item"> Research </a>
+        </div>
+    </nav>
 
-        <div class="alternative-content fade-in">
-            <div class="alternative-content__row">
-                <div class="alternative-content__left-panel">
-                    <div class="alternative-content__anim-trigger"></div>
-                    <div class="alternative-content__video-container">
-                        <video width="674" height="722" class="u-image-cover u-video-cover" loop playsinline autoplay muted preload="metadata" poster="https://bowberes.sirv.com/OneRiver/Left_60fps.mp4?thumbnail=674">
-                            <source src="https://bowberes.sirv.com/OneRiver/Left_60fps.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+    <div class="alternative-content fade-in">
+        <div class="alternative-content__row">
+            <div class="alternative-content__left-panel">
+                <div class="alternative-content__anim-trigger"></div>
+                <div class="alternative-content__video-container">
+                    <video width="674" height="722" class="u-image-cover u-video-cover" loop playsinline autoplay muted
+                        preload="metadata" poster="https://bowberes.sirv.com/OneRiver/Left_60fps.mp4?thumbnail=674">
+                        <source src="https://bowberes.sirv.com/OneRiver/Left_60fps.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="alternative-content__mask animate__width-reverse"></div>
+                <h1 class="alternative-content__left-panel-title">
+                    <div class="alternative-content__title-mask" id="title-target">
+                        <span>Alternative</span>
                     </div>
-                    <div class="alternative-content__mask animate__width-reverse"></div>
-                    <h1 class="alternative-content__left-panel-title">
-                        <div class="alternative-content__title-mask" id="title-target">
-                            <span>Alternative</span>
-                        </div>
-                        <div class="alternative-content__title-mask" id="title-transparent">
-                            <span>Strategies</span>
-                        </div>
-                        <div
-                            class="alternative-content__selector-button display-under-991"
-                        ></div>
-                    </h1>
-                    <div class="alternative-content__left-panel-links">
-                        <div
-                            class="alternative-content__selector activate-desktop alternative-content__selector--inflation alternative-content__selector"
-                        >
-                            <span> INFLATION </span>
-                            <div
-                                class="alternative-content__selector-button"
-                            ></div>
-                        </div>
-                        <div
-                            class="alternative-content__selector alternative-content__selector--trend-strategies"
-                        >
-                            <span> Trend Strategies </span>
-                            <div
-                                class="alternative-content__selector-button"
-                            ></div>
-                        </div>
-                        <div
-                            class="alternative-content__selector alternative-content__selector--volatility-strategies"
-                        >
-                            <span> Volatility Strategies </span>
-                            <div
-                                class="alternative-content__selector-button"
-                            ></div>
-                        </div>
-                        <div
-                            class="alternative-content__selector alternative-content__selector--customised-solutions"
-                        >
-                            <span> Customised solutions </span>
-                            <div
-                                class="alternative-content__selector-button"
-                            ></div>
-                        </div>
+                    <div class="alternative-content__title-mask" id="title-transparent">
+                        <span>Strategies</span>
+                    </div>
+                    <div class="alternative-content__selector-button display-under-991"></div>
+                </h1>
+                <div class="alternative-content__left-panel-links">
+                    <div
+                        class="alternative-content__selector activate-desktop alternative-content__selector--inflation alternative-content__selector">
+                        <span> INFLATION </span>
+                        <div class="alternative-content__selector-button"></div>
+                    </div>
+                    <div class="alternative-content__selector alternative-content__selector--trend-strategies">
+                        <span> Trend Strategies </span>
+                        <div class="alternative-content__selector-button"></div>
+                    </div>
+                    <div class="alternative-content__selector alternative-content__selector--volatility-strategies">
+                        <span> Volatility Strategies </span>
+                        <div class="alternative-content__selector-button"></div>
+                    </div>
+                    <div class="alternative-content__selector alternative-content__selector--customised-solutions">
+                        <span> Customised solutions </span>
+                        <div class="alternative-content__selector-button"></div>
+                    </div>
+                    <div class="alternative-content__selector alternative-content__selector--risk-solutions">
+                        <span> Risk Mitigation Solutions </span>
+                        <div class="alternative-content__selector-button"></div>
                     </div>
                 </div>
-                <div
-                    class="alternative-content__content activate-desktop-content alternative-content__content--inflation alternative-content__content"
-                >
-                    <div class="alternative-content__content-inner">
-                        <p class="alternative-content__paragraph u-text-white">
-                            The inflation strategy is an
-                            inflation-oriented absolute return, benchmark
-                            agnostic strategy that targets a consistent level of
-                            active risk. The strategy seeks to benefit from
-                            inflation exposure long term, while capitalizing on
-                            inflation volatility and dislocations
-                            short-and-medium term. Strong and diversifying
-                            sources of alpha within the inflation-sensitive
-                            markets traded should further improve the strategy’s
-                            risk-adjusted return. The strategy takes risk along
-                            three dimensions: Macro Opportunities, Micro
-                            Opportunities, and Relative Value Opportunities.
-                            These three themes each typically occupy a third of
-                            the strategy’s active risk. While we believe this
-                            approach has an ability to generate out-performance
-                            in different market environments, we believe that
-                            the current tailwinds to inflation driven by
-                            unprecedented Monetary and Fiscal Policy represent a
-                            favorable macroeconomic backdrop for such a
-                            strategy. The strategy employs a discretionary
-                            trading approach, where risk management is integral
-                            to every step in the process.
-                        </p>
-                    </div>
-                </div>
-                <div
-                    class="alternative-content__content alternative-content__content--trend-strategies"
-                >
-                    <div class="alternative-content__content-inner">
-                        <p class="alternative-content__title u-text-white">
-                            Systematic Trend
-                        </p>
-                        <p class="alternative-content__paragraph u-text-white">
-                            The pure trend following strategy seeks to exploit medium to long-term trends frequently observed in 62 of the world’s
-                            most liquid equity index, fixed income, foreign exchange, and commodity markets to generate positive returns. It is
-                            built through a combination of deep quantitative research and discretionary macro trading expertise, and is sensibly
-                            constructed to maximize alpha instead of capacity, using a limited number of parameters to improve robustness. We embed
-                            common-sense risk management logic into our unique algorithm, combining the attractive attributes of medium to
-                            longer-term signals with the nimbleness to get into or out of positions quickly if needed. The fund is delivered to
-                            clients at the lowest fee per unit of volatility available in the marketplace.
-                        </p>
-
-                        <p class="alternative-content__title u-text-white">
-                            Systematic Alternative Markets Trend                        
-                        </p>
-                        <p class="alternative-content__paragraph u-text-white">
-                            The strategy applies One River’s systematic trend algorithm to 110 more esoteric global markets which include developed
-                            and emerging market interest rate swaps, emerging market foreign exchange, credit indexes, equity market sectors,
-                            European power and emissions markets, etc – markets that are not easily accessible by traditional CTAs. One River has
-                            traded these global macro markets for years and has developed the systems to price, trade, and quantify/manage the
-                            risks. The strategy embeds common-sense risk management logic into the unique algorithm, combining the attractive
-                            attributes of medium to longer-term signals with the nimbleness to get into or out of positions quickly if needed. The
-                            fund is the first of its kind to offer a management fee-only share class.
-                        </p>
-                    </div>
-                </div>
-                <div
-                    class="alternative-content__content alternative-content__content--volatility-strategies"
-                >
-                    <div class="alternative-content__content-inner">
-                        <p class="alternative-content__title u-text-white">
-                            Volatility Relative Value
-                        </p>
-                        <p class="alternative-content__paragraph u-text-white">
-                            The discretionary market-neutral fund takes long/short positions in volatility markets across global equity index,
-                            foreign exchange, interest rate and commodity volatility markets. The strategy can generate positive returns in both
-                            bullish and bearish equity environments. The team applies a specialized quantitative volatility infrastructure to
-                            support our fundamental portfolio managers using inputs such as valuation, microstructure data, structured product data,
-                            and dealer hedging activity. Macro awareness is integral to the investment process, creating a more complete
-                            understanding of the market environment rather than relying purely on traditional statistical metrics. Our expertise in
-                            finding ways to be long volatility while minimizing carry is a distinct advantage when constructing a Vol RV book that
-                            can generate strong, differentiated returns and is built to withstand market dislocations.
-                        </p>
-
-                        <p class="alternative-content__title u-text-white">
-                            Dynamic Convexity
-                        </p>
-                        <p class="alternative-content__paragraph u-text-white">
-                            This highly convex systematic strategy trades volatility futures, volatility options, and options on major global equity
-                            indexes from the long-side only. It codifies several discrete volatility trading strategies developed and honed through
-                            years of trading these markets on a discretionary basis and combines them into a fully systematic portfolio. The
-                            strategy capitalizes on aspects of momentum, carry and value found in volatility markets and their curves to maximize
-                            upside capture in periods of stress while minimizing bleed in times of relative calm. Risk is adjusted automatically
-                            using a range of signals and measures of value. Profit-taking is embedded into the algorithm, relieving investors of the
-                            pressure to time their exit from the strategy and this allows it to be held through the cycle as a source of positive
-                            portfolio convexity. For clients seeking to capitalize on large vol spikes, the fund offers weekly liquidity.
-                        </p>
-
-                        <p class="alternative-content__title u-text-white">
-                            Discretionary Long Volatility
-                        </p>
-                        <p class="alternative-content__paragraph u-text-white">
-                            The fund is structured to profit from a rise in cross-asset volatility that is typical at cycle turns and during periods
-                            of transition. We believe that in recent years, a period of major economic, policy and political transition has begun,
-                            manifesting in markets most visibly in Q1 2020. The fund is built for such an environment. We take a value-oriented
-                            approach to portfolio construction, looking for the best risk-reward opportunities to be long volatility across the
-                            globe, with a dominant allocation to equity and high-beta volatility. Macro awareness is integral to the investment
-                            process and helps the team evaluate the risk/reward of various asset class and market exposures relative to potential
-                            catalysts for change. The highly convex strategy is built to minimize carry, and partially crystalize profits through
-                            rebalancing and asset class rotation. The fund offers clients weekly liquidity.
-                        </p>
-                    </div>
-                </div>
-                <div
-                    class="alternative-content__content alternative-content__content--customised-solutions"
-                >
-                    <div class="alternative-content__content-inner">
-                        <p class="alternative-content__paragraph u-text-white">
-                            For institutional clients who require a customized solution, One River can deliver any combination of our investment strategies in a fund-of-one, managed account, swap or UCITS compliant structure. We partner with such bespoke clients in one of three ways; (1) they present us with an investment need to tilt their portfolio and/or hedge a specific risk and we then create a combination of our strategies to achieve that objective, (2) they ask us to build a holistic, stand-alone portfolio of our strategies that is designed to fit well within their larger alternatives portfolio, and (3) they turn to us for solutions that materially reduce the expense ratio and increase the capital efficiency of their existing portfolio while maintaining equivalent market exposures.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="alternative-content__col-left alternative-content__col-left--top animate__fadeIn">
-                    <div class="alternative-content__we-build">
-                        We build unique diversifiers or a changing world. Our
-                        strategies seek to deliver as mounting political,
-                        geopolitical, monetary, and fiscal forces bring
-                        previously dormant portfolio considerations to the
-                        forefront.
-                    </div>
-                    <div class="alternative-content__link-container no-display-under-991"> 
-                        <a href="/about.html#contact" class="alternative-content__link">
-                            CONTACT US
-                        </a>
-                    </div>
-                </div>
-                <div class="alternative-content__col-right">
-                    <p class="alternative-content__our-alternative animate__fadeIn">
-                        Our alternative strategies leverage the full
-                        capabilities of our investment team’s experience over
-                        multiple decades running both discretionary and
-                        systematic strategies. Our approach is distinct in the
-                        industry, leveraging macro awareness, data-driven
-                        processes, and market-tested risk management.
-                        <br />
-                        <br />
-                        We offer six strategies across three categories:
-                        Volatility, Trend, and Inflation. Within Volatility, we
-                        operate two Long Volatility strategies, and one
-                        alpha-seeking Volatility Relative Value strategy. Within
-                        Trend we offer two fully systematic strategies, one of
-                        which is focused on major markets, and another on
-                        alternative markets. Our forthcoming Inflation strategy
-                        seeks to benefit from an inflationary backdrop and
-                        higher potential inflation volatility.
+            </div>
+            <div
+                class="alternative-content__content activate-desktop-content alternative-content__content--inflation alternative-content__content">
+                <div class="alternative-content__content-inner">
+                    <p class="alternative-content__paragraph u-text-white">
+                        The inflation strategy is an
+                        inflation-oriented absolute return, benchmark
+                        agnostic strategy that targets a consistent level of
+                        active risk. The strategy seeks to benefit from
+                        inflation exposure long term, while capitalizing on
+                        inflation volatility and dislocations
+                        short-and-medium term. Strong and diversifying
+                        sources of alpha within the inflation-sensitive
+                        markets traded should further improve the strategy’s
+                        risk-adjusted return. The strategy takes risk along
+                        three dimensions: Macro Opportunities, Micro
+                        Opportunities, and Relative Value Opportunities.
+                        These three themes each typically occupy a third of
+                        the strategy’s active risk. While we believe this
+                        approach has an ability to generate out-performance
+                        in different market environments, we believe that
+                        the current tailwinds to inflation driven by
+                        unprecedented Monetary and Fiscal Policy represent a
+                        favorable macroeconomic backdrop for such a
+                        strategy. The strategy employs a discretionary
+                        trading approach, where risk management is integral
+                        to every step in the process.
                     </p>
                 </div>
+            </div>
+            <div class="alternative-content__content alternative-content__content--trend-strategies">
+                <div class="alternative-content__content-inner">
+                    <p class="alternative-content__title u-text-white">
+                        Systematic Trend
+                    </p>
+                    <p class="alternative-content__paragraph u-text-white">
+                        The pure trend following strategy seeks to exploit medium to long-term trends frequently
+                        observed in 62 of the world’s
+                        most liquid equity index, fixed income, foreign exchange, and commodity markets to generate
+                        positive returns. It is
+                        built through a combination of deep quantitative research and discretionary macro trading
+                        expertise, and is sensibly
+                        constructed to maximize alpha instead of capacity, using a limited number of parameters to
+                        improve robustness. We embed
+                        common-sense risk management logic into our unique algorithm, combining the attractive
+                        attributes of medium to
+                        longer-term signals with the nimbleness to get into or out of positions quickly if needed.
+                    </p>
 
-                <div class="alternative-content__link-container display-under-991"> 
+                    <p class="alternative-content__title u-text-white">
+                        Systematic Alternative Markets Trend
+                    </p>
+                    <p class="alternative-content__paragraph u-text-white">
+                        The strategy applies One River’s systematic trend algorithm to 110 more esoteric global markets
+                        which include developed
+                        and emerging market interest rate swaps, emerging market foreign exchange, credit indexes,
+                        equity market sectors,
+                        European power and emissions markets, etc – markets that are not easily accessible by
+                        traditional CTAs. One River has
+                        traded these global macro markets for years and has developed the systems to price, trade, and
+                        quantify/manage the
+                        risks. The strategy embeds common-sense risk management logic into the unique algorithm,
+                        combining the attractive
+                        attributes of medium to longer-term signals with the nimbleness to get into or out of positions
+                        quickly if needed. The
+                        fund is the first of its kind to offer a management fee-only share class.
+                    </p>
+                </div>
+            </div>
+            <div class="alternative-content__content alternative-content__content--volatility-strategies">
+                <div class="alternative-content__content-inner">
+                    <p class="alternative-content__title u-text-white">
+                        Volatility Relative Value
+                    </p>
+                    <p class="alternative-content__paragraph u-text-white">
+                        The discretionary market-neutral fund takes long/short positions in volatility markets across
+                        global equity index,
+                        foreign exchange, interest rate and commodity volatility markets. The strategy can generate
+                        positive returns in both
+                        bullish and bearish equity environments. The team applies a specialized quantitative volatility
+                        infrastructure to
+                        support our fundamental portfolio managers using inputs such as valuation, microstructure data,
+                        structured product data,
+                        and dealer hedging activity. Macro awareness is integral to the investment process, creating a
+                        more complete
+                        understanding of the market environment rather than relying purely on traditional statistical
+                        metrics. Our expertise in
+                        finding ways to be long volatility while minimizing carry is a distinct advantage when
+                        constructing a Vol RV book that
+                        can generate strong, differentiated returns and is built to withstand market dislocations.
+                    </p>
+
+                    <p class="alternative-content__title u-text-white">
+                        Dynamic Convexity
+                    </p>
+                    <p class="alternative-content__paragraph u-text-white">
+                        This highly convex systematic strategy trades volatility futures, volatility options, and
+                        options on major global equity
+                        indexes from the long-side only. It codifies several discrete volatility trading strategies
+                        developed and honed through
+                        years of trading these markets on a discretionary basis and combines them into a fully
+                        systematic portfolio. The
+                        strategy capitalizes on aspects of momentum, carry and value found in volatility markets and
+                        their curves to maximize
+                        upside capture in periods of stress while minimizing bleed in times of relative calm. Risk is
+                        adjusted automatically
+                        using a range of signals and measures of value. Profit-taking is embedded into the algorithm,
+                        relieving investors of the
+                        pressure to time their exit from the strategy and this allows it to be held through the cycle as
+                        a source of positive
+                        portfolio convexity. For clients seeking to capitalize on large vol spikes, the fund offers
+                        weekly liquidity.
+                    </p>
+
+                    <p class="alternative-content__title u-text-white">
+                        Discretionary Long Volatility
+                    </p>
+                    <p class="alternative-content__paragraph u-text-white">
+                        The fund is structured to profit from a rise in cross-asset volatility that is typical at cycle
+                        turns and during periods
+                        of transition. We believe that in recent years, a period of major economic, policy and political
+                        transition has begun,
+                        manifesting in markets most visibly in Q1 2020. The fund is built for such an environment. We
+                        take a value-oriented
+                        approach to portfolio construction, looking for the best risk-reward opportunities to be long
+                        volatility across the
+                        globe, with a dominant allocation to equity and high-beta volatility. Macro awareness is
+                        integral to the investment
+                        process and helps the team evaluate the risk/reward of various asset class and market exposures
+                        relative to potential
+                        catalysts for change. The highly convex strategy is built to minimize carry, and partially
+                        crystalize profits through
+                        rebalancing and asset class rotation. The fund offers clients weekly liquidity.
+                    </p>
+                </div>
+            </div>
+            <div class="alternative-content__content alternative-content__content--customised-solutions">
+                <div class="alternative-content__content-inner">
+                    <p class="alternative-content__paragraph u-text-white">
+                        For institutional clients who require a customized solution, One River can deliver any
+                        combination of our investment strategies in a fund-of-one, managed account, swap or UCITS
+                        compliant structure. We partner with such bespoke clients in one of three ways; (1) they present
+                        us with an investment need to tilt their portfolio and/or hedge a specific risk and we then
+                        create a combination of our strategies to achieve that objective, (2) they ask us to build a
+                        holistic, stand-alone portfolio of our strategies that is designed to fit well within their
+                        larger alternatives portfolio, and (3) they turn to us for solutions that materially reduce the
+                        expense ratio and increase the capital efficiency of their existing portfolio while maintaining
+                        equivalent market exposures.
+                    </p>
+                </div>
+            </div>
+            <div class="alternative-content__content alternative-content__content--risk-solutions">
+                <div class="alternative-content__content-inner">
+                    <p class="alternative-content__title u-text-white">
+                        Risk Responders Strategy
+                    </p>
+
+                    <p class="alternative-content__paragraph u-text-white">
+                        The Risk Responders Strategy is a cash-efficient, fully systematic combination of Dynamic
+                        Convexity (long equity volatility), Core Markets Trend, and Alternative Markets Trend. The
+                        strategy combines these strategies into one integrated vehicle and deploys additional leverage
+                        to each sleeve, with the intention providing robust risk mitigation in the face of both market
+                        crises (Dynamic Convexity), as well as during prolonged risk asset declines or macro asset
+                        regime shifts (Trend).
+                    </p>
+                    <p class="alternative-content__paragraph u-text-white">
+                        Risk shifts dynamically between long volatility and trend exposures over time, such that the
+                        portfolio risk tends to be primarily driven either by long volatility or trend themes, based on
+                        how the model views the comparative attractiveness of the underlying strategies. This
+                        combination of risk mitigating exposures is expected to deliver a strong risk-adjusted return in
+                        most environments, particularly during major equity market crises. Profit-taking is embedded
+                        into the model, relieving investors of the pressure to time their exit from the strategy and
+                        this allows it to be held through the cycle as a source of positive portfolio convexity. The
+                        fund offers weekly liquidity.
+                    </p>
+                </div>
+            </div>
+
+            <div class="alternative-content__col-left alternative-content__col-left--top animate__fadeIn">
+                <div class="alternative-content__we-build">
+                    We build unique diversifiers or a changing world. Our
+                    strategies seek to deliver as mounting political,
+                    geopolitical, monetary, and fiscal forces bring
+                    previously dormant portfolio considerations to the
+                    forefront.
+                </div>
+                <div class="alternative-content__link-container no-display-under-991">
                     <a href="/about.html#contact" class="alternative-content__link">
                         CONTACT US
                     </a>
                 </div>
+            </div>
+            <div class="alternative-content__col-right">
+                <p class="alternative-content__our-alternative animate__fadeIn">
+                    Our alternative strategies leverage the full
+                    capabilities of our investment team’s experience over
+                    multiple decades running both discretionary and
+                    systematic strategies. Our approach is distinct in the
+                    industry, leveraging macro awareness, data-driven
+                    processes, and market-tested risk management.
+                    <br />
+                    <br />
+                    We offer six strategies across three categories:
+                    Volatility, Trend, and Inflation. Within Volatility, we
+                    operate two Long Volatility strategies, and one
+                    alpha-seeking Volatility Relative Value strategy. Within
+                    Trend we offer two fully systematic strategies, one of
+                    which is focused on major markets, and another on
+                    alternative markets. Our forthcoming Inflation strategy
+                    seeks to benefit from an inflationary backdrop and
+                    higher potential inflation volatility.
+                </p>
+            </div>
 
-                <div class="alternative-content__col-left alternative-content__col-left--bottom">
-                    <div class="alternative-content__anim-trigger alternative-content__anim-trigger--deeper"></div>
-                    <div class="alternative-content__have-you-read-left">  
-                        <div class="alternative-content__title-mask no-display-under-991">
-                            <span>A Deeper</span>
-                        </div>
-                        <div class="alternative-content__title-mask no-display-under-991">
-                            <span>Dive</span>
-                        </div>
-                        <div class="alternative-content__title-mask display-under-991">
-                            <span>A Deeper Dive</span>
-                        </div>
-                        <div class="alternative-content__content-toggle">
-                            <img
-                                src="./assets/images/arrow-white.svg"
-                                class="u-image-contain no-display-under-991"
-                            />
-                            <img
-                                src="./assets/images/arrow-black.svg"
-                                class="u-image-contain display-under-991"
-                            />
-                        </div>
+            <div class="alternative-content__link-container display-under-991">
+                <a href="/about.html#contact" class="alternative-content__link">
+                    CONTACT US
+                </a>
+            </div>
+
+            <div class="alternative-content__col-left alternative-content__col-left--bottom">
+                <div class="alternative-content__anim-trigger alternative-content__anim-trigger--deeper"></div>
+                <div class="alternative-content__have-you-read-left">
+                    <div class="alternative-content__title-mask no-display-under-991">
+                        <span>A Deeper</span>
+                    </div>
+                    <div class="alternative-content__title-mask no-display-under-991">
+                        <span>Dive</span>
+                    </div>
+                    <div class="alternative-content__title-mask display-under-991">
+                        <span>A Deeper Dive</span>
+                    </div>
+                    <div class="alternative-content__content-toggle">
+                        <img src="./assets/images/arrow-white.svg" class="u-image-contain no-display-under-991" />
+                        <img src="./assets/images/arrow-black.svg" class="u-image-contain display-under-991" />
                     </div>
                 </div>
-                <div class="alternative-content__col-right--no-animation">
-                    <div class="alternative-content__col-right-anim animate__fadeIn">
-                        <div class="alternative-content__have-you-read-right alternative-content__have-you-read-right--active">
-                            <p class="alternative-content__title alternative-content__title--black u-text-white">
-                                Improving the Industry’s Dominant Portfolios
-                            </p>
-                            <p class="alternative-content__paragraph alternative-content__paragraph--black u-text-white">
-                                We explore a positive-expectancy portfolio overlay that is negatively-correlated to risk assets. We first published the
-                                research last April and have updated it following the dramatic Q1 2020 real-time stress-test. With US treasury yields so
-                                close to zero, and thus unable to provide a material offset to equity/credit risk, never has this overlay been so vital
-                                in the construction of durable portfolios…
-                            </p>
-    
-                            <a target="_blank" href="./assets/resources/OR-Improving+the+Industry's+Dominant+Portfolios+-+With+2020+Update-220222.pdf" class="pink-link u-text-white" style="font-weight: bold;">
-                              VIEW RESEARCH PAPER
-                            </a>
-                        </div>
-                        <div class="alternative-content__have-you-read-right--slide">
-                          <p class="alternative-content__title alternative-content__title--black u-text-white">
+            </div>
+            <div class="alternative-content__col-right--no-animation">
+                <div class="alternative-content__col-right-anim animate__fadeIn">
+                    <div
+                        class="alternative-content__have-you-read-right alternative-content__have-you-read-right--active">
+                        <p class="alternative-content__title alternative-content__title--black u-text-white">
+                            Improving the Industry’s Dominant Portfolios
+                        </p>
+                        <p class="alternative-content__paragraph alternative-content__paragraph--black u-text-white">
+                            We explore a positive-expectancy portfolio overlay that is negatively-correlated to risk
+                            assets. We first published the
+                            research last April and have updated it following the dramatic Q1 2020 real-time
+                            stress-test. With US treasury yields so
+                            close to zero, and thus unable to provide a material offset to equity/credit risk, never has
+                            this overlay been so vital
+                            in the construction of durable portfolios…
+                        </p>
+
+                        <a target="_blank"
+                            href="./assets/resources/OR-Improving+the+Industry's+Dominant+Portfolios+-+With+2020+Update-220222.pdf"
+                            class="pink-link u-text-white" style="font-weight: bold;">
+                            VIEW RESEARCH PAPER
+                        </a>
+                    </div>
+                    <div class="alternative-content__have-you-read-right--slide">
+                        <p class="alternative-content__title alternative-content__title--black u-text-white">
                             Observations on Post-Covid Inflation Data
-                          </p>
-                          <p class="alternative-content__paragraph alternative-content__paragraph--black u-text-white" style="margin-bottom: 15px;">
-                            We’ve received two months of inflation data since the coronavirus shut down and they paint an interesting picture of the
-                            economy. The impact is broadly but not exclusively deflationary. It’s these divergences that tell a story of a recession
-                            very different from those in recent history. Historically recessions have been broad based demand destructions but
-                            recent data reflect something more complex…We’ve received two months of inflation data since the coronavirus shut down
-                            and they paint an interesting picture of the economy. The impact is broadly but not exclusively deflationary. It’s these
-                            divergences that tell a story of a recession very different from those in recent history. Historically recessions have
+                        </p>
+                        <p class="alternative-content__paragraph alternative-content__paragraph--black u-text-white"
+                            style="margin-bottom: 15px;">
+                            We’ve received two months of inflation data since the coronavirus shut down and they paint
+                            an interesting picture of the
+                            economy. The impact is broadly but not exclusively deflationary. It’s these divergences that
+                            tell a story of a recession
+                            very different from those in recent history. Historically recessions have been broad based
+                            demand destructions but
+                            recent data reflect something more complex…We’ve received two months of inflation data since
+                            the coronavirus shut down
+                            and they paint an interesting picture of the economy. The impact is broadly but not
+                            exclusively deflationary. It’s these
+                            divergences that tell a story of a recession very different from those in recent history.
+                            Historically recessions have
                             been broad based demand destructions but recent data reflect something more complex…
                         </p>
-    
-                          <a target="_blank" href="./assets/resources/OR-Recent-Inflation-Observations_-May-2020-220222.pdf" class="pink-link u-text-white" style="font-weight: bold;">
+
+                        <a target="_blank"
+                            href="./assets/resources/OR-Recent-Inflation-Observations_-May-2020-220222.pdf"
+                            class="pink-link u-text-white" style="font-weight: bold;">
                             VIEW RESEARCH PAPER
-                          </a>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <footer class="footer">
-            <div class="footer__logo footer__logo--mobile">
+    <footer class="footer">
+        <div class="footer__logo footer__logo--mobile">
+            <img src="./assets/images/oneriver-logo-light.svg" alt="OneRiver Logo" class="u-image-contain">
+        </div>
+        <div class="footer__container">
+            <div class="footer__logo">
                 <img src="./assets/images/oneriver-logo-light.svg" alt="OneRiver Logo" class="u-image-contain">
             </div>
-            <div class="footer__container">
-                <div class="footer__logo">
-                    <img src="./assets/images/oneriver-logo-light.svg" alt="OneRiver Logo" class="u-image-contain">
+            <div class="footer__text footer__text--small display-under-991">
+                © 2020 One River Asset Management. All Rights Reserved.
+            </div>
+            <div class="footer__contact">
+                <div class="footer__contact-row">
+                    <span class="footer__contact-info">
+                        (203) 489-1440
+                    </span>
+                    <span class="footer__contact-info-spacer">|</span>
+                    <span class="footer__contact-info">
+                        info@oneriveram.com
+                    </span>
                 </div>
-                <div class="footer__text footer__text--small display-under-991">
-                    © 2020 One River Asset Management. All Rights Reserved.
+                <div class="footer__contact-row">
+                    <span class="footer__contact-info">
+                        <span>3 River Road,</span> <span>2nd Floor, Greenwich,</span> <span>CT 06807</span>
+                    </span>
                 </div>
-                <div class="footer__contact">
-                    <div class="footer__contact-row">
-                        <span class="footer__contact-info">
-                            (203) 489-1440
-                        </span>
-                        <span class="footer__contact-info-spacer">|</span>
-                        <span class="footer__contact-info">
-                            info@oneriveram.com
-                        </span>
-                    </div>
-                    <div class="footer__contact-row">
-                        <span class="footer__contact-info">
-                            <span>3 River Road,</span> <span>2nd Floor, Greenwich,</span> <span>CT 06807</span>
-                        </span>
-                    </div>
-                    <div class="footer__contact-row">
-                        <span class="footer__contact-info">
-                            NFA ID: 0461647
-                        </span>
-                        <span class="footer__contact-info-spacer">|</span>
-                        <span class="footer__contact-info">
-                            FINRA: 167835
-                        </span>
-                    </div>
-                </div>
-                <div class="footer__text-container">
-                    <p class="footer__text">
-                        One River Asset Management is an SEC registered investment advisor, regulated by the National
-                        Futures Association, and manages ERISA assets as a Qualified Plan Asset Manager.
-                    </p>
-                    <div class="footer__text footer__text--small no-display-under-991">
-                        © 2020 One River Asset Management. All Rights Reserved.
-                    </div>
+                <div class="footer__contact-row">
+                    <span class="footer__contact-info">
+                        NFA ID: 0461647
+                    </span>
+                    <span class="footer__contact-info-spacer">|</span>
+                    <span class="footer__contact-info">
+                        FINRA: 167835
+                    </span>
                 </div>
             </div>
-            <div class="footer__legal-links">
-              <div class="footer__legal-item">
-                  <a href="/privacypolicy.html" class="footer__legal-link">
-                      Privacy
-                  </a>
-              </div>
-              <div class="footer__legal-item">
-                  <a href="/termsconditions.html" class="footer__legal-link">
-                      Terms of use
-                  </a>
-              </div>
-          </div>
-        </footer>
+            <div class="footer__text-container">
+                <p class="footer__text">
+                    One River Asset Management is an SEC registered investment advisor, regulated by the National
+                    Futures Association, and manages ERISA assets as a Qualified Plan Asset Manager.
+                </p>
+                <div class="footer__text footer__text--small no-display-under-991">
+                    © 2020 One River Asset Management. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+        <div class="footer__legal-links">
+            <div class="footer__legal-item">
+                <a href="/privacypolicy.html" class="footer__legal-link">
+                    Privacy
+                </a>
+            </div>
+            <div class="footer__legal-item">
+                <a href="/termsconditions.html" class="footer__legal-link">
+                    Terms of use
+                </a>
+            </div>
+        </div>
+    </footer>
+    
 
-        <script>
-            const selectorInflation = document.querySelector(".alternative-content__selector--inflation");
-            const selectorTrendStrategies = document.querySelector(".alternative-content__selector--trend-strategies");
-            const selectorVolatilityStrategies = document.querySelector(".alternative-content__selector--volatility-strategies");
-            const selectorCustomisedSolutions = document.querySelector(".alternative-content__selector--customised-solutions");
+    <script>
+        const selectorInflation = document.querySelector(".alternative-content__selector--inflation");
+        const selectorTrendStrategies = document.querySelector(".alternative-content__selector--trend-strategies");
+        const selectorVolatilityStrategies = document.querySelector(".alternative-content__selector--volatility-strategies");
+        const selectorCustomisedSolutions = document.querySelector(".alternative-content__selector--customised-solutions");
+        const selectorRiskSolutions = document.querySelector(".alternative-content__selector--risk-solutions");
 
-            const contentInflation = document.querySelector(".alternative-content__content--inflation");
-            const contentTrendStrategies = document.querySelector(".alternative-content__content--trend-strategies");
-            const contentVolatilityStrategies = document.querySelector(".alternative-content__content--volatility-strategies");
-            const contentCustomisedSolutions = document.querySelector(".alternative-content__content--customised-solutions");
 
-            const resetClasses = () => {
-                selectorInflation.classList.remove("alternative-content__selector--active");
-                selectorTrendStrategies.classList.remove("alternative-content__selector--active");
-                selectorVolatilityStrategies.classList.remove("alternative-content__selector--active");
-                selectorCustomisedSolutions.classList.remove("alternative-content__selector--active");
+        const contentInflation = document.querySelector(".alternative-content__content--inflation");
+        const contentTrendStrategies = document.querySelector(".alternative-content__content--trend-strategies");
+        const contentVolatilityStrategies = document.querySelector(".alternative-content__content--volatility-strategies");
+        const contentCustomisedSolutions = document.querySelector(".alternative-content__content--customised-solutions");
+        const contentRiskSolutions = document.querySelector(".alternative-content__content--risk-solutions");
 
-                contentInflation.classList.remove("alternative-content__content--active");
-                contentTrendStrategies.classList.remove("alternative-content__content--active");
-                contentVolatilityStrategies.classList.remove("alternative-content__content--active");
-                contentCustomisedSolutions.classList.remove("alternative-content__content--active");
-            };
 
-            const activateSection = (section) => {
-                resetClasses();
-                let selector = document.querySelector(".alternative-content__selector--" + section);
-                selector.classList.add("alternative-content__selector--active");
-                let content = document.querySelector(".alternative-content__content--" + section);
-                content.classList.add("alternative-content__content--active");
-            };
 
-            selectorInflation.addEventListener("click", () => {
-                activateSection("inflation");
-                document.getElementById('title-target').innerHTML = '<span style="padding-top: 40px">Inflation</span>';
-                document.getElementById('title-transparent').style.color = 'transparent';
+        const resetClasses = () => {
+            selectorInflation.classList.remove("alternative-content__selector--active");
+            selectorTrendStrategies.classList.remove("alternative-content__selector--active");
+            selectorVolatilityStrategies.classList.remove("alternative-content__selector--active");
+            selectorCustomisedSolutions.classList.remove("alternative-content__selector--active");
+            selectorRiskSolutions.classList.remove("alternative-content__selector--active");
 
-                document.getElementById('title-target').getElementsByTagName('span')[0].style.transform = 'translateY(100%)';
-                // document.getElementById('title-transparent').getElementsByTagName('span')[0].style.transform = 'translateY(100%)';
-            
-                setTimeout(() => {
-                    document.getElementById('title-target').getElementsByTagName('span')[0].style.transform = 'translateY(0%)';
-                    // document.getElementById('title-transparent').getElementsByTagName('span')[0].style.transform = 'translateY(0%)';
-                }, 500);
-            }
+            contentInflation.classList.remove("alternative-content__content--active");
+            contentTrendStrategies.classList.remove("alternative-content__content--active");
+            contentVolatilityStrategies.classList.remove("alternative-content__content--active");
+            contentCustomisedSolutions.classList.remove("alternative-content__content--active");
+            contentRiskSolutions.classList.remove("alternative-content__content--active");
+        };
+
+        const activateSection = (section) => {
+            resetClasses();
+            let selector = document.querySelector(".alternative-content__selector--" + section);
+            selector.classList.add("alternative-content__selector--active");
+            let content = document.querySelector(".alternative-content__content--" + section);
+            content.classList.add("alternative-content__content--active");
+        };
+
+        selectorInflation.addEventListener("click", () => {
+            activateSection("inflation");
+            document.getElementById('title-target').innerHTML = '<span style="padding-top: 40px">Inflation</span>';
+            document.getElementById('title-transparent').style.color = 'transparent';
+
+            document.getElementById('title-target').getElementsByTagName('span')[0].style.transform = 'translateY(100%)';
+            // document.getElementById('title-transparent').getElementsByTagName('span')[0].style.transform = 'translateY(100%)';
+
+            setTimeout(() => {
+                document.getElementById('title-target').getElementsByTagName('span')[0].style.transform = 'translateY(0%)';
+                // document.getElementById('title-transparent').getElementsByTagName('span')[0].style.transform = 'translateY(0%)';
+            }, 500);
+        }
+        );
+        selectorTrendStrategies.addEventListener("click", () => {
+            activateSection("trend-strategies");
+            document.getElementById('title-target').innerHTML = '<span>Trend</span>';
+            document.getElementById('title-transparent').innerHTML = '<span>Strategies</span>';
+            document.getElementById('title-transparent').style.color = 'white';
+
+            document.getElementById('title-target').getElementsByTagName('span')[0].style.transform = 'translateY(100%)';
+            document.getElementById('title-transparent').getElementsByTagName('span')[0].style.transform = 'translateY(100%)';
+
+            setTimeout(() => {
+                document.getElementById('title-target').getElementsByTagName('span')[0].style.transform = 'translateY(0%)';
+                document.getElementById('title-transparent').getElementsByTagName('span')[0].style.transform = 'translateY(0%)';
+            }, 500);
+        }
+        );
+        selectorVolatilityStrategies.addEventListener("click", () => {
+            activateSection("volatility-strategies");
+            document.getElementById('title-target').innerHTML = '<span>Volatility</span>';
+            document.getElementById('title-transparent').innerHTML = '<span>Strategies</span>';
+            document.getElementById('title-transparent').style.color = 'white';
+
+            document.getElementById('title-target').getElementsByTagName('span')[0].style.transform = 'translateY(100%)';
+            document.getElementById('title-transparent').getElementsByTagName('span')[0].style.transform = 'translateY(100%)';
+
+            setTimeout(() => {
+                document.getElementById('title-target').getElementsByTagName('span')[0].style.transform = 'translateY(0%)';
+                document.getElementById('title-transparent').getElementsByTagName('span')[0].style.transform = 'translateY(0%)';
+            }, 500);
+        }
+        );
+        selectorCustomisedSolutions.addEventListener("click", () => {
+            activateSection("customised-solutions");
+            document.getElementById('title-target').innerHTML = '<span>Inflation</span>';
+            document.getElementById('title-transparent').innerHTML = '<span>Solutions</span>';
+            document.getElementById('title-transparent').style.color = 'white';
+
+            document.getElementById('title-target').getElementsByTagName('span')[0].style.transform = 'translateY(100%)';
+            document.getElementById('title-transparent').getElementsByTagName('span')[0].style.transform = 'translateY(100%)';
+
+            setTimeout(() => {
+                document.getElementById('title-target').getElementsByTagName('span')[0].style.transform = 'translateY(0%)';
+                document.getElementById('title-transparent').getElementsByTagName('span')[0].style.transform = 'translateY(0%)';
+            }, 500);
+        }
+        );
+        selectorRiskSolutions.addEventListener("click", () => {
+            activateSection("risk-solutions");
+            document.getElementById('title-target').innerHTML = '<span>Risk</span>';
+            document.getElementById('title-transparent').innerHTML = '<span>Solutions</span>';
+            document.getElementById('title-transparent').style.color = 'white';
+
+            document.getElementById('title-target').getElementsByTagName('span')[0].style.transform = 'translateY(100%)';
+            document.getElementById('title-transparent').getElementsByTagName('span')[0].style.transform = 'translateY(100%)';
+
+            setTimeout(() => {
+                document.getElementById('title-target').getElementsByTagName('span')[0].style.transform = 'translateY(0%)';
+                document.getElementById('title-transparent').getElementsByTagName('span')[0].style.transform = 'translateY(0%)';
+            }, 500);
+        }
+        );
+
+
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top <= (window.innerHeight || document.documentElement.clientHeight)
             );
-            selectorTrendStrategies.addEventListener("click", () => {
-                activateSection("trend-strategies");
-                document.getElementById('title-target').innerHTML = '<span>Trend</span>';
-                document.getElementById('title-transparent').innerHTML = '<span>Strategies</span>';
-                document.getElementById('title-transparent').style.color = 'white';
+        }
 
-                document.getElementById('title-target').getElementsByTagName('span')[0].style.transform = 'translateY(100%)';
-                document.getElementById('title-transparent').getElementsByTagName('span')[0].style.transform = 'translateY(100%)';
-            
-                setTimeout(() => {
-                    document.getElementById('title-target').getElementsByTagName('span')[0].style.transform = 'translateY(0%)';
-                    document.getElementById('title-transparent').getElementsByTagName('span')[0].style.transform = 'translateY(0%)';
-                }, 500);
-            }
-            );
-            selectorVolatilityStrategies.addEventListener("click", () => {
-                activateSection("volatility-strategies");
-                document.getElementById('title-target').innerHTML = '<span>Volatility</span>';
-                document.getElementById('title-transparent').innerHTML = '<span>Strategies</span>';
-                document.getElementById('title-transparent').style.color = 'white';
-
-                document.getElementById('title-target').getElementsByTagName('span')[0].style.transform = 'translateY(100%)';
-                document.getElementById('title-transparent').getElementsByTagName('span')[0].style.transform = 'translateY(100%)';
-            
-                setTimeout(() => {
-                    document.getElementById('title-target').getElementsByTagName('span')[0].style.transform = 'translateY(0%)';
-                    document.getElementById('title-transparent').getElementsByTagName('span')[0].style.transform = 'translateY(0%)';
-                }, 500);
-            }
-            );
-            selectorCustomisedSolutions.addEventListener("click", () => {
-                activateSection("customised-solutions");
-                document.getElementById('title-target').innerHTML = '<span>Inflation</span>';
-                document.getElementById('title-transparent').innerHTML = '<span>Solutions</span>';
-                document.getElementById('title-transparent').style.color = 'white';
-
-                document.getElementById('title-target').getElementsByTagName('span')[0].style.transform = 'translateY(100%)';
-                document.getElementById('title-transparent').getElementsByTagName('span')[0].style.transform = 'translateY(100%)';
-            
-                setTimeout(() => {
-                    document.getElementById('title-target').getElementsByTagName('span')[0].style.transform = 'translateY(0%)';
-                    document.getElementById('title-transparent').getElementsByTagName('span')[0].style.transform = 'translateY(0%)';
-                }, 500);
-            }
-            );
+        const readContentToggle = document.querySelector('.alternative-content__content-toggle');
+        const readContent1 = document.querySelector('.alternative-content__have-you-read-right');
+        const readContent2 = document.querySelector('.alternative-content__have-you-read-right--slide');
+        const readTitle = document.querySelector('.alternative-content__have-you-read-left');
 
 
-            function isInViewport(element) {
-                const rect = element.getBoundingClientRect();
-                return (
-                    rect.top <= (window.innerHeight || document.documentElement.clientHeight)
-                );
-            }
+        let readContentId = 1;
 
-            const readContentToggle = document.querySelector('.alternative-content__content-toggle');
-            const readContent1 = document.querySelector('.alternative-content__have-you-read-right');
-            const readContent2 = document.querySelector('.alternative-content__have-you-read-right--slide');
-            const readTitle = document.querySelector('.alternative-content__have-you-read-left');
-
-
-            let readContentId = 1; 
-
-            readContentToggle.addEventListener('click', () => {
-                if (readContentId == 1) {
-                    readContent1.classList.remove('alternative-content__have-you-read-right--active');
-                    readContent2.classList.add('alternative-content__have-you-read-right--active');
-                    readContentToggle.classList.add('alternative-content__content-toggle--active');
-                    readContentId = 2;
-                } else {
-                    readContent1.classList.add('alternative-content__have-you-read-right--active');
-                    readContent2.classList.remove('alternative-content__have-you-read-right--active');
-                    readContentToggle.classList.remove('alternative-content__content-toggle--active');
-                    readContentId = 1;
-                }
-            });
-        </script>
-
-        <script>
-          //mobile nav
-            const mobileNavButton = document.querySelector('.navbar-mobile__toggle');
-            const mobileMenu = document.querySelector('.navbar-mobile__menu-items');
-            let moibleNavOpen = false;
-            
-            mobileNavButton.addEventListener('click', () => {
-                if(!moibleNavOpen) {
-                    mobileMenu.classList.add('navbar-mobile__menu-items--active');
-                    mobileNavButton.classList.add('navbar-mobile__toggle--active');
-                    moibleNavOpen = true;
-                } else {
-                    mobileMenu.classList.remove('navbar-mobile__menu-items--active');
-                    mobileNavButton.classList.remove('navbar-mobile__toggle--active');
-                    moibleNavOpen = false;
-                }
-            });
-
-          //animations
-            function isInViewport(element, offset = 0) {
-                const rect = element.getBoundingClientRect();
-                return (rect.top <= ((window.innerHeight || document.documentElement.clientHeight) - offset)) && rect.bottom > offset;
-            }
-
-            function addClassBasedOnScroll(trigger, element, offset = 0, className) {
-                if(isInViewport(trigger, offset)) {
-                    element.classList.add(className);
-                } else {
-                    element.classList.remove(className);
-                }
-            }
-
-            let animOffset = 0;
-            if(window.innerWidth <= 800) {
-                animOffset = 100;
-            } else if(window.innerWidth <= 2200) {
-                animOffset = 200;
-            } else if(window.innerWidth <= 3000) {
-                animOffset = 300;
+        readContentToggle.addEventListener('click', () => {
+            if (readContentId == 1) {
+                readContent1.classList.remove('alternative-content__have-you-read-right--active');
+                readContent2.classList.add('alternative-content__have-you-read-right--active');
+                readContentToggle.classList.add('alternative-content__content-toggle--active');
+                readContentId = 2;
             } else {
-                animOffset = 400;
+                readContent1.classList.add('alternative-content__have-you-read-right--active');
+                readContent2.classList.remove('alternative-content__have-you-read-right--active');
+                readContentToggle.classList.remove('alternative-content__content-toggle--active');
+                readContentId = 1;
             }
+        });
+    </script>
 
-            if(window.innerWidth >= 991) {
-                document.querySelector('.activate-desktop').classList.add('alternative-content__selector--active');
-                document.querySelector('.activate-desktop-content').classList.add('alternative-content__content--active');
+    <script>
+        //mobile nav
+        const mobileNavButton = document.querySelector('.navbar-mobile__toggle');
+        const mobileMenu = document.querySelector('.navbar-mobile__menu-items');
+        let moibleNavOpen = false;
+
+        mobileNavButton.addEventListener('click', () => {
+            if (!moibleNavOpen) {
+                mobileMenu.classList.add('navbar-mobile__menu-items--active');
+                mobileNavButton.classList.add('navbar-mobile__toggle--active');
+                moibleNavOpen = true;
+            } else {
+                mobileMenu.classList.remove('navbar-mobile__menu-items--active');
+                mobileNavButton.classList.remove('navbar-mobile__toggle--active');
+                moibleNavOpen = false;
             }
+        });
 
-            animOffset = 0;
-            
-            const heroTitle = document.querySelector('.alternative-content__left-panel-title');
-            const heroImageTrigger = document.querySelector('.alternative-content__anim-trigger');
-            const heroImageMask = document.querySelector('.alternative-content__mask');
+        //animations
+        function isInViewport(element, offset = 0) {
+            const rect = element.getBoundingClientRect();
+            return (rect.top <= ((window.innerHeight || document.documentElement.clientHeight) - offset)) && rect.bottom > offset;
+        }
 
-            const weBuildTitle = document.querySelector('.alternative-content__col-left--top');
-            const weBuildText = document.querySelector('.alternative-content__our-alternative');
-
-            const deeperTitle = document.querySelector('.alternative-content__have-you-read-left');
-            const deeperSlideAnim = document.querySelector('.alternative-content__col-right-anim');
-            const deeperTitleTrigger = document.querySelector('.alternative-content__anim-trigger--deeper');
-
-            function startAllAnimationsInViewport() {
-                addClassBasedOnScroll(heroImageTrigger, heroImageMask, animOffset, 'animate__width-reverse--active');
-
-                addClassBasedOnScroll(weBuildTitle, weBuildTitle, animOffset, 'animate__fadeIn--active');
-                addClassBasedOnScroll(weBuildText, weBuildText, animOffset, 'animate__fadeIn--active');
-
-                addClassBasedOnScroll(deeperTitle, deeperTitle, animOffset, 'alternative-content__have-you-read-left--active');
-                addClassBasedOnScroll(deeperSlideAnim, deeperSlideAnim, animOffset, 'animate__fadeIn--active');
-
-                addClassBasedOnScroll(heroTitle, heroTitle, animOffset, 'alternative-content__left-panel-title--active')
+        function addClassBasedOnScroll(trigger, element, offset = 0, className) {
+            if (isInViewport(trigger, offset)) {
+                element.classList.add(className);
+            } else {
+                element.classList.remove(className);
             }
+        }
 
-            startAllAnimationsInViewport();
+        let animOffset = 0;
+        if (window.innerWidth <= 800) {
+            animOffset = 100;
+        } else if (window.innerWidth <= 2200) {
+            animOffset = 200;
+        } else if (window.innerWidth <= 3000) {
+            animOffset = 300;
+        } else {
+            animOffset = 400;
+        }
 
-            //throttle scrolling event for performance
+        if (window.innerWidth >= 991) {
+            document.querySelector('.activate-desktop').classList.add('alternative-content__selector--active');
+            document.querySelector('.activate-desktop-content').classList.add('alternative-content__content--active');
+        }
 
-            let isScrolling = false;
-            document.addEventListener('scroll', () => {
-                isScrolling = true;
-            });
+        animOffset = 0;
 
-            setInterval(() => {
-                if(isScrolling) {
-                    isScrolling = false;
-                    startAllAnimationsInViewport();
-                }
-            }, 200);
-        </script>
-    </body>
+        const heroTitle = document.querySelector('.alternative-content__left-panel-title');
+        const heroImageTrigger = document.querySelector('.alternative-content__anim-trigger');
+        const heroImageMask = document.querySelector('.alternative-content__mask');
+
+        const weBuildTitle = document.querySelector('.alternative-content__col-left--top');
+        const weBuildText = document.querySelector('.alternative-content__our-alternative');
+
+        const deeperTitle = document.querySelector('.alternative-content__have-you-read-left');
+        const deeperSlideAnim = document.querySelector('.alternative-content__col-right-anim');
+        const deeperTitleTrigger = document.querySelector('.alternative-content__anim-trigger--deeper');
+
+        function startAllAnimationsInViewport() {
+            addClassBasedOnScroll(heroImageTrigger, heroImageMask, animOffset, 'animate__width-reverse--active');
+
+            addClassBasedOnScroll(weBuildTitle, weBuildTitle, animOffset, 'animate__fadeIn--active');
+            addClassBasedOnScroll(weBuildText, weBuildText, animOffset, 'animate__fadeIn--active');
+
+            addClassBasedOnScroll(deeperTitle, deeperTitle, animOffset, 'alternative-content__have-you-read-left--active');
+            addClassBasedOnScroll(deeperSlideAnim, deeperSlideAnim, animOffset, 'animate__fadeIn--active');
+
+            addClassBasedOnScroll(heroTitle, heroTitle, animOffset, 'alternative-content__left-panel-title--active')
+        }
+
+        startAllAnimationsInViewport();
+
+        //throttle scrolling event for performance
+
+        let isScrolling = false;
+        document.addEventListener('scroll', () => {
+            isScrolling = true;
+        });
+
+        setInterval(() => {
+            if (isScrolling) {
+                isScrolling = false;
+                startAllAnimationsInViewport();
+            }
+        }, 200);
+    </script>
+</body>
+
 </html>

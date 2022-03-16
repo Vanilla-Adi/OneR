@@ -9,6 +9,20 @@
     <link rel="stylesheet" href="./assets/fonts/IvyMode/index.css">
     <link rel="stylesheet" href="./assets/fonts/Optima/index.css">
     <title>One River - Exploring preconditions</title>
+    <meta name="description" content="Each Sunday morning for over a decade, One River’s CIO, Eric Peters, has published “Wknd Notes.” It is an unorthodox take on markets, politics, and policy that’s widely read across our industry and within global policy/political circles. Eric has written for as long as he has traded and the discipline is part of his investment process. Drawing on wide-ranging, multi-disciplinary research, historical study, and discussions with interesting characters throughout the world, Eric collects those things he finds most thought-provoking each week and distills them into a concise letter.">
+    <meta name="keywords" content="One River Digital Asset Management, One River Market Notes, One River Podcasts, One River Blog, One River Weekend Notes, Erik Peters, One River AM, One River Digital, One River Investments, One River Asset Management, Asset Manager">    
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GRPG28921G"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+    
+            gtag('config', 'G-GRPG28921G');
+        </script>
 </head>
 
 <body>
@@ -24,7 +38,7 @@
                 <a href="/about.html" class="navbar__menu-item">
                     About
                 </a>
-                <a href="/weekendNotes.html" class="navbar__menu-item navbar__menu-item--active">
+                <a href="/research.html" class="navbar__menu-item navbar__menu-item--active">
                     Research 
                 </a>
             </div>
@@ -52,7 +66,7 @@
             <a href="/about.html" class="navbar__menu-item">
                 About
             </a>
-            <a href="/weekendNotes.html" class="navbar__menu-item navbar__menu-item--active">
+            <a href="/research.html" class="navbar__menu-item navbar__menu-item--active">
                 Research
             </a>
         </div>
@@ -90,28 +104,28 @@
             </div>
             <div class="weekend-content__selector weekend-content__selector--media">
                 <span>
-                    <a href="./weekendNotes.html?section=media"> Media </a>
+                    <a href="./research.html?section=media"> Media </a>
                 </span>
-                <a href="./weekendNotes.html?section=media"> <div class="weekend-content__selector-button"></div> </a>
+                <a href="./research.html?section=media"> <div class="weekend-content__selector-button"></div> </a>
               </a>
             </div>
             <div class="weekend-content__selector weekend-content__selector--press">
                 <span>
-                    <a href="./weekendNotes.html?section=press"> Press </a>
+                    <a href="./research.html?section=press"> Press </a>
                 </span>
-                <a href="./weekendNotes.html?section=press"> <div class="weekend-content__selector-button"></div> </a>
+                <a href="./research.html?section=press"> <div class="weekend-content__selector-button"></div> </a>
             </div>
             <div class="weekend-content__selector weekend-content__selector--podcasts">
                 <span>
-                    <a href="./weekendNotes.html?section=podcasts"> Podcasts </a>
+                    <a href="./research.html?section=podcasts"> Podcasts </a>
                 </span>
-                <a href="./weekendNotes.html?section=podcasts"> <div class="weekend-content__selector-button"></div> </a>
+                <a href="./research.html?section=podcasts"> <div class="weekend-content__selector-button"></div> </a>
             </div>
             <div class="weekend-content__selector weekend-content__selector--resources">
                 <span>
-                    <a href="./weekendNotes.html?section=resources"> Resources </a>
+                    <a href="./research.html?section=resources"> Resources </a>
                 </span>
-                <a href="./weekendNotes.html?section=resources"> <div class="weekend-content__selector-button"></div> </a>
+                <a href="./research.html?section=resources"> <div class="weekend-content__selector-button"></div> </a>
             </div>
             <div class="weekend-content__selector weekend-content__selector--weekend weekend-content__selector--active">
               <span>
@@ -144,7 +158,7 @@
             -->
             <!-- 
             <div class="weekend-content__weekend-column">
-              <a href="weekendNotes.html" style="text-decoration:none">MORE WKND NOTES</a>
+              <a href="research.html" style="text-decoration:none">MORE WKND NOTES</a>
             </div> 
             -->
           </div>
@@ -189,7 +203,7 @@
             </div>
             
 
-            <a href="weekendNotes.html" class="weekend-content__article-link">
+            <a href="research.html" class="weekend-content__article-link">
               BACK
             </a>
           </div>
@@ -344,9 +358,10 @@
         const urlSearchParams = new URLSearchParams(window.location.search);
         const params = Object.fromEntries(urlSearchParams.entries());
         if(!params.articleId && params.articleId != 0) {
-            // window.location.replace("./weekendNotes.html");
+            // window.location.replace("./research.html");
         }
 
+        document.title = "One River - " + articles[params.articleId].title;
         document.querySelector('.weekend-content__article-title').innerHTML = articles[params.articleId].title;
         document.querySelector('.weekend-content__article-date').innerHTML = articles[params.articleId].date;
         document.querySelector('.weekend-content__article-content').innerHTML = articles[params.articleId].content;

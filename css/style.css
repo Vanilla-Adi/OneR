@@ -638,7 +638,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    height: 300px;
+    height: 340px;
     margin-top: 155px;
     margin-left: auto;
     overflow: hidden;
@@ -649,7 +649,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        height: 220px;
+        height: 340px;
         margin-top: 118px;
         margin-left: auto;
         overflow: hidden;
@@ -749,6 +749,28 @@ body {
       @media only screen and (min-width: 2561px) {
         .digital-banner__selector--ethereum {
           margin-top: 64px; } }
+    .digital-banner__selector--indices {
+      margin-top: 32px; }
+      @media screen and (max-width: 991px) {
+        .digital-banner__selector--indices {
+          margin-top: 17px; } }
+      @media only screen and (min-width: 1921px) {
+        .digital-banner__selector--indices {
+          margin-top: 48px; } }
+      @media only screen and (min-width: 2561px) {
+        .digital-banner__selector--indices {
+          margin-top: 64px; } }
+    .digital-banner__selector--digital-income {
+      margin-top: 32px; }
+      @media screen and (max-width: 991px) {
+        .digital-banner__selector--digital-income {
+          margin-top: 17px; } }
+      @media only screen and (min-width: 1921px) {
+        .digital-banner__selector--digital-income {
+          margin-top: 48px; } }
+      @media only screen and (min-width: 2561px) {
+        .digital-banner__selector--digital-income {
+          margin-top: 64px; } }
     @media only screen and (min-width: 1921px) {
       .digital-banner__selector, .digital-banner__selector:link, .digital-banner__selector:visited {
         font-size: 22px;
@@ -765,6 +787,12 @@ body {
       background-color: #072D7E; } }
   @media only screen and (min-width: 992px) {
     .digital-banner__selector--ethereum > .digital-banner__selector-button {
+      background-color: #072F82; } }
+  @media only screen and (min-width: 992px) {
+    .digital-banner__selector--indices > .digital-banner__selector-button {
+      background-color: #072F82; } }
+  @media only screen and (min-width: 992px) {
+    .digital-banner__selector--digital-income > .digital-banner__selector-button {
       background-color: #072F82; } }
   .digital-banner__selector-button {
     position: absolute;
@@ -877,13 +905,19 @@ body {
       @media only screen and (min-width: 1200px) {
         .digital-banner__main-title--digital {
           right: 95px; } }
+    .digital-banner__main-title--digital-income {
+      top: 127px; }
     .digital-banner__main-title--digital-active {
       opacity: 1; }
     @media screen and (max-width: 991px) {
       .digital-banner__main-title--bitcoin {
         top: 105px; }
       .digital-banner__main-title--ethereum {
-        top: 148px; } }
+        top: 148px; }
+      .digital-banner__main-title--indices {
+        top: 190px; }
+      .digital-banner__main-title--digital-income {
+        top: 229px; } }
   .digital-banner__secondary {
     position: relative;
     padding-top: 200px; }
